@@ -28,7 +28,7 @@ global igrid CONSTANTS psStuff nstates ncontrols npaths
 % -------------------------------------------------- %
 % END:   DO NOT ALTER THE FOLLOWING LINES OF CODE!!! %
 % -------------------------------------------------- %
-path = 'C:\Users\elias\Documents\UF_Classes\EML6934\orthogonalCollocationAdigator\orthogonalCollocationAdigator';
+path = 'C:\Users\elias\Documents\UF_Classes\EML6934\Final_Project\EML6934_Final_Project';
 addpath(genpath(path))
 
 CONSTANTS.MU = 1;
@@ -51,26 +51,9 @@ vthetamin = -10;  vthetamax = 10;
 mmin      = 0.1;  mmax      = m0;
 u1min     = -10;  u1max     = 10;
 u2min     = -10;  u2max     = 10;
-u3min     =  0;   u3max     = 0.1405;
+u3min     = 0;    u3max     = 0.1405;
 t0min     = 0;    t0max     = 0;
 tfmin     = 0;    tfmax     = 5;
-
-% % Set polynomial degree in each mesh interval
-% N = 50;
-% 
-% % Set locations of mesh points
-% % meshPoints = linspace(-1,1,10).';
-% meshPoints = [-1; 1];
-% 
-% % Allocate Vector of Polynomial Degrees
-% polyDegrees = N*ones(length(meshPoints)-1,1);
-% 
-% % Compute LGR points, weights, and differentiation matrix.
-% [tau,w,D] = lgrPS(meshPoints,polyDegrees);
-% NLGR = length(w);
-% psStuff.tau = tau;
-% psStuff.w   = w;
-% psStuff.D   = D;
 
 % Set polynomial degree and number of intervals
 N = 4;
@@ -94,7 +77,7 @@ zthetamin(1) = theta0; zthetamax(1) = theta0;
 
 zvrmin = vrmin*ones(length(tau),1);
 zvrmax = vrmax*ones(length(tau),1);
-zvrmin(1) = vr0; zvrmax(1) = vr0;
+zvrmin(1)   = vr0; zvrmax(1)   = vr0;
 zvrmin(end) = vrf; zvrmax(end) = vrf;
 
 zvthetamin = vthetamin*ones(length(tau),1);
