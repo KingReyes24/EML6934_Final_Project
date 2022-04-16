@@ -6,14 +6,14 @@ function C = orbitTransferFun(z)
 % solver SNOPT.                                                   %
 %-----------------------------------------------------------------%
 %      DO NOT FOR ANY REASON ALTER THE LINE OF CODE BELOW!        %
-global psStuff nstates ncontrols npaths CONSTANTS                 %
+global psStuff nstates ncontrols npaths CONSTANTS path_constraint %
 %      DO NOT FOR ANY REASON ALTER THE LINE OF CODE ABOVE!        %
 %-----------------------------------------------------------------%
 
 %-----------------------------------------------------------------%
 %         Extract the constants used in the problem.              %
 %-----------------------------------------------------------------%
-mu = CONSTANTS.MU;% mdot = CONSTANTS.mdot; T = CONSTANTS.T;
+mu = CONSTANTS.MU;
 ve = CONSTANTS.ve;
 %-----------------------------------------------------------------%
 % Radau pseudospectral method quantities required:                %
@@ -39,8 +39,6 @@ stateVector    = z(stateIndices);
 controlVector  = z(controlIndices);
 t0             = z(t0Index);
 tf             = z(tfIndex);
-% t              = (tf-t0)*(tau+1)/2+t0;
-% tLGR           = t(1:end-1);
 
 %-----------------------------------------------------------------%
 % Reshape the state and control parts of the NLP decision vector  %
@@ -67,14 +65,19 @@ theta  = stateLGR(:,1);
 vr     = stateLGR(:,3);
 vtheta = stateLGR(:,4);
 m      = stateLGR(:,5);
-u1     = control(:,1);
-u2     = control(:,2);
-u3     = control(:,3);
+if path_constraint
+    u1 = control(:,1);
+    u2 = control(:,2);
+    u3 = control(:,3);
+else
+    u1 = control(:,1);
+    u3 = control(:,2);
+end
 %-----------------------------------------------------------------%
 % The quantity STATEF is the value of the state at the final      %
 % time, tf, which corresponds to the state at $\tau=1$.           %
 %-----------------------------------------------------------------%
-stateF = statePlusEnd(end,:);
+% stateF = statePlusEnd(end,:);
 %-----------------------------------------------------------------%
 % The orbit-raising problem contains one nonlinear boundary       %
 % condition $\sqrt{mu/r(t_f)-v_\theta(t_f) = 0$.  Because $r(t)$  %
@@ -102,17 +105,16 @@ stateF = statePlusEnd(end,:);
 % vector field f.  It is noted that in MATLABB the calculation of %
 % the right-hand side is vectorized.                              %
 %-----------------------------------------------------------------%
-% rdot = vr;
-% thetadot = vtheta./r;
-% vrdot = vtheta.^2./r-MU./r.^2+a.*u1;
-% vthetadot = -vr.*vtheta./r+a.*u2;
-% mdot = -mdot*ones(size(tLGR));
-
 rdot       = vr;
 thetadot   = vtheta./r;
-vrdot      = vtheta.^2./r - mu./r.^2 + u3.*u1./m;
-vthetadot  = -vtheta.*vr./r + u3.*u2./m;
 mdot       = -u3./ve;
+if path_constraint
+    vrdot      = vtheta.^2./r - mu./r.^2 + u3.*u1./m;
+    vthetadot  = -vtheta.*vr./r + u3.*u2./m;
+else
+    vrdot      = vtheta.^2./r - mu./r.^2 + u3.*sin(u1)./m;
+    vthetadot  = -vtheta.*vr./r + u3.*cos(u1)./m;
+end
 
 diffeqRHS = [rdot, thetadot, vrdot, vthetadot, mdot];
 
@@ -135,7 +137,10 @@ defects = diffeqLHS-(tf-t0)*diffeqRHS/2;
 %-----------------------------------------------------------------%
 % Construct the path constraints at the N LGR points.             %
 %-----------------------------------------------------------------%
-paths = u1.^2+u2.^2;
+if path_constraint 
+    paths = u1.^2+u2.^2;
+end
+% paths = u1.^2+u2.^2;
 
 %-----------------------------------------------------------------%
 % Reshape the defect contraints into a column vector.             % 
@@ -145,15 +150,17 @@ defects = reshape(defects,N*nstates,1);
 %-----------------------------------------------------------------%
 % Reshape the defect contraints into a column vector.             % 
 %-----------------------------------------------------------------%
-paths = reshape(paths,N*npaths,1);
-
-%-----------------------------------------------------------------%
-% Compute the nonlinear boundary condition.                       %
-%-----------------------------------------------------------------%
-% bcs = sqrt(MU/rF)-vthetaF;
+if path_constraint 
+    paths = reshape(paths,N*npaths,1);
+end
 
 %-----------------------------------------------------------------%
 % Construct the objective function plus constraint vector.        %
 %-----------------------------------------------------------------%
- C = [tf;defects;paths];
+if path_constraint 
+    C = [tf;defects;paths];
+else
+    C = [tf;defects];    
+end 
+  
 

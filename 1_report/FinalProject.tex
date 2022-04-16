@@ -47,7 +47,7 @@
 	
 	\section{Problem Statement}
 	\section{Differential Equations of Motion}
-	The equations of motion were derived using both Newton's second law and Lagrange's equations. The schematic for the problem can be seen Figure \ref{fig:schematic}. The spacecraft is modeled as point \(P\) of  mass \(m\). The spacecraft moves relative to an inertial reference frame \(l\). The reference frame fixed in \(l\) is expressed as \(\{e_{x},e_{y},e_{z}\}\). The position of the spacecraft is denoted as \(r_{P/O}\), where \(O\) is modeled as the sun, fixed in \(l\). The spacecraft is parameterized in the basis \(\{u_{r},u_{\theta},u_{z}\}\), where the rotation is about \(u_{z}\) = \(e_{z}\). The rotation creates an angle \(\theta\) between \(e_{x}\) and \(u_{r}\), which can be seen in Figure \ref{fig:rotation2}.
+	The differential equations of motion were derived using both Newton's second law. The schematic for the problem can be seen Figure \ref{fig:schematic}. The spacecraft is modeled as point \(P\) of  mass \(m\). The spacecraft moves relative to an inertial reference frame \(l\). The reference frame fixed in \(l\) is expressed as \(\{e_{x},e_{y},e_{z}\}\). The position of the spacecraft is denoted as \(r_{P/O}\), where \(O\) is modeled as the sun, fixed in \(l\). The spacecraft is parameterized in the basis \(\{u_{r},u_{\theta},u_{z}\}\), where the rotation is about \(u_{z}\) = \(e_{z}\). The rotation creates an angle \(\theta\) between \(e_{x}\) and \(u_{r}\), which can be seen in Figure \ref{fig:rotation2}.
 	\begin{figure}
 		\centering
 		\includegraphics[width=85mm,scale=0.85]{midterm_schematic.png}
@@ -104,7 +104,7 @@
 	
 	%\figurename{Schematic of a particle in a an inertially fixed plane.}
 	\subsection{Newton's Second Law for A Particle}
-	The equations of motion are first derived using Newton's Second Law for a Particle. Newton's Second Law for a particle is represented by
+	Newton's second law for a particle is represented by
 	\begin{align}
 		\sum{F_{P}} = m_{P} * a_{P}. \label{newton}
 	\end{align}
@@ -133,5 +133,51 @@
 		\caption{Free Body Diagram}
 		\label{fig:FBD}
 	\end{figure}
+
+	\subsection{Conversion to First-Order Equations}
+	To re-write the two second-order equations into first four first-order equations, the following substitutions can be made:
+	\begin{align}
+		\dot{r}       &= v_r,     \label{vr} \\
+		r\dot{\theta} &= v_\theta,  \nonumber \\
+		\dot{\theta}  &= \frac{v_\theta}{r}. \label{vtheta}
+	\end{align}
+	Then, taking the derivatives of \(r\) and \(\theta\) of equations \ref{vr} and \ref{vtheta}, respectively, we obtain:
+	\begin{align}
+		\ddot{r}      &= \dot{v}_r,  \label{rddot} \\
+		\ddot{\theta} &= \frac{\dot{v}_{\theta}r - v_{\theta}\dot{r}}{r^2}. \label{thetaddot}
+	\end{align}
+	After substituting equations \ref{vr}, \ref{vtheta}, \ref{rddot}, and \ref{thetaddot} into equations \ref{eom1} and \ref{eom2}, two first-order equations are derived as:
+	\begin{align}
+		\dot{v}_r     &= \frac{v^2_{\theta}r}{r^2} - \frac{\mu}{r^2} + \frac{T\sin(\beta)}{m},                      \nonumber \\
+		\dot{v}_r     &= \frac{v^2_{\theta}}{r} - \frac{\mu}{r^2} + \frac{T\sin(\beta)}{m},                        \label{vrdot}
+	\end{align}
+	and,
+	\begin{align}
+		\frac{\dot{v}_{\theta}r - v_{\theta}v_r}{r^2} &= -\frac{2v_{\theta}v_r}{r^2}   + \frac{T\cos(\beta)}{mr},   \nonumber\\
+		\dot{v}_{\theta}r - v_{\theta}v_r &= -\frac{2v_{\theta}v_{r}r^2}{r^2}   + \frac{T\cos(\beta)r^2}{mr},       \nonumber\\
+		\dot{v}_\theta &= -\frac{2v_{\theta}v_{r}}{r}   + \frac{T\cos(\beta)}{m} + \frac{v_{\theta}v_r}{r},        \nonumber\\
+		\dot{v}_\theta &= -\frac{v_{\theta}v_{r}}{r}   + \frac{T\cos(\beta)}{m} \label{vthetadot}.
+	\end{align}
+	Next, a fifth first-order equation is given as
+	\begin{align}
+		\dot{m} &= -\frac{T}{v_e}. \label{massflowrate}
+	\end{align}
+	The five first-order differential equations are listed below:
+	\begin{align*}
+		\dot{r}       &= v_r,     \\
+		\dot{\theta}  &= \frac{v_\theta}{r},  \\ 
+	    \dot{v}_r     &= \frac{v^2_{\theta}}{r} - \frac{\mu}{r^2} + \frac{T\sin(\beta)}{m},       \\
+		\dot{v}_\theta &= -\frac{v_{\theta}v_{r}}{r}   + \frac{T\cos(\beta)}{m}, \\
+		\dot{m} &= -\frac{T}{v_e}.
+	\end{align*}
+
+\section{Formulation of Optimal Control Problem}
+There are two objectives for the optimal control problem. The first objective is to minimize the time to transfer from an initial circular orbit to a final circular orbit. The second objective is to maximize the terminal mass when transferring from an initial circular orbit to a final circular orbit.  Below is an overview of the problem:
+\begin{align*}
+	\mathrm{Objective \ 1}:& \quad \min\ t_f \\
+	\mathrm{Objective \ 2}:& \quad \max\ m(t_f) \\
+	\mathrm{State}:&     \quad r(t), \theta(t), v_r(t), v_\theta(t), m(t) \\
+	\mathrm{Control}:&   \quad \beta(t), T(t)
+\end{align*}
 
 \end{document}

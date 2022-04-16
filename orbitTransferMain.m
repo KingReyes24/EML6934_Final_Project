@@ -24,22 +24,32 @@
 % -------------------------------------------------- %
 % BEGIN: DO NOT ALTER THE FOLLOWING LINES OF CODE!!! %
 % -------------------------------------------------- %
-global igrid CONSTANTS psStuff nstates ncontrols npaths
+global igrid CONSTANTS psStuff nstates ncontrols npaths path_constraint maximize_mass
 % -------------------------------------------------- %
 % END:   DO NOT ALTER THE FOLLOWING LINES OF CODE!!! %
 % -------------------------------------------------- %
 path = 'C:\Users\elias\Documents\UF_Classes\EML6934\Final_Project\EML6934_Final_Project';
 addpath(genpath(path))
 
+% Set polynomial degree and number of intervals
+N              = 4; % number of polynomial degree
+numIntervals   = 32; % number of intervals
+path_constraint= 1; % is there a path contraint?
+maximize_mass  = 1; % maximize mass at tf
+% set gloabl constants
 CONSTANTS.MU = 1;
 CONSTANTS.m0 = 1;
-% CONSTANTS.mdot = 0.0749;
-% CONSTANTS.T = 0.1405;
 CONSTANTS.ve = 1.8658344;
-nstates      = 5;
-ncontrols    = 3;
-npaths       = 1;
-
+% set number of states 
+nstates = 5;
+% set number of controls and paths
+if path_constraint
+    ncontrols = 3;
+    npaths    = 1;
+else
+    ncontrols = 2;
+    npaths    = 0;
+end
 % Bounds on State and Control
 r0 = 1;   theta0 = 0; vr0 = 0; vtheta0 = 1; m0 = 1;
 rf = 1.5;          vrf    = 0; vthetaf = sqrt(1/rf);  
@@ -49,15 +59,17 @@ thetamin  = 0;    thetamax  = 4*pi;
 vrmin     = -10;  vrmax     = 10;
 vthetamin = -10;  vthetamax = 10;
 mmin      = 0.1;  mmax      = m0;
-u1min     = -10;  u1max     = 10;
-u2min     = -10;  u2max     = 10;
-u3min     = 0;    u3max     = 0.1405;
 t0min     = 0;    t0max     = 0;
 tfmin     = 0;    tfmax     = 5;
-
-% Set polynomial degree and number of intervals
-N = 4;
-numIntervals = 32;
+if path_constraint
+    u1min     = -10;  u1max     = 10;
+    u2min     = -10;  u2max     = 10;
+    u3min     = 0;    u3max     = 0.1405;
+else
+    u1min     = -pi;  u1max     = pi;
+    u2min     = 0;    u2max     = 0;
+    u3min     = 0;    u3max     = 0.1405;
+end
 
 % Create Leguandre Gauss Points
 meshPoints  = linspace(-1,1,numIntervals+1).';  
@@ -98,15 +110,24 @@ zu2max = u2max*ones(length(tau)-1,1);
 zu3min = u3min*ones(length(tau)-1,1);
 zu3max = u3max*ones(length(tau)-1,1);
 
-zmin = [zrmin; zthetamin; zvrmin; zvthetamin; zmmin; zu1min; zu2min; zu3min; t0min; tfmin];
-zmax = [zrmax; zthetamax; zvrmax; zvthetamax; zmmax; zu1max; zu2max; zu3max; t0max; tfmax];
-
+if path_constraint
+    zmin = [zrmin; zthetamin; zvrmin; zvthetamin; zmmin; zu1min; zu2min; zu3min; t0min; tfmin];
+    zmax = [zrmax; zthetamax; zvrmax; zvthetamax; zmmax; zu1max; zu2max; zu3max; t0max; tfmax];
+else
+    zmin = [zrmin; zthetamin; zvrmin; zvthetamin; zmmin; zu1min; zu3min; t0min; tfmin];
+    zmax = [zrmax; zthetamax; zvrmax; zvthetamax; zmmax; zu1max; zu3max; t0max; tfmax];
+end
 % Set the bounds on the NLP constraints
 % There are NSTATES sets of defect constraints.
 defectMin = zeros(nstates*(length(tau)-1),1);
 defectMax = zeros(nstates*(length(tau)-1),1);
-% There is one path constraint
-pathMin = ones(length(tau)-1,1); pathMax = ones(length(tau)-1,1);
+if path_constraint 
+    % There is a path constraint
+    pathMin = ones(length(tau)-1,1); pathMax = ones(length(tau)-1,1);
+else
+    % No path constraint
+    pathMin = []; pathMax = [];
+end
 % I dont believe there is nonlinear event constraint
 eventMin = [];   eventMax = [];
 objMin   = -inf; objMax   = inf;
@@ -119,12 +140,18 @@ thetaguess  = linspace(theta0,theta0,NLGR+1).';
 vrguess     = linspace(vr0,vrf,NLGR+1).';
 vthetaguess = linspace(vtheta0,vtheta0,NLGR+1).';
 mguess      = linspace(m0,m0,NLGR+1).';
-u1guess     = linspace(1,1,NLGR).';
-u2guess     = linspace(0,0,NLGR).';
 u3guess     = linspace(u3min,u3max,NLGR).';
 t0guess     = 0;
 tfguess     = 3.5;
-z0 = [rguess;thetaguess;vrguess;vthetaguess;mguess;u1guess;u2guess;u3guess;t0guess;tfguess];
+
+if path_constraint
+    u1guess = linspace(1,1,NLGR).';
+    u2guess = linspace(0,0,NLGR).';
+    z0 = [rguess;thetaguess;vrguess;vthetaguess;mguess;u1guess;u2guess;u3guess;t0guess;tfguess];
+else
+    u1guess = linspace(u1min,u1max,NLGR).';
+    z0 = [rguess;thetaguess;vrguess;vthetaguess;mguess;u1guess;u3guess;t0guess;tfguess];
+end
 
 %-----------------------------------------------------------------%
 % Generate derivatives and sparsity pattern using Adigator        %
@@ -189,9 +216,14 @@ vr     = z(2*(NLGR+1)+1:3*(NLGR+1));
 vtheta = z(3*(NLGR+1)+1:4*(NLGR+1));
 m      = z(4*(NLGR+1)+1:5*(NLGR+1));
 u1     = z(5*(NLGR+1)+1:5*(NLGR+1)+NLGR);
-u2     = z(5*(NLGR+1)+NLGR+1:5*(NLGR+1)+2*NLGR);
-u3     = z(5*(NLGR+1)+2*NLGR+1:5*(NLGR+1)+3*NLGR);
-alpha  = mod(atan2(u1,u2),2*pi)*180/pi;
+if path_constraint
+    u2 = z(5*(NLGR+1)+NLGR+1:5*(NLGR+1)+2*NLGR);
+    u3 = z(5*(NLGR+1)+2*NLGR+1:5*(NLGR+1)+3*NLGR);
+    alpha  = mod(atan2(u1,u2),2*pi)*180/pi;
+else
+    u3 = z(5*(NLGR+1)+NLGR+1:5*(NLGR+1)+2*NLGR);
+    alpha = mod(u1,2*pi)*180/pi;
+end
 t0     = z(end-1);
 tf     = z(end);
 t      = (tf-t0)*(tau+1)/2+t0;
@@ -216,6 +248,17 @@ costateF = D(:,end).'*multipliersDefects;
 costate = [costateLGR; costateF];    
 lamr = costate(:,1); lamtheta = costate(:,2);
 lamvr = costate(:,3); lamvtheta = costate(:,4);
+
+%-----------------------------------------------------------------%
+% Get planer coordinates
+%-----------------------------------------------------------------%
+x_transfer  = r.*cos(theta);
+y_transfer  = r.*sin(theta);
+theta_orbit = linspace(0,2*pi,100);
+x_orbit_1   = r0*cos(theta_orbit);
+y_orbit_1   = r0*sin(theta_orbit);
+x_orbit_2   = rf*cos(theta_orbit);
+y_orbit_2   = rf*sin(theta_orbit);
 
 %-------------%
 % Plot Results 
@@ -266,24 +309,26 @@ set(yl,'FontSize',18);
 set(gca,'FontName','Times','FontSize',18);
 grid on;
 
-figure(3);
-subplot(1,2,1);
-plot(tLGR,u1,'-o');
-xl = xlabel('$t$','Interpreter','LaTeX');
-yl = ylabel('$u_1(t)$','Interpreter','LaTeX');
-set(xl,'FontSize',18);
-set(yl,'FontSize',18);
-set(gca,'FontName','Times','FontSize',18);
-grid on;
+if path_constraint 
+    figure(3);
+    subplot(1,2,1);
+    plot(tLGR,u1,'-o');
+    xl = xlabel('$t$','Interpreter','LaTeX');
+    yl = ylabel('$u_1(t)$','Interpreter','LaTeX');
+    set(xl,'FontSize',18);
+    set(yl,'FontSize',18);
+    set(gca,'FontName','Times','FontSize',18);
+    grid on;
 
-subplot(1,2,2);
-plot(tLGR,u2,'-o');
-xl = xlabel('$t$','Interpreter','LaTeX');
-yl = ylabel('$u_2(t)$','Interpreter','LaTeX');
-set(xl,'FontSize',18);
-set(yl,'FontSize',18);
-set(gca,'FontName','Times','FontSize',18);
-grid on;
+    subplot(1,2,2);
+    plot(tLGR,u2,'-o');
+    xl = xlabel('$t$','Interpreter','LaTeX');
+    yl = ylabel('$u_2(t)$','Interpreter','LaTeX');
+    set(xl,'FontSize',18);
+    set(yl,'FontSize',18);
+    set(gca,'FontName','Times','FontSize',18);
+    grid on;
+end
 
 figure(4);
 subplot(2,2,1);
@@ -333,3 +378,21 @@ legend('r(t)','$\theta(t)$','vr(t)','v$\theta(t)$','m(t)','Interpreter','LaTeX')
 set(gcf,'color','white')
 set(gca,'fontweight','bold','fontsize',10)
 title('States for trajectory that minimized fuel consumption')
+
+figure; hold on; grid minor
+plot(x_orbit_1,y_orbit_1)
+plot(x_orbit_2,y_orbit_2)
+plot(x_transfer,y_transfer)
+set(gca,'fontweight','bold','fontsize',10)
+set(gcf,'color','white')
+legend('Initial Orbit','Final Orbit','Orbit Transfer')
+axis equal
+title('Orbit Transfer Overview')
+
+figure; hold on; grid minor
+plot(tLGR,u1,'-o');
+set(gca,'fontweight','bold','fontsize',10)
+set(gcf,'color','white')
+% legend('Initial Orbit','Final Orbit','Orbit Transfer')
+axis equal
+title('Thrust')

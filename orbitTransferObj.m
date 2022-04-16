@@ -1,7 +1,7 @@
 function obj = orbitTransferObj(z)
 % Computes the objective function of the problem
 
-global psStuff nstates ncontrols CONSTANTS       
+global psStuff nstates ncontrols maximize_mass    
 
 %-----------------------------------------------------------------%
 %         Extract the constants used in the problem.              %
@@ -24,16 +24,14 @@ D = psStuff.D; tau = psStuff.tau; w = psStuff.w;
 %    - the final time                                             %
 %-----------------------------------------------------------------%
 N = length(tau)-1;
-stateIndices = 1:nstates*(N+1);
+stateIndices   = 1:nstates*(N+1);
 controlIndices = (nstates*(N+1)+1):(nstates*(N+1)+ncontrols*N);
-t0Index = controlIndices(end)+1;
-tfIndex = t0Index+1;
+t0Index     = controlIndices(end)+1;
+tfIndex     = t0Index+1;
 stateVector = z(stateIndices);
-controlVector = z(controlIndices);
-t0 = z(t0Index);
+% controlVector = z(controlIndices);
+% t0 = z(t0Index);
 tf = z(tfIndex);
-t = (tf-t0)*(tau+1)/2+t0;
-tLGR = t(1:end-1);
 
 %-----------------------------------------------------------------%
 % Reshape the state and control parts of the NLP decision vector  %
@@ -48,38 +46,28 @@ tLGR = t(1:end-1);
 % only the N LGR points.  Finally, in the Radau pseudospectral    %
 % method, the control is approximated at only the N LGR points.   %
 %-----------------------------------------------------------------%
-statePlusEnd   = reshape(stateVector,N+1,nstates);
-stateLGR = statePlusEnd(1:end-1,:);
-control = reshape(controlVector,N,ncontrols);
+statePlusEnd = reshape(stateVector,N+1,nstates);
+stateLGR     = statePlusEnd(1:end-1,:);
+% control = reshape(controlVector,N,ncontrols);
 
 %-----------------------------------------------------------------%
 % Identify the components of the state column-wise from stateLGR. % 
 %-----------------------------------------------------------------%
-r      = stateLGR(:,1);
-theta  = stateLGR(:,1);
-vr     = stateLGR(:,3);
-vtheta = stateLGR(:,4);
-m      = stateLGR(:,5);
-u1     = control(:,1);
-u2     = control(:,2);
-u3     = control(:,3);
+% r      = stateLGR(:,1);
+% theta  = stateLGR(:,1);
+% vr     = stateLGR(:,3);
+% vtheta = stateLGR(:,4);
 
-%-----------------------------------------------------------------%
-% The quantity STATEF is the value of the state at the final      %
-% time, tf, which corresponds to the state at $\tau=1$.           %
-%-----------------------------------------------------------------%
-% stateF = statePlusEnd(end,:);
-%-----------------------------------------------------------------%
-% The orbit-raising problem contains one nonlinear boundary       %
-% condition $\sqrt{mu/r(t_f)-v_\theta(t_f) = 0$.  Because $r(t)$  %
-% and $v_\theta(t)$ are the first and fourth components of the    %
-% state, it is necessary to extract stateF(1) and stateF(4) in    %
-% order to compute this boundary condition function.              %
-%-----------------------------------------------------------------%
-% rF = stateF(1);
 
 % Cost Function
-J   = tf;
+% minizing time or maximizing mass
+if maximize_mass
+    m = stateLGR(:,5);
+    J = -m(end);
+else
+    J = tf;
+end
+
 obj = J;
 
 end
