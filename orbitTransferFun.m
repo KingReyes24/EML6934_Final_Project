@@ -71,6 +71,7 @@ if path_constraint
     u3 = control(:,3);
 else
     u1 = control(:,1);
+    u2 = 0;
     u3 = control(:,2);
 end
 %-----------------------------------------------------------------%
@@ -136,9 +137,13 @@ defects = diffeqLHS-(tf-t0)*diffeqRHS/2;
 
 %-----------------------------------------------------------------%
 % Construct the path constraints at the N LGR points.             %
+% Reshape the path contraints into a column vector.               % 
 %-----------------------------------------------------------------%
 if path_constraint 
     paths = u1.^2+u2.^2;
+    paths = reshape(paths,N*npaths,1);
+else
+    paths = [];
 end
 % paths = u1.^2+u2.^2;
 
@@ -148,19 +153,9 @@ end
 defects = reshape(defects,N*nstates,1);
 
 %-----------------------------------------------------------------%
-% Reshape the defect contraints into a column vector.             % 
-%-----------------------------------------------------------------%
-if path_constraint 
-    paths = reshape(paths,N*npaths,1);
-end
-
-%-----------------------------------------------------------------%
 % Construct the objective function plus constraint vector.        %
 %-----------------------------------------------------------------%
-if path_constraint 
-    C = [tf;defects;paths];
-else
-    C = [tf;defects];    
-end 
-  
+
+C = [tf;defects;paths];
+
 

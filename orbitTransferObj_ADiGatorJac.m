@@ -16,7 +16,7 @@ if isempty(ADiGator_orbitTransferObj_ADiGatorJac); ADiGator_LoadData(); end
 Gator1Data = ADiGator_orbitTransferObj_ADiGatorJac.orbitTransferObj_ADiGatorJac.Gator1Data;
 % ADiGator Start Derivative Computations
 %User Line: % Computes the objective function of the problem
-global psStuff nstates ncontrols CONSTANTS 
+global psStuff nstates ncontrols maximize_mass 
 %User Line: global
 %User Line: %-----------------------------------------------------------------%
 %User Line: %         Extract the constants used in the problem.              %
@@ -47,7 +47,7 @@ N.f = cada1f1 - 1;
 cada1f1 = N.f + 1;
 cada1f2 = nstates*cada1f1;
 stateIndices.f = 1:cada1f2;
-%User Line: stateIndices = 1:nstates*(N+1);
+%User Line: stateIndices   = 1:nstates*(N+1);
 cada1f1 = N.f + 1;
 cada1f2 = nstates*cada1f1;
 cada1f3 = cada1f2 + 1;
@@ -60,46 +60,17 @@ controlIndices.f = cada1f3:cada1f7;
 cada1f1 = length(controlIndices.f);
 cada1f2 = controlIndices.f(cada1f1);
 t0Index.f = cada1f2 + 1;
-%User Line: t0Index = controlIndices(end)+1;
+%User Line: t0Index     = controlIndices(end)+1;
 tfIndex.f = t0Index.f + 1;
-%User Line: tfIndex = t0Index+1;
+%User Line: tfIndex     = t0Index+1;
 stateVector.dz0 = z.dz0(Gator1Data.Index1);
 stateVector.f = z.f(stateIndices.f);
 %User Line: stateVector = z(stateIndices);
-controlVector.dz0 = z.dz0(Gator1Data.Index2);
-controlVector.f = z.f(controlIndices.f);
-%User Line: controlVector = z(controlIndices);
-t0.dz0 = z.dz0(1030);
-t0.f = z.f(t0Index.f);
-%User Line: t0 = z(t0Index);
+%User Line: % controlVector = z(controlIndices);
+%User Line: % t0 = z(t0Index);
 tf.dz0 = z.dz0(1031);
 tf.f = z.f(tfIndex.f);
 %User Line: tf = z(tfIndex);
-cada1td1 = zeros(2,1);
-cada1td1(2) = tf.dz0;
-cada1td1(1) = cada1td1(1) + -t0.dz0;
-cada1f1dz0 = cada1td1;
-cada1f1 = tf.f - t0.f;
-cada1f2 = tau + 1;
-cada1tempdz0 = cada1f1dz0(Gator1Data.Index3);
-cada1tf1 = cada1f2(Gator1Data.Index5);
-cada1f3dz0 = cada1tf1(:).*cada1tempdz0(Gator1Data.Index4);
-cada1f3 = cada1f1*cada1f2;
-cada1f4dz0 = cada1f3dz0./2;
-cada1f4 = cada1f3/2;
-cada1tempdz0 = t0.dz0(Gator1Data.Index6);
-cada1td1 = zeros(257,1);
-cada1td1(Gator1Data.Index7) = cada1f4dz0;
-cada1td1(Gator1Data.Index8) = cada1td1(Gator1Data.Index8) + cada1tempdz0;
-t.dz0 = cada1td1;
-t.f = cada1f4 + t0.f;
-%User Line: t = (tf-t0)*(tau+1)/2+t0;
-cada1f1 = length(t.f);
-cada1f2 = cada1f1 - 1;
-cada1f3 = 1:cada1f2;
-tLGR.dz0 = t.dz0(Gator1Data.Index9);
-tLGR.f = t.f(cada1f3);
-%User Line: tLGR = t(1:end-1);
 %User Line: %-----------------------------------------------------------------%
 %User Line: % Reshape the state and control parts of the NLP decision vector  %
 %User Line: % to matrices of sizes (N+1) by nstates and (N+1) by ncontrols,   %
@@ -116,63 +87,33 @@ tLGR.f = t.f(cada1f3);
 cada1f1 = N.f + 1;
 statePlusEnd.dz0 = stateVector.dz0;
 statePlusEnd.f = reshape(stateVector.f,cada1f1,nstates);
-%User Line: statePlusEnd   = reshape(stateVector,N+1,nstates);
+%User Line: statePlusEnd = reshape(stateVector,N+1,nstates);
 cada1f1 = size(statePlusEnd.f,1);
 cada1f2 = cada1f1 - 1;
 cada1f3 = 1:cada1f2;
-stateLGR.dz0 = statePlusEnd.dz0(Gator1Data.Index10);
+stateLGR.dz0 = statePlusEnd.dz0(Gator1Data.Index2);
 stateLGR.f = statePlusEnd.f(cada1f3,:);
-%User Line: stateLGR = statePlusEnd(1:end-1,:);
-control.dz0 = controlVector.dz0;
-control.f = reshape(controlVector.f,N.f,ncontrols);
-%User Line: control = reshape(controlVector,N,ncontrols);
+%User Line: stateLGR     = statePlusEnd(1:end-1,:);
+%User Line: % control = reshape(controlVector,N,ncontrols);
 %User Line: %-----------------------------------------------------------------%
 %User Line: % Identify the components of the state column-wise from stateLGR. %
 %User Line: %-----------------------------------------------------------------%
-r.dz0 = stateLGR.dz0(Gator1Data.Index11);
-r.f = stateLGR.f(:,1);
-%User Line: r      = stateLGR(:,1);
-theta.dz0 = stateLGR.dz0(Gator1Data.Index12);
-theta.f = stateLGR.f(:,1);
-%User Line: theta  = stateLGR(:,1);
-vr.dz0 = stateLGR.dz0(Gator1Data.Index13);
-vr.f = stateLGR.f(:,3);
-%User Line: vr     = stateLGR(:,3);
-vtheta.dz0 = stateLGR.dz0(Gator1Data.Index14);
-vtheta.f = stateLGR.f(:,4);
-%User Line: vtheta = stateLGR(:,4);
-m.dz0 = stateLGR.dz0(Gator1Data.Index15);
-m.f = stateLGR.f(:,5);
-%User Line: m      = stateLGR(:,5);
-u1.dz0 = control.dz0(Gator1Data.Index16);
-u1.f = control.f(:,1);
-%User Line: u1     = control(:,1);
-u2.dz0 = control.dz0(Gator1Data.Index17);
-u2.f = control.f(:,2);
-%User Line: u2     = control(:,2);
-u3.dz0 = control.dz0(Gator1Data.Index18);
-u3.f = control.f(:,3);
-%User Line: u3     = control(:,3);
-%User Line: %-----------------------------------------------------------------%
-%User Line: % The quantity STATEF is the value of the state at the final      %
-%User Line: % time, tf, which corresponds to the state at $\tau=1$.           %
-%User Line: %-----------------------------------------------------------------%
-%User Line: % stateF = statePlusEnd(end,:);
-%User Line: %-----------------------------------------------------------------%
-%User Line: % The orbit-raising problem contains one nonlinear boundary       %
-%User Line: % condition $\sqrt{mu/r(t_f)-v_\theta(t_f) = 0$.  Because $r(t)$  %
-%User Line: % and $v_\theta(t)$ are the first and fourth components of the    %
-%User Line: % state, it is necessary to extract stateF(1) and stateF(4) in    %
-%User Line: % order to compute this boundary condition function.              %
-%User Line: %-----------------------------------------------------------------%
-%User Line: % rF = stateF(1);
+%User Line: % r      = stateLGR(:,1);
+%User Line: % theta  = stateLGR(:,1);
+%User Line: % vr     = stateLGR(:,3);
+%User Line: % vtheta = stateLGR(:,4);
 %User Line: % Cost Function
-J.dz0 = tf.dz0; J.f = tf.f;
-%User Line: J   = tf;
+%User Line: % minizing time or maximizing mass
+cadaconditional1 = maximize_mass;
+%User Line: cadaconditional1 = maximize_mass;
+    %User Line: m = stateLGR(:,5);
+    %User Line: J = -m(end);
+    J.dz0 = tf.dz0;     J.f = tf.f;
+    %User Line: J = tf;
 obj.dz0 = J.dz0; obj.f = J.f;
 %User Line: obj = J;
 obj.dz0_size = 1031;
-obj.dz0_location = Gator1Data.Index19;
+obj.dz0_location = Gator1Data.Index3;
 end
 
 
