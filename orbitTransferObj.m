@@ -62,7 +62,7 @@ stateLGR     = statePlusEnd(1:end-1,:);
 % Cost Function
 % minizing time or maximizing mass
 if maximize_mass
-    m = stateLGR(:,5);
+    m = statePlusEnd(:,5);
     J = -m(end);
 else
     J = tf;

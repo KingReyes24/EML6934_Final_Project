@@ -14,8 +14,8 @@
 
 function [Jac,Fun] = orbitTransferObj_Jac(z)
 gator_z.f = z;
-gator_z.dz0 = ones(1031,1);
+gator_z.dz0 = ones(49,1);
 obj = orbitTransferObj_ADiGatorJac(gator_z);
-Jac = zeros(1,1031);Jac(obj.dz0_location) = obj.dz0;
+Jac = zeros(1,49);Jac(obj.dz0_location) = obj.dz0;
 Fun = obj.f;
 end

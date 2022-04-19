@@ -68,7 +68,7 @@ stateVector.f = z.f(stateIndices.f);
 %User Line: stateVector = z(stateIndices);
 %User Line: % controlVector = z(controlIndices);
 %User Line: % t0 = z(t0Index);
-tf.dz0 = z.dz0(1031);
+tf.dz0 = z.dz0(49);
 tf.f = z.f(tfIndex.f);
 %User Line: tf = z(tfIndex);
 %User Line: %-----------------------------------------------------------------%
@@ -106,13 +106,13 @@ stateLGR.f = statePlusEnd.f(cada1f3,:);
 %User Line: % minizing time or maximizing mass
 cadaconditional1 = maximize_mass;
 %User Line: cadaconditional1 = maximize_mass;
-    %User Line: m = stateLGR(:,5);
+    %User Line: m = statePlusEnd(:,5);
     %User Line: J = -m(end);
     J.dz0 = tf.dz0;     J.f = tf.f;
     %User Line: J = tf;
 obj.dz0 = J.dz0; obj.f = J.f;
 %User Line: obj = J;
-obj.dz0_size = 1031;
+obj.dz0_size = 49;
 obj.dz0_location = Gator1Data.Index3;
 end
 

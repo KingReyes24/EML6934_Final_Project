@@ -6,7 +6,7 @@ function C = orbitTransferFun(z)
 % solver SNOPT.                                                   %
 %-----------------------------------------------------------------%
 %      DO NOT FOR ANY REASON ALTER THE LINE OF CODE BELOW!        %
-global psStuff nstates ncontrols npaths CONSTANTS path_constraint %
+global psStuff nstates ncontrols npaths CONSTANTS path_constraint maximize_mass%
 %      DO NOT FOR ANY REASON ALTER THE LINE OF CODE ABOVE!        %
 %-----------------------------------------------------------------%
 
@@ -155,7 +155,12 @@ defects = reshape(defects,N*nstates,1);
 %-----------------------------------------------------------------%
 % Construct the objective function plus constraint vector.        %
 %-----------------------------------------------------------------%
-
-C = [tf;defects;paths];
+if maximize_mass
+    m = statePlusEnd(:,5);
+    J = -m(end);
+else
+    J = tf;
+end
+C = [J;defects;paths];
 
 

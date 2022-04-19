@@ -32,16 +32,16 @@ path = 'C:\Users\elias\Documents\UF_Classes\EML6934\Final_Project\EML6934_Final_
 addpath(genpath(path))
 
 % save figures or create latex table?
-save_figs          = 0;
-create_latex_table = 0;
+save_figs          = 1;
+create_latex_table = 1;
 
 % Set path constrant and objective function descision
 path_constraint= 1; % is there a path contraint?
-maximize_mass  = 0; % maximize m(tf), else min tf
+maximize_mass  = 1; % maximize m(tf), else min tf
 
 % Set polynomial degrees and intervals to loop through
-n_list = [3 ]; %4];
-k_list = [16 ]; %4 8 16 32];
+n_list = [3 4];
+k_list = [2 4 8 16 32];
 
 % counter for table
 count  = 1;
@@ -60,19 +60,22 @@ for nIdx = 1:numel(n_list)
     CONSTANTS.ve = 1.8658344;
     % set number of states 
     nstates = 5;
+    
     % set number of controls and paths
     if path_constraint
-        ncontrols = 3;
+        ncontrols = 3; 
         npaths    = 1;
     else
         ncontrols = 2;
         npaths    = 0;
     end
+    
     % Bounds on State and Control
+    % thetaf and mf are free
     r0 = 1;   theta0 = 0; vr0 = 0; vtheta0 = 1; m0 = 1;
-    rf = 1.5;          vrf    = 0; vthetaf = sqrt(1/rf);  
+    rf = 1.5;             vrf = 0; vthetaf = sqrt(1/rf);  
 
-    rmin      = 0.5;  rmax      = 5;
+    rmin      = 1;    rmax      = 3;
     thetamin  = 0;    thetamax  = 4*pi;
     vrmin     = -10;  vrmax     = 10;
     vthetamin = -10;  vthetamax = 10;
@@ -80,14 +83,13 @@ for nIdx = 1:numel(n_list)
     t0min     = 0;    t0max     = 0;
     tfmin     = 0;    tfmax     = 100;
     if path_constraint
-        u1min     = -10;  u1max     = 10;
-        u2min     = -10;  u2max     = 10;
-        u3min     = 0;    u3max     = 0.1405;
+        u1min = -10;  u1max = 10;     % sin(beta)
+        u2min = -10;  u2max = 10;     % cos(beta)
+        u3min = 0;    u3max = 0.1405; % thrust
     else
-%         u1min     = -pi;  u1max     = pi;
-        u1min     = 0;  u1max       = 2*pi;
-        u2min     = 0;    u2max     = 0;
-        u3min     = 0;    u3max     = 0.1405;
+        u1min = -4*pi; u1max = 4*pi;  % beta
+        u2min = 0;     u2max = 0;     % empty
+        u3min = 0;     u3max = 0.1405;% thrust
     end
 
     % Create Leguandre Gauss Points
@@ -159,7 +161,7 @@ for nIdx = 1:numel(n_list)
     vrguess     = linspace(vr0,vrf,NLGR+1).';
     vthetaguess = linspace(vtheta0,vtheta0,NLGR+1).';
     mguess      = linspace(m0,m0,NLGR+1).';
-    u3guess     = linspace(u3min,u3max,NLGR).';
+    u3guess     = linspace(0,0,NLGR).';
     t0guess     = 0;
     tfguess     = 3.5;
 
@@ -168,7 +170,7 @@ for nIdx = 1:numel(n_list)
         u2guess = linspace(0,0,NLGR).';
         z0 = [rguess;thetaguess;vrguess;vthetaguess;mguess;u1guess;u2guess;u3guess;t0guess;tfguess];
     else
-        u1guess = linspace(u1min,u1max,NLGR).';
+        u1guess = linspace(0,0,NLGR).';
         z0 = [rguess;thetaguess;vrguess;vthetaguess;mguess;u1guess;u3guess;t0guess;tfguess];
     end
 
@@ -203,7 +205,7 @@ for nIdx = 1:numel(n_list)
     %-----------------------------------------------------------------%
     options.ipopt.tol = 1e-8;
     options.ipopt.linear_solver = 'ma57'; %'mumps';
-    options.ipopt.max_iter = 2000;
+    options.ipopt.max_iter = 8000;
     options.ipopt.mu_strategy = 'adaptive';
     options.ipopt.ma57_automatic_scaling = 'yes';
     options.ipopt.print_user_options = 'yes';
@@ -238,12 +240,11 @@ for nIdx = 1:numel(n_list)
     if path_constraint
         u2   = z(5*(NLGR+1)+NLGR+1:5*(NLGR+1)+2*NLGR);
         u3   = z(5*(NLGR+1)+2*NLGR+1:5*(NLGR+1)+3*NLGR);
-%          beta = mod(atan2(u1,u2),2*pi)*180/pi;
         beta = atan2(u1,u2);
         beta = unwrap(beta)*180/pi;
     else
         u3   = z(5*(NLGR+1)+NLGR+1:5*(NLGR+1)+2*NLGR);
-        beta = mod(u1,2*pi)*180/pi;
+        beta = unwrap(u1)*180/pi;
     end
     t0     = z(end-1);
     tf     = z(end);

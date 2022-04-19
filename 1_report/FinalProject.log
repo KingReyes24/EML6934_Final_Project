@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.6)  13 APR 2022 22:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.6)  18 APR 2022 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -403,7 +403,77 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `FinalProject.toc'.
 
- [1] (FinalProject.lof)
+ [1] (FinalProject.lof [2]
+Overfull \hbox (2.66702pt too wide) in paragraph at lines 67--67
+ [][] [][][]\OT1/cmr/m/n/10 Path con-strained con-trol that min-i-mized ter-mi-
+nal time ($\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 : 3 \OML/cmm/m/it/10 ; K \OT1/cmr
+/m/n/10 : 
+ []
+
+
+Overfull \hbox (2.66702pt too wide) in paragraph at lines 71--71
+ [][] [][][]\OT1/cmr/m/n/10 Path con-strained con-trol that min-i-mized ter-mi-
+nal time ($\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 : 3 \OML/cmm/m/it/10 ; K \OT1/cmr
+/m/n/10 : 
+ []
+
+
+Overfull \hbox (2.66702pt too wide) in paragraph at lines 75--75
+ [][] [][][]\OT1/cmr/m/n/10 Path con-strained con-trol that min-i-mized ter-mi-
+nal time ($\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 : 3 \OML/cmm/m/it/10 ; K \OT1/cmr
+/m/n/10 : 
+ []
+
+
+Overfull \hbox (2.66702pt too wide) in paragraph at lines 79--79
+ [][] [][][]\OT1/cmr/m/n/10 Path con-strained con-trol that min-i-mized ter-mi-
+nal time ($\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 : 3 \OML/cmm/m/it/10 ; K \OT1/cmr
+/m/n/10 : 
+ []
+
+
+Overfull \hbox (2.66702pt too wide) in paragraph at lines 83--83
+ [][] [][][]\OT1/cmr/m/n/10 Path con-strained con-trol that min-i-mized ter-mi-
+nal time ($\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 : 3 \OML/cmm/m/it/10 ; K \OT1/cmr
+/m/n/10 : 
+ []
+
+[3]
+Overfull \hbox (2.66702pt too wide) in paragraph at lines 87--87
+ [][] [][][]\OT1/cmr/m/n/10 Path con-strained con-trol that min-i-mized ter-mi-
+nal time ($\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 : 4 \OML/cmm/m/it/10 ; K \OT1/cmr
+/m/n/10 : 
+ []
+
+
+Overfull \hbox (2.66702pt too wide) in paragraph at lines 91--91
+ [][] [][][]\OT1/cmr/m/n/10 Path con-strained con-trol that min-i-mized ter-mi-
+nal time ($\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 : 4 \OML/cmm/m/it/10 ; K \OT1/cmr
+/m/n/10 : 
+ []
+
+
+Overfull \hbox (2.66702pt too wide) in paragraph at lines 95--95
+ [][] [][][]\OT1/cmr/m/n/10 Path con-strained con-trol that min-i-mized ter-mi-
+nal time ($\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 : 4 \OML/cmm/m/it/10 ; K \OT1/cmr
+/m/n/10 : 
+ []
+
+
+Overfull \hbox (2.66702pt too wide) in paragraph at lines 99--99
+ [][] [][][]\OT1/cmr/m/n/10 Path con-strained con-trol that min-i-mized ter-mi-
+nal time ($\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 : 4 \OML/cmm/m/it/10 ; K \OT1/cmr
+/m/n/10 : 
+ []
+
+
+Overfull \hbox (2.66702pt too wide) in paragraph at lines 103--103
+ [][] [][][]\OT1/cmr/m/n/10 Path con-strained con-trol that min-i-mized ter-mi-
+nal time ($\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 : 4 \OML/cmm/m/it/10 ; K \OT1/cmr
+/m/n/10 : 
+ []
+
+[4])
 \tf@lof=\write5
 \openout5 = `FinalProject.lof'.
 
@@ -411,18 +481,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@lot=\write6
 \openout6 = `FinalProject.lot'.
 
- [2]
-(FinalProject.lol)
+ [5] (FinalProject.lol)
 \tf@lol=\write7
 \openout7 = `FinalProject.lol'.
 
- [3]
-<midterm_schematic.png, id=60, 630.10406pt x 433.62pt>
+ [6]
+<midterm_schematic.png, id=446, 630.10406pt x 433.62pt>
 File: midterm_schematic.png Graphic file (type png)
 <use midterm_schematic.png>
 Package pdftex.def Info: midterm_schematic.png  used on input line 53.
 (pdftex.def)             Requested size: 535.59099pt x 368.57874pt.
-<rotation.png, id=62, 230.607pt x 171.477pt>
+<rotation.png, id=448, 230.607pt x 171.477pt>
 File: rotation.png Graphic file (type png)
 <use rotation.png>
 Package pdftex.def Info: rotation.png  used on input line 59.
@@ -432,7 +501,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--70
 
  []
 
-<beta.png, id=64, 164.25pt x 150.015pt>
+<beta.png, id=450, 164.25pt x 150.015pt>
 File: beta.png Graphic file (type png)
 <use beta.png>
 Package pdftex.def Info: beta.png  used on input line 77.
@@ -445,38 +514,3292 @@ been already used, duplicate ignored
 l.102 	\end{align}
                    [1] [2 <./midterm_schematic.png> <./rotation.png> <./beta.pn
 g>]
-<FBD.png, id=94, 105.996pt x 125.268pt>
+<FBD.png, id=479, 105.996pt x 125.268pt>
 File: FBD.png Graphic file (type png)
 <use FBD.png>
 Package pdftex.def Info: FBD.png  used on input line 132.
 (pdftex.def)             Requested size: 52.99786pt x 62.63383pt.
- [3] [4 <./FBD.png>] (FinalProject.aux)
+ [3] [4 <./FBD.png>]
+Package epstopdf Info: Source file: <states_N3_K2_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:27
+(epstopdf)                    size: 43275 bytes
+(epstopdf)             Output file: <states_N3_K2_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:39
+(epstopdf)                    size: 21607 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K2_C2_tf-e
+ps-converted-to.pdf states_N3_K2_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 204.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K2_C2_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K2_C2_tf-eps-converted-to.pdf, id=511, 360.34625pt x 306.14375pt>
+File: states_N3_K2_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K2_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K2_C2_tf-eps-converted-to.pdf  used on input
+ line 204.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+[5]
+Package epstopdf Info: Source file: <control_N3_K2_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:26
+(epstopdf)                    size: 40967 bytes
+(epstopdf)             Output file: <control_N3_K2_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:39
+(epstopdf)                    size: 16143 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K2_C2_tf-
+eps-converted-to.pdf control_N3_K2_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 210.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K2_C2_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K2_C2_tf-eps-converted-to.pdf, id=520, 415.5525pt x 291.0875pt>
+File: control_N3_K2_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K2_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K2_C2_tf-eps-converted-to.pdf  used on inpu
+t line 210.
+(pdftex.def)             Requested size: 311.6636pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N3_K2_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:27
+(epstopdf)                    size: 25952 bytes
+(epstopdf)             Output file: <orbit_N3_K2_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:40
+(epstopdf)                    size: 10875 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K2_C2_tf-ep
+s-converted-to.pdf orbit_N3_K2_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 216.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K2_C2_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K2_C2_tf-eps-converted-to.pdf, id=521, 355.3275pt x 295.1025pt>
+File: orbit_N3_K2_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K2_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K2_C2_tf-eps-converted-to.pdf  used on input 
+line 216.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K4_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:30
+(epstopdf)                    size: 46445 bytes
+(epstopdf)             Output file: <states_N3_K4_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:41
+(epstopdf)                    size: 25517 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K4_C2_tf-e
+ps-converted-to.pdf states_N3_K4_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 222.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K4_C2_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K4_C2_tf-eps-converted-to.pdf, id=522, 360.34625pt x 306.14375pt>
+File: states_N3_K4_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K4_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K4_C2_tf-eps-converted-to.pdf  used on input
+ line 222.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K4_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:30
+(epstopdf)                    size: 43547 bytes
+(epstopdf)             Output file: <control_N3_K4_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:41
+(epstopdf)                    size: 17688 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K4_C2_tf-
+eps-converted-to.pdf control_N3_K4_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 228.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K4_C2_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K4_C2_tf-eps-converted-to.pdf, id=523, 415.5525pt x 291.0875pt>
+File: control_N3_K4_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K4_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K4_C2_tf-eps-converted-to.pdf  used on inpu
+t line 228.
+(pdftex.def)             Requested size: 311.6636pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N3_K4_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:30
+(epstopdf)                    size: 26057 bytes
+(epstopdf)             Output file: <orbit_N3_K4_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:42
+(epstopdf)                    size: 10923 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K4_C2_tf-ep
+s-converted-to.pdf orbit_N3_K4_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 234.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K4_C2_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K4_C2_tf-eps-converted-to.pdf, id=524, 355.3275pt x 295.1025pt>
+File: orbit_N3_K4_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K4_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K4_C2_tf-eps-converted-to.pdf  used on input 
+line 234.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K8_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:33
+(epstopdf)                    size: 53553 bytes
+(epstopdf)             Output file: <states_N3_K8_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:42
+(epstopdf)                    size: 33223 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K8_C2_tf-e
+ps-converted-to.pdf states_N3_K8_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 240.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K8_C2_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K8_C2_tf-eps-converted-to.pdf, id=525, 360.34625pt x 306.14375pt>
+File: states_N3_K8_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K8_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K8_C2_tf-eps-converted-to.pdf  used on input
+ line 240.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K8_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:33
+(epstopdf)                    size: 45312 bytes
+(epstopdf)             Output file: <control_N3_K8_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:43
+(epstopdf)                    size: 20429 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K8_C2_tf-
+eps-converted-to.pdf control_N3_K8_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 246.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K8_C2_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K8_C2_tf-eps-converted-to.pdf, id=526, 415.5525pt x 291.0875pt>
+File: control_N3_K8_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K8_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K8_C2_tf-eps-converted-to.pdf  used on inpu
+t line 246.
+(pdftex.def)             Requested size: 311.6636pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N3_K8_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:34
+(epstopdf)                    size: 26258 bytes
+(epstopdf)             Output file: <orbit_N3_K8_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:44
+(epstopdf)                    size: 11018 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K8_C2_tf-ep
+s-converted-to.pdf orbit_N3_K8_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 252.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K8_C2_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K8_C2_tf-eps-converted-to.pdf, id=527, 355.3275pt x 295.1025pt>
+File: orbit_N3_K8_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K8_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K8_C2_tf-eps-converted-to.pdf  used on input 
+line 252.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K16_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:36
+(epstopdf)                    size: 65429 bytes
+(epstopdf)             Output file: <states_N3_K16_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:44
+(epstopdf)                    size: 47792 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K16_C2_tf-
+eps-converted-to.pdf states_N3_K16_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 258.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K16_C2_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K16_C2_tf-eps-converted-to.pdf, id=528, 360.34625pt x 306.14375pt>
+File: states_N3_K16_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K16_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K16_C2_tf-eps-converted-to.pdf  used on inpu
+t line 258.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K16_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:36
+(epstopdf)                    size: 48393 bytes
+(epstopdf)             Output file: <control_N3_K16_C2_tf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:12:45
+(epstopdf)                    size: 26206 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K16_C2_tf
+-eps-converted-to.pdf control_N3_K16_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 264.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K16_C2_tf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K16_C2_tf-eps-converted-to.pdf, id=529, 421.575pt x 291.0875pt>
+File: control_N3_K16_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K16_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K16_C2_tf-eps-converted-to.pdf  used on inp
+ut line 264.
+(pdftex.def)             Requested size: 316.18047pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N3_K16_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:36
+(epstopdf)                    size: 26671 bytes
+(epstopdf)             Output file: <orbit_N3_K16_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:46
+(epstopdf)                    size: 11214 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K16_C2_tf-e
+ps-converted-to.pdf orbit_N3_K16_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 270.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K16_C2_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K16_C2_tf-eps-converted-to.pdf, id=530, 355.3275pt x 295.1025pt>
+File: orbit_N3_K16_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K16_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K16_C2_tf-eps-converted-to.pdf  used on input
+ line 270.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K32_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:39
+(epstopdf)                    size: 90732 bytes
+(epstopdf)             Output file: <states_N3_K32_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:46
+(epstopdf)                    size: 82235 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K32_C2_tf-
+eps-converted-to.pdf states_N3_K32_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 276.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K32_C2_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K32_C2_tf-eps-converted-to.pdf, id=531, 360.34625pt x 306.14375pt>
+File: states_N3_K32_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K32_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K32_C2_tf-eps-converted-to.pdf  used on inpu
+t line 276.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K32_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:39
+(epstopdf)                    size: 60564 bytes
+(epstopdf)             Output file: <control_N3_K32_C2_tf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:12:47
+(epstopdf)                    size: 38161 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K32_C2_tf
+-eps-converted-to.pdf control_N3_K32_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 282.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K32_C2_tf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K32_C2_tf-eps-converted-to.pdf, id=532, 421.575pt x 291.0875pt>
+File: control_N3_K32_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K32_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K32_C2_tf-eps-converted-to.pdf  used on inp
+ut line 282.
+(pdftex.def)             Requested size: 316.18047pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N3_K32_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:40
+(epstopdf)                    size: 27483 bytes
+(epstopdf)             Output file: <orbit_N3_K32_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:48
+(epstopdf)                    size: 11593 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K32_C2_tf-e
+ps-converted-to.pdf orbit_N3_K32_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 288.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K32_C2_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K32_C2_tf-eps-converted-to.pdf, id=533, 355.3275pt x 295.1025pt>
+File: orbit_N3_K32_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K32_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K32_C2_tf-eps-converted-to.pdf  used on input
+ line 288.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K2_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:42
+(epstopdf)                    size: 45141 bytes
+(epstopdf)             Output file: <states_N4_K2_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:48
+(epstopdf)                    size: 22939 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K2_C2_tf-e
+ps-converted-to.pdf states_N4_K2_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 294.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K2_C2_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K2_C2_tf-eps-converted-to.pdf, id=534, 360.34625pt x 306.14375pt>
+File: states_N4_K2_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K2_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K2_C2_tf-eps-converted-to.pdf  used on input
+ line 294.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K2_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:42
+(epstopdf)                    size: 42981 bytes
+(epstopdf)             Output file: <control_N4_K2_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:49
+(epstopdf)                    size: 16697 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K2_C2_tf-
+eps-converted-to.pdf control_N4_K2_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 300.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K2_C2_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K2_C2_tf-eps-converted-to.pdf, id=535, 419.5675pt x 291.0875pt>
+File: control_N4_K2_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K2_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K2_C2_tf-eps-converted-to.pdf  used on inpu
+t line 300.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N4_K2_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:42
+(epstopdf)                    size: 25988 bytes
+(epstopdf)             Output file: <orbit_N4_K2_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:50
+(epstopdf)                    size: 10890 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K2_C2_tf-ep
+s-converted-to.pdf orbit_N4_K2_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 306.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K2_C2_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K2_C2_tf-eps-converted-to.pdf, id=536, 355.3275pt x 295.1025pt>
+File: orbit_N4_K2_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K2_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K2_C2_tf-eps-converted-to.pdf  used on input 
+line 306.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K4_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:45
+(epstopdf)                    size: 48538 bytes
+(epstopdf)             Output file: <states_N4_K4_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:50
+(epstopdf)                    size: 28071 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K4_C2_tf-e
+ps-converted-to.pdf states_N4_K4_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K4_C2_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K4_C2_tf-eps-converted-to.pdf, id=537, 360.34625pt x 306.14375pt>
+File: states_N4_K4_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K4_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K4_C2_tf-eps-converted-to.pdf  used on input
+ line 312.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K4_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:44
+(epstopdf)                    size: 44430 bytes
+(epstopdf)             Output file: <control_N4_K4_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:51
+(epstopdf)                    size: 18691 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K4_C2_tf-
+eps-converted-to.pdf control_N4_K4_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 318.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K4_C2_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K4_C2_tf-eps-converted-to.pdf, id=538, 419.5675pt x 291.0875pt>
+File: control_N4_K4_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K4_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K4_C2_tf-eps-converted-to.pdf  used on inpu
+t line 318.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N4_K4_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:45
+(epstopdf)                    size: 26121 bytes
+(epstopdf)             Output file: <orbit_N4_K4_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:52
+(epstopdf)                    size: 10958 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K4_C2_tf-ep
+s-converted-to.pdf orbit_N4_K4_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 324.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K4_C2_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K4_C2_tf-eps-converted-to.pdf, id=539, 355.3275pt x 295.1025pt>
+File: orbit_N4_K4_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K4_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K4_C2_tf-eps-converted-to.pdf  used on input 
+line 324.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K8_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:47
+(epstopdf)                    size: 57795 bytes
+(epstopdf)             Output file: <states_N4_K8_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:52
+(epstopdf)                    size: 38046 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K8_C2_tf-e
+ps-converted-to.pdf states_N4_K8_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 330.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K8_C2_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K8_C2_tf-eps-converted-to.pdf, id=540, 360.34625pt x 306.14375pt>
+File: states_N4_K8_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K8_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K8_C2_tf-eps-converted-to.pdf  used on input
+ line 330.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K8_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:47
+(epstopdf)                    size: 45794 bytes
+(epstopdf)             Output file: <control_N4_K8_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:53
+(epstopdf)                    size: 22328 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K8_C2_tf-
+eps-converted-to.pdf control_N4_K8_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 336.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K8_C2_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K8_C2_tf-eps-converted-to.pdf, id=541, 419.5675pt x 291.0875pt>
+File: control_N4_K8_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K8_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K8_C2_tf-eps-converted-to.pdf  used on inpu
+t line 336.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N4_K8_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:47
+(epstopdf)                    size: 26394 bytes
+(epstopdf)             Output file: <orbit_N4_K8_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:54
+(epstopdf)                    size: 11087 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K8_C2_tf-ep
+s-converted-to.pdf orbit_N4_K8_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 342.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K8_C2_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K8_C2_tf-eps-converted-to.pdf, id=542, 355.3275pt x 295.1025pt>
+File: orbit_N4_K8_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K8_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K8_C2_tf-eps-converted-to.pdf  used on input 
+line 342.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K16_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:50
+(epstopdf)                    size: 73885 bytes
+(epstopdf)             Output file: <states_N4_K16_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:54
+(epstopdf)                    size: 58215 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K16_C2_tf-
+eps-converted-to.pdf states_N4_K16_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 348.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K16_C2_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K16_C2_tf-eps-converted-to.pdf, id=543, 360.34625pt x 306.14375pt>
+File: states_N4_K16_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K16_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K16_C2_tf-eps-converted-to.pdf  used on inpu
+t line 348.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K16_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:50
+(epstopdf)                    size: 51990 bytes
+(epstopdf)             Output file: <control_N4_K16_C2_tf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:12:55
+(epstopdf)                    size: 30701 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K16_C2_tf
+-eps-converted-to.pdf control_N4_K16_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 354.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K16_C2_tf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K16_C2_tf-eps-converted-to.pdf, id=544, 419.5675pt x 291.0875pt>
+File: control_N4_K16_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K16_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K16_C2_tf-eps-converted-to.pdf  used on inp
+ut line 354.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N4_K16_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:51
+(epstopdf)                    size: 26941 bytes
+(epstopdf)             Output file: <orbit_N4_K16_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:56
+(epstopdf)                    size: 11343 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K16_C2_tf-e
+ps-converted-to.pdf orbit_N4_K16_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 360.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K16_C2_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K16_C2_tf-eps-converted-to.pdf, id=545, 355.3275pt x 295.1025pt>
+File: orbit_N4_K16_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K16_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K16_C2_tf-eps-converted-to.pdf  used on input
+ line 360.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K32_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:53
+(epstopdf)                    size: 107582 bytes
+(epstopdf)             Output file: <states_N4_K32_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:56
+(epstopdf)                    size: 103392 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K32_C2_tf-
+eps-converted-to.pdf states_N4_K32_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 366.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K32_C2_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K32_C2_tf-eps-converted-to.pdf, id=546, 360.34625pt x 306.14375pt>
+File: states_N4_K32_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K32_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K32_C2_tf-eps-converted-to.pdf  used on inpu
+t line 366.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K32_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:53
+(epstopdf)                    size: 65565 bytes
+(epstopdf)             Output file: <control_N4_K32_C2_tf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:12:57
+(epstopdf)                    size: 45157 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K32_C2_tf
+-eps-converted-to.pdf control_N4_K32_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 372.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K32_C2_tf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K32_C2_tf-eps-converted-to.pdf, id=547, 415.5525pt x 291.0875pt>
+File: control_N4_K32_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K32_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K32_C2_tf-eps-converted-to.pdf  used on inp
+ut line 372.
+(pdftex.def)             Requested size: 311.6636pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N4_K32_C2_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:08:54
+(epstopdf)                    size: 28042 bytes
+(epstopdf)             Output file: <orbit_N4_K32_C2_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:58
+(epstopdf)                    size: 11844 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K32_C2_tf-e
+ps-converted-to.pdf orbit_N4_K32_C2_tf.eps>
+(epstopdf)             \includegraphics on input line 378.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K32_C2_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K32_C2_tf-eps-converted-to.pdf, id=548, 355.3275pt x 295.1025pt>
+File: orbit_N4_K32_C2_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K32_C2_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K32_C2_tf-eps-converted-to.pdf  used on input
+ line 378.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+
+Overfull \hbox (16.19513pt too wide) in paragraph at lines 383--398
+[][] 
+ []
+
+[6 <./states_N3_K2_C2_tf-eps-converted-to.pdf>] [7 <./control_N3_K2_C2_tf-eps-c
+onverted-to.pdf> <./orbit_N3_K2_C2_tf-eps-converted-to.pdf>] [8 <./states_N3_K4
+_C2_tf-eps-converted-to.pdf> <./control_N3_K4_C2_tf-eps-converted-to.pdf>]
+[9 <./orbit_N3_K4_C2_tf-eps-converted-to.pdf> <./states_N3_K8_C2_tf-eps-convert
+ed-to.pdf>] [10 <./control_N3_K8_C2_tf-eps-converted-to.pdf> <./orbit_N3_K8_C2_
+tf-eps-converted-to.pdf>] [11 <./states_N3_K16_C2_tf-eps-converted-to.pdf> <./c
+ontrol_N3_K16_C2_tf-eps-converted-to.pdf>] [12 <./orbit_N3_K16_C2_tf-eps-conver
+ted-to.pdf> <./states_N3_K32_C2_tf-eps-converted-to.pdf>] [13 <./control_N3_K32
+_C2_tf-eps-converted-to.pdf> <./orbit_N3_K32_C2_tf-eps-converted-to.pdf>]
+[14 <./states_N4_K2_C2_tf-eps-converted-to.pdf> <./control_N4_K2_C2_tf-eps-conv
+erted-to.pdf>] [15 <./orbit_N4_K2_C2_tf-eps-converted-to.pdf> <./states_N4_K4_C
+2_tf-eps-converted-to.pdf>] [16 <./control_N4_K4_C2_tf-eps-converted-to.pdf> <.
+/orbit_N4_K4_C2_tf-eps-converted-to.pdf>] [17 <./states_N4_K8_C2_tf-eps-convert
+ed-to.pdf> <./control_N4_K8_C2_tf-eps-converted-to.pdf>] [18 <./orbit_N4_K8_C2_
+tf-eps-converted-to.pdf> <./states_N4_K16_C2_tf-eps-converted-to.pdf>] [19 <./c
+ontrol_N4_K16_C2_tf-eps-converted-to.pdf> <./orbit_N4_K16_C2_tf-eps-converted-t
+o.pdf>] [20 <./states_N4_K32_C2_tf-eps-converted-to.pdf> <./control_N4_K32_C2_t
+f-eps-converted-to.pdf>] [21 <./orbit_N4_K32_C2_tf-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <states_N3_K2_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:10
+(epstopdf)                    size: 44321 bytes
+(epstopdf)             Output file: <states_N3_K2_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:58
+(epstopdf)                    size: 22182 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K2_C2_mf-e
+ps-converted-to.pdf states_N3_K2_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 405.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K2_C2_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K2_C2_mf-eps-converted-to.pdf, id=856, 352.31625pt x 306.14375pt>
+File: states_N3_K2_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K2_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K2_C2_mf-eps-converted-to.pdf  used on input
+ line 405.
+(pdftex.def)             Requested size: 264.23653pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K2_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:10
+(epstopdf)                    size: 36623 bytes
+(epstopdf)             Output file: <control_N3_K2_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:12:59
+(epstopdf)                    size: 16042 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K2_C2_mf-
+eps-converted-to.pdf control_N3_K2_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 411.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K2_C2_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K2_C2_mf-eps-converted-to.pdf, id=857, 418.56375pt x 291.0875pt>
+File: control_N3_K2_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K2_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K2_C2_mf-eps-converted-to.pdf  used on inpu
+t line 411.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N3_K2_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:10
+(epstopdf)                    size: 25954 bytes
+(epstopdf)             Output file: <orbit_N3_K2_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:00
+(epstopdf)                    size: 10874 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K2_C2_mf-ep
+s-converted-to.pdf orbit_N3_K2_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 417.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K2_C2_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K2_C2_mf-eps-converted-to.pdf, id=858, 355.3275pt x 295.1025pt>
+File: orbit_N3_K2_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K2_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K2_C2_mf-eps-converted-to.pdf  used on input 
+line 417.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K4_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:27
+(epstopdf)                    size: 46554 bytes
+(epstopdf)             Output file: <states_N3_K4_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:00
+(epstopdf)                    size: 25831 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K4_C2_mf-e
+ps-converted-to.pdf states_N3_K4_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 423.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K4_C2_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K4_C2_mf-eps-converted-to.pdf, id=859, 353.32pt x 306.14375pt>
+File: states_N3_K4_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K4_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K4_C2_mf-eps-converted-to.pdf  used on input
+ line 423.
+(pdftex.def)             Requested size: 264.98935pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K4_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:26
+(epstopdf)                    size: 40072 bytes
+(epstopdf)             Output file: <control_N3_K4_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:01
+(epstopdf)                    size: 17561 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K4_C2_mf-
+eps-converted-to.pdf control_N3_K4_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 429.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K4_C2_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K4_C2_mf-eps-converted-to.pdf, id=860, 419.5675pt x 291.0875pt>
+File: control_N3_K4_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K4_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K4_C2_mf-eps-converted-to.pdf  used on inpu
+t line 429.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N3_K4_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:27
+(epstopdf)                    size: 26446 bytes
+(epstopdf)             Output file: <orbit_N3_K4_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:02
+(epstopdf)                    size: 10951 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K4_C2_mf-ep
+s-converted-to.pdf orbit_N3_K4_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 435.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K4_C2_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K4_C2_mf-eps-converted-to.pdf, id=861, 355.3275pt x 295.1025pt>
+File: orbit_N3_K4_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K4_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K4_C2_mf-eps-converted-to.pdf  used on input 
+line 435.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K8_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:31
+(epstopdf)                    size: 52380 bytes
+(epstopdf)             Output file: <states_N3_K8_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:02
+(epstopdf)                    size: 32645 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K8_C2_mf-e
+ps-converted-to.pdf states_N3_K8_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 441.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K8_C2_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K8_C2_mf-eps-converted-to.pdf, id=862, 352.31625pt x 306.14375pt>
+File: states_N3_K8_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K8_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K8_C2_mf-eps-converted-to.pdf  used on input
+ line 441.
+(pdftex.def)             Requested size: 264.23653pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K8_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:31
+(epstopdf)                    size: 41636 bytes
+(epstopdf)             Output file: <control_N3_K8_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:03
+(epstopdf)                    size: 20367 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K8_C2_mf-
+eps-converted-to.pdf control_N3_K8_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 447.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K8_C2_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K8_C2_mf-eps-converted-to.pdf, id=863, 418.56375pt x 291.0875pt>
+File: control_N3_K8_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K8_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K8_C2_mf-eps-converted-to.pdf  used on inpu
+t line 447.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N3_K8_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:31
+(epstopdf)                    size: 26315 bytes
+(epstopdf)             Output file: <orbit_N3_K8_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:04
+(epstopdf)                    size: 11036 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K8_C2_mf-ep
+s-converted-to.pdf orbit_N3_K8_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 453.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K8_C2_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K8_C2_mf-eps-converted-to.pdf, id=864, 355.3275pt x 295.1025pt>
+File: orbit_N3_K8_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K8_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K8_C2_mf-eps-converted-to.pdf  used on input 
+line 453.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K16_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:35
+(epstopdf)                    size: 67079 bytes
+(epstopdf)             Output file: <states_N3_K16_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:04
+(epstopdf)                    size: 46886 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K16_C2_mf-
+eps-converted-to.pdf states_N3_K16_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 459.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K16_C2_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K16_C2_mf-eps-converted-to.pdf, id=865, 350.30875pt x 306.14375pt>
+File: states_N3_K16_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K16_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K16_C2_mf-eps-converted-to.pdf  used on inpu
+t line 459.
+(pdftex.def)             Requested size: 262.73091pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K16_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:35
+(epstopdf)                    size: 50836 bytes
+(epstopdf)             Output file: <control_N3_K16_C2_mf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:13:05
+(epstopdf)                    size: 27174 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K16_C2_mf
+-eps-converted-to.pdf control_N3_K16_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 465.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K16_C2_mf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K16_C2_mf-eps-converted-to.pdf, id=866, 419.5675pt x 291.0875pt>
+File: control_N3_K16_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K16_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K16_C2_mf-eps-converted-to.pdf  used on inp
+ut line 465.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N3_K16_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:35
+(epstopdf)                    size: 26695 bytes
+(epstopdf)             Output file: <orbit_N3_K16_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:06
+(epstopdf)                    size: 11225 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K16_C2_mf-e
+ps-converted-to.pdf orbit_N3_K16_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 471.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K16_C2_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K16_C2_mf-eps-converted-to.pdf, id=867, 355.3275pt x 295.1025pt>
+File: orbit_N3_K16_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K16_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K16_C2_mf-eps-converted-to.pdf  used on input
+ line 471.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K32_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:38
+(epstopdf)                    size: 91964 bytes
+(epstopdf)             Output file: <states_N3_K32_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:06
+(epstopdf)                    size: 77472 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K32_C2_mf-
+eps-converted-to.pdf states_N3_K32_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 477.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K32_C2_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K32_C2_mf-eps-converted-to.pdf, id=868, 348.30125pt x 306.14375pt>
+File: states_N3_K32_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K32_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K32_C2_mf-eps-converted-to.pdf  used on inpu
+t line 477.
+(pdftex.def)             Requested size: 261.2253pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K32_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:38
+(epstopdf)                    size: 55563 bytes
+(epstopdf)             Output file: <control_N3_K32_C2_mf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:13:07
+(epstopdf)                    size: 38121 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K32_C2_mf
+-eps-converted-to.pdf control_N3_K32_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 483.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K32_C2_mf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K32_C2_mf-eps-converted-to.pdf, id=869, 419.5675pt x 291.0875pt>
+File: control_N3_K32_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K32_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K32_C2_mf-eps-converted-to.pdf  used on inp
+ut line 483.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N3_K32_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:38
+(epstopdf)                    size: 27573 bytes
+(epstopdf)             Output file: <orbit_N3_K32_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:08
+(epstopdf)                    size: 11624 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K32_C2_mf-e
+ps-converted-to.pdf orbit_N3_K32_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 489.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K32_C2_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K32_C2_mf-eps-converted-to.pdf, id=870, 355.3275pt x 295.1025pt>
+File: orbit_N3_K32_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K32_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K32_C2_mf-eps-converted-to.pdf  used on input
+ line 489.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K2_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:41
+(epstopdf)                    size: 45532 bytes
+(epstopdf)             Output file: <states_N4_K2_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:08
+(epstopdf)                    size: 23367 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K2_C2_mf-e
+ps-converted-to.pdf states_N4_K2_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 495.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K2_C2_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K2_C2_mf-eps-converted-to.pdf, id=871, 348.30125pt x 306.14375pt>
+File: states_N4_K2_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K2_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K2_C2_mf-eps-converted-to.pdf  used on input
+ line 495.
+(pdftex.def)             Requested size: 261.2253pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K2_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:41
+(epstopdf)                    size: 39017 bytes
+(epstopdf)             Output file: <control_N4_K2_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:09
+(epstopdf)                    size: 16648 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K2_C2_mf-
+eps-converted-to.pdf control_N4_K2_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 501.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K2_C2_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K2_C2_mf-eps-converted-to.pdf, id=872, 418.56375pt x 291.0875pt>
+File: control_N4_K2_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K2_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K2_C2_mf-eps-converted-to.pdf  used on inpu
+t line 501.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N4_K2_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:41
+(epstopdf)                    size: 25989 bytes
+(epstopdf)             Output file: <orbit_N4_K2_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:10
+(epstopdf)                    size: 10889 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K2_C2_mf-ep
+s-converted-to.pdf orbit_N4_K2_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 507.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K2_C2_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K2_C2_mf-eps-converted-to.pdf, id=873, 355.3275pt x 295.1025pt>
+File: orbit_N4_K2_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K2_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K2_C2_mf-eps-converted-to.pdf  used on input 
+line 507.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K4_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:49
+(epstopdf)                    size: 51080 bytes
+(epstopdf)             Output file: <states_N4_K4_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:10
+(epstopdf)                    size: 28336 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K4_C2_mf-e
+ps-converted-to.pdf states_N4_K4_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 513.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K4_C2_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K4_C2_mf-eps-converted-to.pdf, id=874, 350.30875pt x 306.14375pt>
+File: states_N4_K4_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K4_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K4_C2_mf-eps-converted-to.pdf  used on input
+ line 513.
+(pdftex.def)             Requested size: 262.73091pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K4_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:49
+(epstopdf)                    size: 36227 bytes
+(epstopdf)             Output file: <control_N4_K4_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:11
+(epstopdf)                    size: 18285 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K4_C2_mf-
+eps-converted-to.pdf control_N4_K4_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 519.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K4_C2_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K4_C2_mf-eps-converted-to.pdf, id=875, 421.575pt x 291.0875pt>
+File: control_N4_K4_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K4_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K4_C2_mf-eps-converted-to.pdf  used on inpu
+t line 519.
+(pdftex.def)             Requested size: 316.18047pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N4_K4_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:49
+(epstopdf)                    size: 26129 bytes
+(epstopdf)             Output file: <orbit_N4_K4_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:12
+(epstopdf)                    size: 10961 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K4_C2_mf-ep
+s-converted-to.pdf orbit_N4_K4_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 525.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K4_C2_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K4_C2_mf-eps-converted-to.pdf, id=876, 355.3275pt x 295.1025pt>
+File: orbit_N4_K4_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K4_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K4_C2_mf-eps-converted-to.pdf  used on input 
+line 525.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K8_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:52
+(epstopdf)                    size: 57274 bytes
+(epstopdf)             Output file: <states_N4_K8_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:12
+(epstopdf)                    size: 37232 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K8_C2_mf-e
+ps-converted-to.pdf states_N4_K8_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 531.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K8_C2_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K8_C2_mf-eps-converted-to.pdf, id=877, 352.31625pt x 306.14375pt>
+File: states_N4_K8_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K8_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K8_C2_mf-eps-converted-to.pdf  used on input
+ line 531.
+(pdftex.def)             Requested size: 264.23653pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K8_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:52
+(epstopdf)                    size: 41251 bytes
+(epstopdf)             Output file: <control_N4_K8_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:13
+(epstopdf)                    size: 22308 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K8_C2_mf-
+eps-converted-to.pdf control_N4_K8_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 537.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K8_C2_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K8_C2_mf-eps-converted-to.pdf, id=878, 419.5675pt x 291.0875pt>
+File: control_N4_K8_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K8_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K8_C2_mf-eps-converted-to.pdf  used on inpu
+t line 537.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N4_K8_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:52
+(epstopdf)                    size: 26446 bytes
+(epstopdf)             Output file: <orbit_N4_K8_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:13
+(epstopdf)                    size: 11093 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K8_C2_mf-ep
+s-converted-to.pdf orbit_N4_K8_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 543.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K8_C2_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K8_C2_mf-eps-converted-to.pdf, id=879, 355.3275pt x 295.1025pt>
+File: orbit_N4_K8_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K8_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K8_C2_mf-eps-converted-to.pdf  used on input 
+line 543.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K16_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:55
+(epstopdf)                    size: 74859 bytes
+(epstopdf)             Output file: <states_N4_K16_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:14
+(epstopdf)                    size: 55868 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K16_C2_mf-
+eps-converted-to.pdf states_N4_K16_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 549.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K16_C2_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K16_C2_mf-eps-converted-to.pdf, id=880, 352.31625pt x 306.14375pt>
+File: states_N4_K16_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K16_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K16_C2_mf-eps-converted-to.pdf  used on inpu
+t line 549.
+(pdftex.def)             Requested size: 264.23653pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K16_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:55
+(epstopdf)                    size: 49775 bytes
+(epstopdf)             Output file: <control_N4_K16_C2_mf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:13:15
+(epstopdf)                    size: 30735 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K16_C2_mf
+-eps-converted-to.pdf control_N4_K16_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 555.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K16_C2_mf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K16_C2_mf-eps-converted-to.pdf, id=881, 419.5675pt x 291.0875pt>
+File: control_N4_K16_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K16_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K16_C2_mf-eps-converted-to.pdf  used on inp
+ut line 555.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N4_K16_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:55
+(epstopdf)                    size: 26973 bytes
+(epstopdf)             Output file: <orbit_N4_K16_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:16
+(epstopdf)                    size: 11359 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K16_C2_mf-e
+ps-converted-to.pdf orbit_N4_K16_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 561.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K16_C2_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K16_C2_mf-eps-converted-to.pdf, id=882, 355.3275pt x 295.1025pt>
+File: orbit_N4_K16_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K16_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K16_C2_mf-eps-converted-to.pdf  used on input
+ line 561.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K32_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:58
+(epstopdf)                    size: 106717 bytes
+(epstopdf)             Output file: <states_N4_K32_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:16
+(epstopdf)                    size: 98522 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K32_C2_mf-
+eps-converted-to.pdf states_N4_K32_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 567.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K32_C2_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K32_C2_mf-eps-converted-to.pdf, id=883, 352.31625pt x 306.14375pt>
+File: states_N4_K32_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K32_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K32_C2_mf-eps-converted-to.pdf  used on inpu
+t line 567.
+(pdftex.def)             Requested size: 264.23653pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K32_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:58
+(epstopdf)                    size: 60409 bytes
+(epstopdf)             Output file: <control_N4_K32_C2_mf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:13:17
+(epstopdf)                    size: 45750 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K32_C2_mf
+-eps-converted-to.pdf control_N4_K32_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 573.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K32_C2_mf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K32_C2_mf-eps-converted-to.pdf, id=884, 419.5675pt x 291.0875pt>
+File: control_N4_K32_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K32_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K32_C2_mf-eps-converted-to.pdf  used on inp
+ut line 573.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <orbit_N4_K32_C2_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:09:58
+(epstopdf)                    size: 28108 bytes
+(epstopdf)             Output file: <orbit_N4_K32_C2_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:18
+(epstopdf)                    size: 11882 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K32_C2_mf-e
+ps-converted-to.pdf orbit_N4_K32_C2_mf.eps>
+(epstopdf)             \includegraphics on input line 579.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K32_C2_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K32_C2_mf-eps-converted-to.pdf, id=885, 355.3275pt x 295.1025pt>
+File: orbit_N4_K32_C2_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K32_C2_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K32_C2_mf-eps-converted-to.pdf  used on input
+ line 579.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+
+Overfull \hbox (21.19514pt too wide) in paragraph at lines 584--599
+[][] 
+ []
+
+[22] [23 <./states_N3_K2_C2_mf-eps-converted-to.pdf> <./control_N3_K2_C2_mf-eps
+-converted-to.pdf>] [24 <./orbit_N3_K2_C2_mf-eps-converted-to.pdf> <./states_N3
+_K4_C2_mf-eps-converted-to.pdf>] [25 <./control_N3_K4_C2_mf-eps-converted-to.pd
+f> <./orbit_N3_K4_C2_mf-eps-converted-to.pdf>] [26 <./states_N3_K8_C2_mf-eps-co
+nverted-to.pdf> <./control_N3_K8_C2_mf-eps-converted-to.pdf>] [27 <./orbit_N3_K
+8_C2_mf-eps-converted-to.pdf> <./states_N3_K16_C2_mf-eps-converted-to.pdf>]
+[28 <./control_N3_K16_C2_mf-eps-converted-to.pdf> <./orbit_N3_K16_C2_mf-eps-con
+verted-to.pdf>] [29 <./states_N3_K32_C2_mf-eps-converted-to.pdf> <./control_N3_
+K32_C2_mf-eps-converted-to.pdf>] [30 <./orbit_N3_K32_C2_mf-eps-converted-to.pdf
+> <./states_N4_K2_C2_mf-eps-converted-to.pdf>] [31 <./control_N4_K2_C2_mf-eps-c
+onverted-to.pdf> <./orbit_N4_K2_C2_mf-eps-converted-to.pdf>] [32 <./states_N4_K
+4_C2_mf-eps-converted-to.pdf> <./control_N4_K4_C2_mf-eps-converted-to.pdf>]
+[33 <./orbit_N4_K4_C2_mf-eps-converted-to.pdf> <./states_N4_K8_C2_mf-eps-conver
+ted-to.pdf>] [34 <./control_N4_K8_C2_mf-eps-converted-to.pdf> <./orbit_N4_K8_C2
+_mf-eps-converted-to.pdf>] [35 <./states_N4_K16_C2_mf-eps-converted-to.pdf> <./
+control_N4_K16_C2_mf-eps-converted-to.pdf>] [36 <./orbit_N4_K16_C2_mf-eps-conve
+rted-to.pdf> <./states_N4_K32_C2_mf-eps-converted-to.pdf>] [37 <./control_N4_K3
+2_C2_mf-eps-converted-to.pdf> <./orbit_N4_K32_C2_mf-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <states_N3_K2_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:20
+(epstopdf)                    size: 43275 bytes
+(epstopdf)             Output file: <states_N3_K2_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:18
+(epstopdf)                    size: 21607 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K2_C3_tf-e
+ps-converted-to.pdf states_N3_K2_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 606.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K2_C3_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K2_C3_tf-eps-converted-to.pdf, id=1193, 360.34625pt x 306.14375pt>
+File: states_N3_K2_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K2_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K2_C3_tf-eps-converted-to.pdf  used on input
+ line 606.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K2_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:20
+(epstopdf)                    size: 39807 bytes
+(epstopdf)             Output file: <control_N3_K2_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:19
+(epstopdf)                    size: 15857 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K2_C3_tf-
+eps-converted-to.pdf control_N3_K2_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 612.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K2_C3_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K2_C3_tf-eps-converted-to.pdf, id=1194, 415.5525pt x 291.0875pt>
+File: control_N3_K2_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K2_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K2_C3_tf-eps-converted-to.pdf  used on inpu
+t line 612.
+(pdftex.def)             Requested size: 311.6636pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N3_K2_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:21
+(epstopdf)                    size: 32459 bytes
+(epstopdf)             Output file: <path_N3_K2_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:19
+(epstopdf)                    size: 12415 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N3_K2_C3_tf-eps
+-converted-to.pdf path_N3_K2_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 618.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N3_K2_C3_tf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N3_K2_C3_tf-eps-converted-to.pdf, id=1195, 366.36874pt x 292.09125pt>
+File: path_N3_K2_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N3_K2_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N3_K2_C3_tf-eps-converted-to.pdf  used on input l
+ine 618.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N3_K2_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:20
+(epstopdf)                    size: 25952 bytes
+(epstopdf)             Output file: <orbit_N3_K2_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:20
+(epstopdf)                    size: 10875 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K2_C3_tf-ep
+s-converted-to.pdf orbit_N3_K2_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 624.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K2_C3_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K2_C3_tf-eps-converted-to.pdf, id=1196, 355.3275pt x 295.1025pt>
+File: orbit_N3_K2_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K2_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K2_C3_tf-eps-converted-to.pdf  used on input 
+line 624.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K4_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:24
+(epstopdf)                    size: 46445 bytes
+(epstopdf)             Output file: <states_N3_K4_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:21
+(epstopdf)                    size: 25517 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K4_C3_tf-e
+ps-converted-to.pdf states_N3_K4_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 630.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K4_C3_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K4_C3_tf-eps-converted-to.pdf, id=1197, 360.34625pt x 306.14375pt>
+File: states_N3_K4_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K4_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K4_C3_tf-eps-converted-to.pdf  used on input
+ line 630.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K4_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:24
+(epstopdf)                    size: 42413 bytes
+(epstopdf)             Output file: <control_N3_K4_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:21
+(epstopdf)                    size: 17406 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K4_C3_tf-
+eps-converted-to.pdf control_N3_K4_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 636.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K4_C3_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K4_C3_tf-eps-converted-to.pdf, id=1198, 415.5525pt x 291.0875pt>
+File: control_N3_K4_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K4_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K4_C3_tf-eps-converted-to.pdf  used on inpu
+t line 636.
+(pdftex.def)             Requested size: 311.6636pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N3_K4_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:24
+(epstopdf)                    size: 33764 bytes
+(epstopdf)             Output file: <path_N3_K4_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:22
+(epstopdf)                    size: 14081 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N3_K4_C3_tf-eps
+-converted-to.pdf path_N3_K4_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 642.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N3_K4_C3_tf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N3_K4_C3_tf-eps-converted-to.pdf, id=1199, 366.36874pt x 292.09125pt>
+File: path_N3_K4_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N3_K4_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N3_K4_C3_tf-eps-converted-to.pdf  used on input l
+ine 642.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N3_K4_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:24
+(epstopdf)                    size: 26057 bytes
+(epstopdf)             Output file: <orbit_N3_K4_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:23
+(epstopdf)                    size: 10923 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K4_C3_tf-ep
+s-converted-to.pdf orbit_N3_K4_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 648.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K4_C3_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K4_C3_tf-eps-converted-to.pdf, id=1200, 355.3275pt x 295.1025pt>
+File: orbit_N3_K4_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K4_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K4_C3_tf-eps-converted-to.pdf  used on input 
+line 648.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K8_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:27
+(epstopdf)                    size: 52753 bytes
+(epstopdf)             Output file: <states_N3_K8_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:23
+(epstopdf)                    size: 33051 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K8_C3_tf-e
+ps-converted-to.pdf states_N3_K8_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 654.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K8_C3_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K8_C3_tf-eps-converted-to.pdf, id=1201, 360.34625pt x 306.14375pt>
+File: states_N3_K8_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K8_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K8_C3_tf-eps-converted-to.pdf  used on input
+ line 654.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K8_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:27
+(epstopdf)                    size: 43568 bytes
+(epstopdf)             Output file: <control_N3_K8_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:24
+(epstopdf)                    size: 20179 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K8_C3_tf-
+eps-converted-to.pdf control_N3_K8_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 660.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K8_C3_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K8_C3_tf-eps-converted-to.pdf, id=1202, 418.56375pt x 291.0875pt>
+File: control_N3_K8_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K8_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K8_C3_tf-eps-converted-to.pdf  used on inpu
+t line 660.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N3_K8_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:28
+(epstopdf)                    size: 36192 bytes
+(epstopdf)             Output file: <path_N3_K8_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:25
+(epstopdf)                    size: 17377 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N3_K8_C3_tf-eps
+-converted-to.pdf path_N3_K8_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 666.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N3_K8_C3_tf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N3_K8_C3_tf-eps-converted-to.pdf, id=1203, 366.36874pt x 292.09125pt>
+File: path_N3_K8_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N3_K8_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N3_K8_C3_tf-eps-converted-to.pdf  used on input l
+ine 666.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N3_K8_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:27
+(epstopdf)                    size: 26261 bytes
+(epstopdf)             Output file: <orbit_N3_K8_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:25
+(epstopdf)                    size: 11018 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K8_C3_tf-ep
+s-converted-to.pdf orbit_N3_K8_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 672.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K8_C3_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K8_C3_tf-eps-converted-to.pdf, id=1204, 355.3275pt x 295.1025pt>
+File: orbit_N3_K8_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K8_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K8_C3_tf-eps-converted-to.pdf  used on input 
+line 672.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K16_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:30
+(epstopdf)                    size: 65375 bytes
+(epstopdf)             Output file: <states_N3_K16_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:26
+(epstopdf)                    size: 47770 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K16_C3_tf-
+eps-converted-to.pdf states_N3_K16_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 678.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K16_C3_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K16_C3_tf-eps-converted-to.pdf, id=1205, 360.34625pt x 306.14375pt>
+File: states_N3_K16_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K16_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K16_C3_tf-eps-converted-to.pdf  used on inpu
+t line 678.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K16_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:30
+(epstopdf)                    size: 49584 bytes
+(epstopdf)             Output file: <control_N3_K16_C3_tf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:13:27
+(epstopdf)                    size: 26075 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K16_C3_tf
+-eps-converted-to.pdf control_N3_K16_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 684.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K16_C3_tf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K16_C3_tf-eps-converted-to.pdf, id=1206, 415.5525pt x 291.0875pt>
+File: control_N3_K16_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K16_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K16_C3_tf-eps-converted-to.pdf  used on inp
+ut line 684.
+(pdftex.def)             Requested size: 311.6636pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N3_K16_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:31
+(epstopdf)                    size: 40094 bytes
+(epstopdf)             Output file: <path_N3_K16_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:27
+(epstopdf)                    size: 23719 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N3_K16_C3_tf-ep
+s-converted-to.pdf path_N3_K16_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 690.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N3_K16_C3_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N3_K16_C3_tf-eps-converted-to.pdf, id=1207, 366.36874pt x 292.09125pt>
+File: path_N3_K16_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N3_K16_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N3_K16_C3_tf-eps-converted-to.pdf  used on input 
+line 690.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N3_K16_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:30
+(epstopdf)                    size: 26668 bytes
+(epstopdf)             Output file: <orbit_N3_K16_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:28
+(epstopdf)                    size: 11210 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K16_C3_tf-e
+ps-converted-to.pdf orbit_N3_K16_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 696.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K16_C3_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K16_C3_tf-eps-converted-to.pdf, id=1208, 355.3275pt x 295.1025pt>
+File: orbit_N3_K16_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K16_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K16_C3_tf-eps-converted-to.pdf  used on input
+ line 696.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K32_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:33
+(epstopdf)                    size: 90721 bytes
+(epstopdf)             Output file: <states_N3_K32_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:29
+(epstopdf)                    size: 81703 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K32_C3_tf-
+eps-converted-to.pdf states_N3_K32_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 702.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K32_C3_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K32_C3_tf-eps-converted-to.pdf, id=1209, 360.34625pt x 306.14375pt>
+File: states_N3_K32_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K32_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K32_C3_tf-eps-converted-to.pdf  used on inpu
+t line 702.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K32_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:33
+(epstopdf)                    size: 60243 bytes
+(epstopdf)             Output file: <control_N3_K32_C3_tf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:13:29
+(epstopdf)                    size: 37938 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K32_C3_tf
+-eps-converted-to.pdf control_N3_K32_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 708.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K32_C3_tf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K32_C3_tf-eps-converted-to.pdf, id=1210, 419.5675pt x 291.0875pt>
+File: control_N3_K32_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K32_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K32_C3_tf-eps-converted-to.pdf  used on inp
+ut line 708.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N3_K32_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:34
+(epstopdf)                    size: 49850 bytes
+(epstopdf)             Output file: <path_N3_K32_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:30
+(epstopdf)                    size: 36579 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N3_K32_C3_tf-ep
+s-converted-to.pdf path_N3_K32_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 714.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N3_K32_C3_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N3_K32_C3_tf-eps-converted-to.pdf, id=1211, 366.36874pt x 292.09125pt>
+File: path_N3_K32_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N3_K32_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N3_K32_C3_tf-eps-converted-to.pdf  used on input 
+line 714.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N3_K32_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:34
+(epstopdf)                    size: 27492 bytes
+(epstopdf)             Output file: <orbit_N3_K32_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:31
+(epstopdf)                    size: 11603 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K32_C3_tf-e
+ps-converted-to.pdf orbit_N3_K32_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 720.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K32_C3_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K32_C3_tf-eps-converted-to.pdf, id=1212, 355.3275pt x 295.1025pt>
+File: orbit_N3_K32_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K32_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K32_C3_tf-eps-converted-to.pdf  used on input
+ line 720.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K2_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:36
+(epstopdf)                    size: 44328 bytes
+(epstopdf)             Output file: <states_N4_K2_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:31
+(epstopdf)                    size: 22857 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K2_C3_tf-e
+ps-converted-to.pdf states_N4_K2_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 726.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K2_C3_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K2_C3_tf-eps-converted-to.pdf, id=1213, 360.34625pt x 306.14375pt>
+File: states_N4_K2_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K2_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K2_C3_tf-eps-converted-to.pdf  used on input
+ line 726.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K2_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:36
+(epstopdf)                    size: 41609 bytes
+(epstopdf)             Output file: <control_N4_K2_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:32
+(epstopdf)                    size: 16449 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K2_C3_tf-
+eps-converted-to.pdf control_N4_K2_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 732.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K2_C3_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K2_C3_tf-eps-converted-to.pdf, id=1214, 415.5525pt x 291.0875pt>
+File: control_N4_K2_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K2_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K2_C3_tf-eps-converted-to.pdf  used on inpu
+t line 732.
+(pdftex.def)             Requested size: 311.6636pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N4_K2_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:37
+(epstopdf)                    size: 32962 bytes
+(epstopdf)             Output file: <path_N4_K2_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:33
+(epstopdf)                    size: 12948 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N4_K2_C3_tf-eps
+-converted-to.pdf path_N4_K2_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 738.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N4_K2_C3_tf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N4_K2_C3_tf-eps-converted-to.pdf, id=1215, 366.36874pt x 292.09125pt>
+File: path_N4_K2_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N4_K2_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N4_K2_C3_tf-eps-converted-to.pdf  used on input l
+ine 738.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N4_K2_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:36
+(epstopdf)                    size: 25986 bytes
+(epstopdf)             Output file: <orbit_N4_K2_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:33
+(epstopdf)                    size: 10888 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K2_C3_tf-ep
+s-converted-to.pdf orbit_N4_K2_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 744.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K2_C3_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K2_C3_tf-eps-converted-to.pdf, id=1216, 355.3275pt x 295.1025pt>
+File: orbit_N4_K2_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K2_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K2_C3_tf-eps-converted-to.pdf  used on input 
+line 744.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K4_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:39
+(epstopdf)                    size: 48522 bytes
+(epstopdf)             Output file: <states_N4_K4_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:34
+(epstopdf)                    size: 28052 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K4_C3_tf-e
+ps-converted-to.pdf states_N4_K4_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 750.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K4_C3_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K4_C3_tf-eps-converted-to.pdf, id=1217, 360.34625pt x 306.14375pt>
+File: states_N4_K4_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K4_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K4_C3_tf-eps-converted-to.pdf  used on input
+ line 750.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K4_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:39
+(epstopdf)                    size: 42167 bytes
+(epstopdf)             Output file: <control_N4_K4_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:34
+(epstopdf)                    size: 18308 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K4_C3_tf-
+eps-converted-to.pdf control_N4_K4_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 756.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K4_C3_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K4_C3_tf-eps-converted-to.pdf, id=1218, 418.56375pt x 291.0875pt>
+File: control_N4_K4_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K4_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K4_C3_tf-eps-converted-to.pdf  used on inpu
+t line 756.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N4_K4_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:39
+(epstopdf)                    size: 34588 bytes
+(epstopdf)             Output file: <path_N4_K4_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:35
+(epstopdf)                    size: 15236 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N4_K4_C3_tf-eps
+-converted-to.pdf path_N4_K4_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 762.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N4_K4_C3_tf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N4_K4_C3_tf-eps-converted-to.pdf, id=1219, 366.36874pt x 292.09125pt>
+File: path_N4_K4_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N4_K4_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N4_K4_C3_tf-eps-converted-to.pdf  used on input l
+ine 762.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N4_K4_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:39
+(epstopdf)                    size: 26122 bytes
+(epstopdf)             Output file: <orbit_N4_K4_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:36
+(epstopdf)                    size: 10954 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K4_C3_tf-ep
+s-converted-to.pdf orbit_N4_K4_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 768.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K4_C3_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K4_C3_tf-eps-converted-to.pdf, id=1220, 355.3275pt x 295.1025pt>
+File: orbit_N4_K4_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K4_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K4_C3_tf-eps-converted-to.pdf  used on input 
+line 768.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K8_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:42
+(epstopdf)                    size: 56978 bytes
+(epstopdf)             Output file: <states_N4_K8_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:36
+(epstopdf)                    size: 37863 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K8_C3_tf-e
+ps-converted-to.pdf states_N4_K8_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 774.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K8_C3_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K8_C3_tf-eps-converted-to.pdf, id=1221, 360.34625pt x 306.14375pt>
+File: states_N4_K8_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K8_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K8_C3_tf-eps-converted-to.pdf  used on input
+ line 774.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K8_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:42
+(epstopdf)                    size: 45126 bytes
+(epstopdf)             Output file: <control_N4_K8_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:37
+(epstopdf)                    size: 22092 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K8_C3_tf-
+eps-converted-to.pdf control_N4_K8_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 780.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K8_C3_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K8_C3_tf-eps-converted-to.pdf, id=1222, 418.56375pt x 291.0875pt>
+File: control_N4_K8_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K8_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K8_C3_tf-eps-converted-to.pdf  used on inpu
+t line 780.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N4_K8_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:42
+(epstopdf)                    size: 36852 bytes
+(epstopdf)             Output file: <path_N4_K8_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:38
+(epstopdf)                    size: 19432 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N4_K8_C3_tf-eps
+-converted-to.pdf path_N4_K8_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 786.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N4_K8_C3_tf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N4_K8_C3_tf-eps-converted-to.pdf, id=1223, 366.36874pt x 292.09125pt>
+File: path_N4_K8_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N4_K8_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N4_K8_C3_tf-eps-converted-to.pdf  used on input l
+ine 786.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N4_K8_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:42
+(epstopdf)                    size: 26394 bytes
+(epstopdf)             Output file: <orbit_N4_K8_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:38
+(epstopdf)                    size: 11085 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K8_C3_tf-ep
+s-converted-to.pdf orbit_N4_K8_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 792.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K8_C3_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K8_C3_tf-eps-converted-to.pdf, id=1224, 355.3275pt x 295.1025pt>
+File: orbit_N4_K8_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K8_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K8_C3_tf-eps-converted-to.pdf  used on input 
+line 792.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K16_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:45
+(epstopdf)                    size: 73830 bytes
+(epstopdf)             Output file: <states_N4_K16_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:39
+(epstopdf)                    size: 58216 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K16_C3_tf-
+eps-converted-to.pdf states_N4_K16_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 798.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K16_C3_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K16_C3_tf-eps-converted-to.pdf, id=1225, 360.34625pt x 306.14375pt>
+File: states_N4_K16_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K16_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K16_C3_tf-eps-converted-to.pdf  used on inpu
+t line 798.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K16_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:45
+(epstopdf)                    size: 52783 bytes
+(epstopdf)             Output file: <control_N4_K16_C3_tf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:13:40
+(epstopdf)                    size: 30427 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K16_C3_tf
+-eps-converted-to.pdf control_N4_K16_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 804.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K16_C3_tf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K16_C3_tf-eps-converted-to.pdf, id=1226, 415.5525pt x 291.0875pt>
+File: control_N4_K16_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K16_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K16_C3_tf-eps-converted-to.pdf  used on inp
+ut line 804.
+(pdftex.def)             Requested size: 311.6636pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N4_K16_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:46
+(epstopdf)                    size: 43349 bytes
+(epstopdf)             Output file: <path_N4_K16_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:40
+(epstopdf)                    size: 28312 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N4_K16_C3_tf-ep
+s-converted-to.pdf path_N4_K16_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 810.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N4_K16_C3_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N4_K16_C3_tf-eps-converted-to.pdf, id=1227, 366.36874pt x 292.09125pt>
+File: path_N4_K16_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N4_K16_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N4_K16_C3_tf-eps-converted-to.pdf  used on input 
+line 810.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N4_K16_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:45
+(epstopdf)                    size: 26948 bytes
+(epstopdf)             Output file: <orbit_N4_K16_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:41
+(epstopdf)                    size: 11340 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K16_C3_tf-e
+ps-converted-to.pdf orbit_N4_K16_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 816.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K16_C3_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K16_C3_tf-eps-converted-to.pdf, id=1228, 355.3275pt x 295.1025pt>
+File: orbit_N4_K16_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K16_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K16_C3_tf-eps-converted-to.pdf  used on input
+ line 816.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K32_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:48
+(epstopdf)                    size: 107609 bytes
+(epstopdf)             Output file: <states_N4_K32_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:42
+(epstopdf)                    size: 103038 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K32_C3_tf-
+eps-converted-to.pdf states_N4_K32_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 822.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K32_C3_tf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K32_C3_tf-eps-converted-to.pdf, id=1229, 360.34625pt x 306.14375pt>
+File: states_N4_K32_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K32_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K32_C3_tf-eps-converted-to.pdf  used on inpu
+t line 822.
+(pdftex.def)             Requested size: 270.25902pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K32_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:48
+(epstopdf)                    size: 63877 bytes
+(epstopdf)             Output file: <control_N4_K32_C3_tf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:13:42
+(epstopdf)                    size: 44835 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K32_C3_tf
+-eps-converted-to.pdf control_N4_K32_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 828.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K32_C3_tf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K32_C3_tf-eps-converted-to.pdf, id=1230, 418.56375pt x 291.0875pt>
+File: control_N4_K32_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K32_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K32_C3_tf-eps-converted-to.pdf  used on inp
+ut line 828.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N4_K32_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:49
+(epstopdf)                    size: 56341 bytes
+(epstopdf)             Output file: <path_N4_K32_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:43
+(epstopdf)                    size: 44873 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N4_K32_C3_tf-ep
+s-converted-to.pdf path_N4_K32_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 834.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N4_K32_C3_tf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N4_K32_C3_tf-eps-converted-to.pdf, id=1231, 366.36874pt x 292.09125pt>
+File: path_N4_K32_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N4_K32_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N4_K32_C3_tf-eps-converted-to.pdf  used on input 
+line 834.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N4_K32_C3_tf.eps>
+(epstopdf)                    date: 2022-04-18 23:10:49
+(epstopdf)                    size: 28038 bytes
+(epstopdf)             Output file: <orbit_N4_K32_C3_tf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:43
+(epstopdf)                    size: 11841 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K32_C3_tf-e
+ps-converted-to.pdf orbit_N4_K32_C3_tf.eps>
+(epstopdf)             \includegraphics on input line 840.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K32_C3_tf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K32_C3_tf-eps-converted-to.pdf, id=1232, 355.3275pt x 295.1025pt>
+File: orbit_N4_K32_C3_tf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K32_C3_tf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K32_C3_tf-eps-converted-to.pdf  used on input
+ line 840.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+
+Overfull \hbox (16.19513pt too wide) in paragraph at lines 845--860
+[][] 
+ []
+
+[38] [39 <./states_N3_K2_C3_tf-eps-converted-to.pdf> <./control_N3_K2_C3_tf-eps
+-converted-to.pdf>] [40 <./path_N3_K2_C3_tf-eps-converted-to.pdf> <./orbit_N3_K
+2_C3_tf-eps-converted-to.pdf>] [41 <./states_N3_K4_C3_tf-eps-converted-to.pdf> 
+<./control_N3_K4_C3_tf-eps-converted-to.pdf>] [42 <./path_N3_K4_C3_tf-eps-conve
+rted-to.pdf> <./orbit_N3_K4_C3_tf-eps-converted-to.pdf>] [43 <./states_N3_K8_C3
+_tf-eps-converted-to.pdf> <./control_N3_K8_C3_tf-eps-converted-to.pdf>]
+[44 <./path_N3_K8_C3_tf-eps-converted-to.pdf> <./orbit_N3_K8_C3_tf-eps-converte
+d-to.pdf>] [45 <./states_N3_K16_C3_tf-eps-converted-to.pdf> <./control_N3_K16_C
+3_tf-eps-converted-to.pdf>] [46 <./path_N3_K16_C3_tf-eps-converted-to.pdf> <./o
+rbit_N3_K16_C3_tf-eps-converted-to.pdf>] [47 <./states_N3_K32_C3_tf-eps-convert
+ed-to.pdf> <./control_N3_K32_C3_tf-eps-converted-to.pdf>] [48 <./path_N3_K32_C3
+_tf-eps-converted-to.pdf> <./orbit_N3_K32_C3_tf-eps-converted-to.pdf>] [49 <./s
+tates_N4_K2_C3_tf-eps-converted-to.pdf> <./control_N4_K2_C3_tf-eps-converted-to
+.pdf>] [50 <./path_N4_K2_C3_tf-eps-converted-to.pdf> <./orbit_N4_K2_C3_tf-eps-c
+onverted-to.pdf>] [51 <./states_N4_K4_C3_tf-eps-converted-to.pdf> <./control_N4
+_K4_C3_tf-eps-converted-to.pdf>] [52 <./path_N4_K4_C3_tf-eps-converted-to.pdf> 
+<./orbit_N4_K4_C3_tf-eps-converted-to.pdf>] [53 <./states_N4_K8_C3_tf-eps-conve
+rted-to.pdf> <./control_N4_K8_C3_tf-eps-converted-to.pdf>] [54 <./path_N4_K8_C3
+_tf-eps-converted-to.pdf> <./orbit_N4_K8_C3_tf-eps-converted-to.pdf>] [55 <./st
+ates_N4_K16_C3_tf-eps-converted-to.pdf> <./control_N4_K16_C3_tf-eps-converted-t
+o.pdf>] [56 <./path_N4_K16_C3_tf-eps-converted-to.pdf> <./orbit_N4_K16_C3_tf-ep
+s-converted-to.pdf>] [57 <./states_N4_K32_C3_tf-eps-converted-to.pdf> <./contro
+l_N4_K32_C3_tf-eps-converted-to.pdf>] [58 <./path_N4_K32_C3_tf-eps-converted-to
+.pdf> <./orbit_N4_K32_C3_tf-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <states_N3_K2_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:09
+(epstopdf)                    size: 44286 bytes
+(epstopdf)             Output file: <states_N3_K2_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:44
+(epstopdf)                    size: 21895 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K2_C3_mf-e
+ps-converted-to.pdf states_N3_K2_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 867.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K2_C3_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K2_C3_mf-eps-converted-to.pdf, id=1610, 353.32pt x 306.14375pt>
+File: states_N3_K2_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K2_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K2_C3_mf-eps-converted-to.pdf  used on input
+ line 867.
+(pdftex.def)             Requested size: 264.98935pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K2_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:09
+(epstopdf)                    size: 40315 bytes
+(epstopdf)             Output file: <control_N3_K2_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:45
+(epstopdf)                    size: 16146 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K2_C3_mf-
+eps-converted-to.pdf control_N3_K2_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 873.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K2_C3_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K2_C3_mf-eps-converted-to.pdf, id=1611, 418.56375pt x 291.0875pt>
+File: control_N3_K2_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K2_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K2_C3_mf-eps-converted-to.pdf  used on inpu
+t line 873.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N3_K2_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:10
+(epstopdf)                    size: 32470 bytes
+(epstopdf)             Output file: <path_N3_K2_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:45
+(epstopdf)                    size: 12187 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N3_K2_C3_mf-eps
+-converted-to.pdf path_N3_K2_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 879.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N3_K2_C3_mf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N3_K2_C3_mf-eps-converted-to.pdf, id=1612, 371.3875pt x 292.09125pt>
+File: path_N3_K2_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N3_K2_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N3_K2_C3_mf-eps-converted-to.pdf  used on input l
+ine 879.
+(pdftex.def)             Requested size: 278.53993pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N3_K2_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:10
+(epstopdf)                    size: 26348 bytes
+(epstopdf)             Output file: <orbit_N3_K2_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:46
+(epstopdf)                    size: 10879 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K2_C3_mf-ep
+s-converted-to.pdf orbit_N3_K2_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 885.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K2_C3_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K2_C3_mf-eps-converted-to.pdf, id=1613, 355.3275pt x 295.1025pt>
+File: orbit_N3_K2_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K2_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K2_C3_mf-eps-converted-to.pdf  used on input 
+line 885.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K4_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:20
+(epstopdf)                    size: 44385 bytes
+(epstopdf)             Output file: <states_N3_K4_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:47
+(epstopdf)                    size: 25776 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K4_C3_mf-e
+ps-converted-to.pdf states_N3_K4_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 891.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K4_C3_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K4_C3_mf-eps-converted-to.pdf, id=1614, 353.32pt x 306.14375pt>
+File: states_N3_K4_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K4_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K4_C3_mf-eps-converted-to.pdf  used on input
+ line 891.
+(pdftex.def)             Requested size: 264.98935pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K4_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:20
+(epstopdf)                    size: 42517 bytes
+(epstopdf)             Output file: <control_N3_K4_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:47
+(epstopdf)                    size: 17678 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K4_C3_mf-
+eps-converted-to.pdf control_N3_K4_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 897.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K4_C3_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K4_C3_mf-eps-converted-to.pdf, id=1615, 418.56375pt x 291.0875pt>
+File: control_N3_K4_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K4_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K4_C3_mf-eps-converted-to.pdf  used on inpu
+t line 897.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N3_K4_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:20
+(epstopdf)                    size: 33615 bytes
+(epstopdf)             Output file: <path_N3_K4_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:48
+(epstopdf)                    size: 14666 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N3_K4_C3_mf-eps
+-converted-to.pdf path_N3_K4_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 903.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N3_K4_C3_mf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N3_K4_C3_mf-eps-converted-to.pdf, id=1616, 364.36125pt x 292.09125pt>
+File: path_N3_K4_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N3_K4_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N3_K4_C3_mf-eps-converted-to.pdf  used on input l
+ine 903.
+(pdftex.def)             Requested size: 273.27026pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N3_K4_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:20
+(epstopdf)                    size: 26063 bytes
+(epstopdf)             Output file: <orbit_N3_K4_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:49
+(epstopdf)                    size: 10929 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K4_C3_mf-ep
+s-converted-to.pdf orbit_N3_K4_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 909.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K4_C3_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K4_C3_mf-eps-converted-to.pdf, id=1617, 355.3275pt x 295.1025pt>
+File: orbit_N3_K4_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K4_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K4_C3_mf-eps-converted-to.pdf  used on input 
+line 909.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K8_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:25
+(epstopdf)                    size: 53555 bytes
+(epstopdf)             Output file: <states_N3_K8_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:49
+(epstopdf)                    size: 32894 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K8_C3_mf-e
+ps-converted-to.pdf states_N3_K8_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 915.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K8_C3_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K8_C3_mf-eps-converted-to.pdf, id=1618, 350.30875pt x 306.14375pt>
+File: states_N3_K8_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K8_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K8_C3_mf-eps-converted-to.pdf  used on input
+ line 915.
+(pdftex.def)             Requested size: 262.73091pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K8_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:25
+(epstopdf)                    size: 45176 bytes
+(epstopdf)             Output file: <control_N3_K8_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:50
+(epstopdf)                    size: 20718 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K8_C3_mf-
+eps-converted-to.pdf control_N3_K8_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 921.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K8_C3_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K8_C3_mf-eps-converted-to.pdf, id=1619, 418.56375pt x 291.0875pt>
+File: control_N3_K8_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K8_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K8_C3_mf-eps-converted-to.pdf  used on inpu
+t line 921.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N3_K8_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:26
+(epstopdf)                    size: 36910 bytes
+(epstopdf)             Output file: <path_N3_K8_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:50
+(epstopdf)                    size: 18099 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N3_K8_C3_mf-eps
+-converted-to.pdf path_N3_K8_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 927.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N3_K8_C3_mf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N3_K8_C3_mf-eps-converted-to.pdf, id=1620, 364.36125pt x 292.09125pt>
+File: path_N3_K8_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N3_K8_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N3_K8_C3_mf-eps-converted-to.pdf  used on input l
+ine 927.
+(pdftex.def)             Requested size: 273.27026pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N3_K8_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:26
+(epstopdf)                    size: 26304 bytes
+(epstopdf)             Output file: <orbit_N3_K8_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:51
+(epstopdf)                    size: 11032 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K8_C3_mf-ep
+s-converted-to.pdf orbit_N3_K8_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 933.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K8_C3_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K8_C3_mf-eps-converted-to.pdf, id=1621, 355.3275pt x 295.1025pt>
+File: orbit_N3_K8_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K8_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K8_C3_mf-eps-converted-to.pdf  used on input 
+line 933.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K16_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:28
+(epstopdf)                    size: 67904 bytes
+(epstopdf)             Output file: <states_N3_K16_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:52
+(epstopdf)                    size: 46585 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K16_C3_mf-
+eps-converted-to.pdf states_N3_K16_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 939.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K16_C3_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K16_C3_mf-eps-converted-to.pdf, id=1622, 350.30875pt x 306.14375pt>
+File: states_N3_K16_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K16_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K16_C3_mf-eps-converted-to.pdf  used on inpu
+t line 939.
+(pdftex.def)             Requested size: 262.73091pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K16_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:28
+(epstopdf)                    size: 51390 bytes
+(epstopdf)             Output file: <control_N3_K16_C3_mf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:13:52
+(epstopdf)                    size: 27152 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K16_C3_mf
+-eps-converted-to.pdf control_N3_K16_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 945.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K16_C3_mf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K16_C3_mf-eps-converted-to.pdf, id=1623, 418.56375pt x 291.0875pt>
+File: control_N3_K16_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K16_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K16_C3_mf-eps-converted-to.pdf  used on inp
+ut line 945.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N3_K16_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:29
+(epstopdf)                    size: 43288 bytes
+(epstopdf)             Output file: <path_N3_K16_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:53
+(epstopdf)                    size: 24358 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N3_K16_C3_mf-ep
+s-converted-to.pdf path_N3_K16_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 951.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N3_K16_C3_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N3_K16_C3_mf-eps-converted-to.pdf, id=1624, 364.36125pt x 292.09125pt>
+File: path_N3_K16_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N3_K16_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N3_K16_C3_mf-eps-converted-to.pdf  used on input 
+line 951.
+(pdftex.def)             Requested size: 273.27026pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N3_K16_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:28
+(epstopdf)                    size: 26687 bytes
+(epstopdf)             Output file: <orbit_N3_K16_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:54
+(epstopdf)                    size: 11231 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K16_C3_mf-e
+ps-converted-to.pdf orbit_N3_K16_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 957.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K16_C3_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K16_C3_mf-eps-converted-to.pdf, id=1625, 355.3275pt x 295.1025pt>
+File: orbit_N3_K16_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K16_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K16_C3_mf-eps-converted-to.pdf  used on input
+ line 957.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N3_K32_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:31
+(epstopdf)                    size: 91443 bytes
+(epstopdf)             Output file: <states_N3_K32_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:54
+(epstopdf)                    size: 78875 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N3_K32_C3_mf-
+eps-converted-to.pdf states_N3_K32_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 963.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N3_K32_C3_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N3_K32_C3_mf-eps-converted-to.pdf, id=1626, 350.30875pt x 306.14375pt>
+File: states_N3_K32_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N3_K32_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N3_K32_C3_mf-eps-converted-to.pdf  used on inpu
+t line 963.
+(pdftex.def)             Requested size: 262.73091pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N3_K32_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:31
+(epstopdf)                    size: 59462 bytes
+(epstopdf)             Output file: <control_N3_K32_C3_mf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:13:55
+(epstopdf)                    size: 38212 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N3_K32_C3_mf
+-eps-converted-to.pdf control_N3_K32_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 969.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N3_K32_C3_mf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N3_K32_C3_mf-eps-converted-to.pdf, id=1627, 418.56375pt x 291.0875pt>
+File: control_N3_K32_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N3_K32_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N3_K32_C3_mf-eps-converted-to.pdf  used on inp
+ut line 969.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N3_K32_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:32
+(epstopdf)                    size: 51675 bytes
+(epstopdf)             Output file: <path_N3_K32_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:56
+(epstopdf)                    size: 36595 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N3_K32_C3_mf-ep
+s-converted-to.pdf path_N3_K32_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 975.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N3_K32_C3_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N3_K32_C3_mf-eps-converted-to.pdf, id=1628, 366.36874pt x 292.09125pt>
+File: path_N3_K32_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N3_K32_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N3_K32_C3_mf-eps-converted-to.pdf  used on input 
+line 975.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N3_K32_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:32
+(epstopdf)                    size: 27529 bytes
+(epstopdf)             Output file: <orbit_N3_K32_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:56
+(epstopdf)                    size: 11615 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N3_K32_C3_mf-e
+ps-converted-to.pdf orbit_N3_K32_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 981.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N3_K32_C3_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N3_K32_C3_mf-eps-converted-to.pdf, id=1629, 355.3275pt x 295.1025pt>
+File: orbit_N3_K32_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N3_K32_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N3_K32_C3_mf-eps-converted-to.pdf  used on input
+ line 981.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K2_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:36
+(epstopdf)                    size: 43767 bytes
+(epstopdf)             Output file: <states_N4_K2_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:57
+(epstopdf)                    size: 22961 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K2_C3_mf-e
+ps-converted-to.pdf states_N4_K2_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 987.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K2_C3_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K2_C3_mf-eps-converted-to.pdf, id=1630, 353.32pt x 306.14375pt>
+File: states_N4_K2_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K2_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K2_C3_mf-eps-converted-to.pdf  used on input
+ line 987.
+(pdftex.def)             Requested size: 264.98935pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K2_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:35
+(epstopdf)                    size: 38479 bytes
+(epstopdf)             Output file: <control_N4_K2_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:57
+(epstopdf)                    size: 16460 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K2_C3_mf-
+eps-converted-to.pdf control_N4_K2_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 993.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K2_C3_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K2_C3_mf-eps-converted-to.pdf, id=1631, 418.56375pt x 291.0875pt>
+File: control_N4_K2_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K2_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K2_C3_mf-eps-converted-to.pdf  used on inpu
+t line 993.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N4_K2_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:36
+(epstopdf)                    size: 33511 bytes
+(epstopdf)             Output file: <path_N4_K2_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:58
+(epstopdf)                    size: 13270 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N4_K2_C3_mf-eps
+-converted-to.pdf path_N4_K2_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 999.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N4_K2_C3_mf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N4_K2_C3_mf-eps-converted-to.pdf, id=1632, 364.36125pt x 292.09125pt>
+File: path_N4_K2_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N4_K2_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N4_K2_C3_mf-eps-converted-to.pdf  used on input l
+ine 999.
+(pdftex.def)             Requested size: 273.27026pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N4_K2_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:36
+(epstopdf)                    size: 25897 bytes
+(epstopdf)             Output file: <orbit_N4_K2_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:59
+(epstopdf)                    size: 10872 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K2_C3_mf-ep
+s-converted-to.pdf orbit_N4_K2_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1005.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K2_C3_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K2_C3_mf-eps-converted-to.pdf, id=1633, 355.3275pt x 295.1025pt>
+File: orbit_N4_K2_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K2_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K2_C3_mf-eps-converted-to.pdf  used on input 
+line 1005.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K4_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:40
+(epstopdf)                    size: 49364 bytes
+(epstopdf)             Output file: <states_N4_K4_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:13:59
+(epstopdf)                    size: 28320 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K4_C3_mf-e
+ps-converted-to.pdf states_N4_K4_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1011.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K4_C3_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K4_C3_mf-eps-converted-to.pdf, id=1634, 350.30875pt x 306.14375pt>
+File: states_N4_K4_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K4_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K4_C3_mf-eps-converted-to.pdf  used on input
+ line 1011.
+(pdftex.def)             Requested size: 262.73091pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K4_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:39
+(epstopdf)                    size: 42917 bytes
+(epstopdf)             Output file: <control_N4_K4_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:00
+(epstopdf)                    size: 18688 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K4_C3_mf-
+eps-converted-to.pdf control_N4_K4_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1017.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K4_C3_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K4_C3_mf-eps-converted-to.pdf, id=1635, 418.56375pt x 291.0875pt>
+File: control_N4_K4_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K4_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K4_C3_mf-eps-converted-to.pdf  used on inpu
+t line 1017.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N4_K4_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:40
+(epstopdf)                    size: 35701 bytes
+(epstopdf)             Output file: <path_N4_K4_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:01
+(epstopdf)                    size: 15856 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N4_K4_C3_mf-eps
+-converted-to.pdf path_N4_K4_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1023.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N4_K4_C3_mf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N4_K4_C3_mf-eps-converted-to.pdf, id=1636, 357.335pt x 292.09125pt>
+File: path_N4_K4_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N4_K4_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N4_K4_C3_mf-eps-converted-to.pdf  used on input l
+ine 1023.
+(pdftex.def)             Requested size: 268.00058pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N4_K4_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:40
+(epstopdf)                    size: 26131 bytes
+(epstopdf)             Output file: <orbit_N4_K4_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:01
+(epstopdf)                    size: 10961 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K4_C3_mf-ep
+s-converted-to.pdf orbit_N4_K4_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1029.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K4_C3_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K4_C3_mf-eps-converted-to.pdf, id=1637, 355.3275pt x 295.1025pt>
+File: orbit_N4_K4_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K4_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K4_C3_mf-eps-converted-to.pdf  used on input 
+line 1029.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K8_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:43
+(epstopdf)                    size: 58635 bytes
+(epstopdf)             Output file: <states_N4_K8_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:02
+(epstopdf)                    size: 37570 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K8_C3_mf-e
+ps-converted-to.pdf states_N4_K8_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1035.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K8_C3_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K8_C3_mf-eps-converted-to.pdf, id=1638, 350.30875pt x 306.14375pt>
+File: states_N4_K8_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K8_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K8_C3_mf-eps-converted-to.pdf  used on input
+ line 1035.
+(pdftex.def)             Requested size: 262.73091pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K8_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:43
+(epstopdf)                    size: 47846 bytes
+(epstopdf)             Output file: <control_N4_K8_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:03
+(epstopdf)                    size: 22802 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K8_C3_mf-
+eps-converted-to.pdf control_N4_K8_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1041.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K8_C3_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K8_C3_mf-eps-converted-to.pdf, id=1639, 418.56375pt x 291.0875pt>
+File: control_N4_K8_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K8_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K8_C3_mf-eps-converted-to.pdf  used on inpu
+t line 1041.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N4_K8_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:44
+(epstopdf)                    size: 36611 bytes
+(epstopdf)             Output file: <path_N4_K8_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:03
+(epstopdf)                    size: 19875 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N4_K8_C3_mf-eps
+-converted-to.pdf path_N4_K8_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1047.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N4_K8_C3_mf-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N4_K8_C3_mf-eps-converted-to.pdf, id=1640, 364.36125pt x 292.09125pt>
+File: path_N4_K8_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N4_K8_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N4_K8_C3_mf-eps-converted-to.pdf  used on input l
+ine 1047.
+(pdftex.def)             Requested size: 273.27026pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N4_K8_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:44
+(epstopdf)                    size: 26438 bytes
+(epstopdf)             Output file: <orbit_N4_K8_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:04
+(epstopdf)                    size: 11066 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K8_C3_mf-ep
+s-converted-to.pdf orbit_N4_K8_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1053.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K8_C3_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K8_C3_mf-eps-converted-to.pdf, id=1641, 355.3275pt x 295.1025pt>
+File: orbit_N4_K8_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K8_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K8_C3_mf-eps-converted-to.pdf  used on input 
+line 1053.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K16_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:47
+(epstopdf)                    size: 74597 bytes
+(epstopdf)             Output file: <states_N4_K16_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:05
+(epstopdf)                    size: 56899 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K16_C3_mf-
+eps-converted-to.pdf states_N4_K16_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1059.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K16_C3_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K16_C3_mf-eps-converted-to.pdf, id=1642, 350.30875pt x 306.14375pt>
+File: states_N4_K16_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K16_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K16_C3_mf-eps-converted-to.pdf  used on inpu
+t line 1059.
+(pdftex.def)             Requested size: 262.73091pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K16_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:46
+(epstopdf)                    size: 52714 bytes
+(epstopdf)             Output file: <control_N4_K16_C3_mf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:14:05
+(epstopdf)                    size: 31049 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K16_C3_mf
+-eps-converted-to.pdf control_N4_K16_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1065.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K16_C3_mf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K16_C3_mf-eps-converted-to.pdf, id=1643, 418.56375pt x 291.0875pt>
+File: control_N4_K16_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K16_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K16_C3_mf-eps-converted-to.pdf  used on inp
+ut line 1065.
+(pdftex.def)             Requested size: 313.92203pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N4_K16_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:47
+(epstopdf)                    size: 44305 bytes
+(epstopdf)             Output file: <path_N4_K16_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:06
+(epstopdf)                    size: 28042 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N4_K16_C3_mf-ep
+s-converted-to.pdf path_N4_K16_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1071.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N4_K16_C3_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N4_K16_C3_mf-eps-converted-to.pdf, id=1644, 366.36874pt x 292.09125pt>
+File: path_N4_K16_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N4_K16_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N4_K16_C3_mf-eps-converted-to.pdf  used on input 
+line 1071.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N4_K16_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:47
+(epstopdf)                    size: 26975 bytes
+(epstopdf)             Output file: <orbit_N4_K16_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:06
+(epstopdf)                    size: 11359 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K16_C3_mf-e
+ps-converted-to.pdf orbit_N4_K16_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1077.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K16_C3_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K16_C3_mf-eps-converted-to.pdf, id=1645, 355.3275pt x 295.1025pt>
+File: orbit_N4_K16_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K16_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K16_C3_mf-eps-converted-to.pdf  used on input
+ line 1077.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+Package epstopdf Info: Source file: <states_N4_K32_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:54
+(epstopdf)                    size: 109239 bytes
+(epstopdf)             Output file: <states_N4_K32_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:07
+(epstopdf)                    size: 99088 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=states_N4_K32_C3_mf-
+eps-converted-to.pdf states_N4_K32_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1083.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./states_N4_K32_C3_mf-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<states_N4_K32_C3_mf-eps-converted-to.pdf, id=1646, 350.30875pt x 306.14375pt>
+File: states_N4_K32_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use states_N4_K32_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: states_N4_K32_C3_mf-eps-converted-to.pdf  used on inpu
+t line 1083.
+(pdftex.def)             Requested size: 262.73091pt x 229.60724pt.
+Package epstopdf Info: Source file: <control_N4_K32_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:54
+(epstopdf)                    size: 68655 bytes
+(epstopdf)             Output file: <control_N4_K32_C3_mf-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2022-04-18 23:14:08
+(epstopdf)                    size: 48065 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=control_N4_K32_C3_mf
+-eps-converted-to.pdf control_N4_K32_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1089.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./control_N4_K32_C3_mf-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<control_N4_K32_C3_mf-eps-converted-to.pdf, id=1647, 419.5675pt x 291.0875pt>
+File: control_N4_K32_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use control_N4_K32_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: control_N4_K32_C3_mf-eps-converted-to.pdf  used on inp
+ut line 1089.
+(pdftex.def)             Requested size: 314.67485pt x 218.31508pt.
+Package epstopdf Info: Source file: <path_N4_K32_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:55
+(epstopdf)                    size: 58665 bytes
+(epstopdf)             Output file: <path_N4_K32_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:08
+(epstopdf)                    size: 43989 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=path_N4_K32_C3_mf-ep
+s-converted-to.pdf path_N4_K32_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1095.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./path_N4_K32_C3_mf-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<path_N4_K32_C3_mf-eps-converted-to.pdf, id=1648, 366.36874pt x 292.09125pt>
+File: path_N4_K32_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use path_N4_K32_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: path_N4_K32_C3_mf-eps-converted-to.pdf  used on input 
+line 1095.
+(pdftex.def)             Requested size: 274.77588pt x 219.06789pt.
+Package epstopdf Info: Source file: <orbit_N4_K32_C3_mf.eps>
+(epstopdf)                    date: 2022-04-18 23:11:55
+(epstopdf)                    size: 28130 bytes
+(epstopdf)             Output file: <orbit_N4_K32_C3_mf-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-04-18 23:14:09
+(epstopdf)                    size: 11880 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=orbit_N4_K32_C3_mf-e
+ps-converted-to.pdf orbit_N4_K32_C3_mf.eps>
+(epstopdf)             \includegraphics on input line 1101.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./orbit_N4_K32_C3_mf-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<orbit_N4_K32_C3_mf-eps-converted-to.pdf, id=1649, 355.3275pt x 295.1025pt>
+File: orbit_N4_K32_C3_mf-eps-converted-to.pdf Graphic file (type pdf)
+<use orbit_N4_K32_C3_mf-eps-converted-to.pdf>
+Package pdftex.def Info: orbit_N4_K32_C3_mf-eps-converted-to.pdf  used on input
+ line 1101.
+(pdftex.def)             Requested size: 266.49495pt x 221.32631pt.
+
+Overfull \hbox (21.19514pt too wide) in paragraph at lines 1106--1121
+[][] 
+ []
+
+[59] [60 <./states_N3_K2_C3_mf-eps-converted-to.pdf> <./control_N3_K2_C3_mf-eps
+-converted-to.pdf>] [61 <./path_N3_K2_C3_mf-eps-converted-to.pdf> <./orbit_N3_K
+2_C3_mf-eps-converted-to.pdf>] [62 <./states_N3_K4_C3_mf-eps-converted-to.pdf> 
+<./control_N3_K4_C3_mf-eps-converted-to.pdf>] [63 <./path_N3_K4_C3_mf-eps-conve
+rted-to.pdf> <./orbit_N3_K4_C3_mf-eps-converted-to.pdf>] [64 <./states_N3_K8_C3
+_mf-eps-converted-to.pdf> <./control_N3_K8_C3_mf-eps-converted-to.pdf>]
+[65 <./path_N3_K8_C3_mf-eps-converted-to.pdf> <./orbit_N3_K8_C3_mf-eps-converte
+d-to.pdf>] [66 <./states_N3_K16_C3_mf-eps-converted-to.pdf> <./control_N3_K16_C
+3_mf-eps-converted-to.pdf>] [67 <./path_N3_K16_C3_mf-eps-converted-to.pdf> <./o
+rbit_N3_K16_C3_mf-eps-converted-to.pdf>] [68 <./states_N3_K32_C3_mf-eps-convert
+ed-to.pdf> <./control_N3_K32_C3_mf-eps-converted-to.pdf>] [69 <./path_N3_K32_C3
+_mf-eps-converted-to.pdf> <./orbit_N3_K32_C3_mf-eps-converted-to.pdf>] [70 <./s
+tates_N4_K2_C3_mf-eps-converted-to.pdf> <./control_N4_K2_C3_mf-eps-converted-to
+.pdf>] [71 <./path_N4_K2_C3_mf-eps-converted-to.pdf> <./orbit_N4_K2_C3_mf-eps-c
+onverted-to.pdf>] [72 <./states_N4_K4_C3_mf-eps-converted-to.pdf> <./control_N4
+_K4_C3_mf-eps-converted-to.pdf>] [73 <./path_N4_K4_C3_mf-eps-converted-to.pdf> 
+<./orbit_N4_K4_C3_mf-eps-converted-to.pdf>] [74 <./states_N4_K8_C3_mf-eps-conve
+rted-to.pdf> <./control_N4_K8_C3_mf-eps-converted-to.pdf>] [75 <./path_N4_K8_C3
+_mf-eps-converted-to.pdf> <./orbit_N4_K8_C3_mf-eps-converted-to.pdf>] [76 <./st
+ates_N4_K16_C3_mf-eps-converted-to.pdf> <./control_N4_K16_C3_mf-eps-converted-t
+o.pdf>] [77 <./path_N4_K16_C3_mf-eps-converted-to.pdf> <./orbit_N4_K16_C3_mf-ep
+s-converted-to.pdf>] [78 <./states_N4_K32_C3_mf-eps-converted-to.pdf> <./contro
+l_N4_K32_C3_mf-eps-converted-to.pdf>] [79 <./path_N4_K32_C3_mf-eps-converted-to
+.pdf> <./orbit_N4_K32_C3_mf-eps-converted-to.pdf>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 1132.
+ (../orbitTransferMain.m
+LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 1.
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
+1.
+
+(C:\Users\elias\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmss.fd
+File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Trying to load font information for OMS+cmss on input line 
+31.
+LaTeX Font Info:    No file OMScmss.fd. on input line 31.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbackslash' on input line 31.
+
+[80] [81]
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 177--178
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 179--180
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 193--194
+[][][][][][][] 
+ []
+
+[82]
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 195--196
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 203--204
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 205--206
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 220--221
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 222--223
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 225--226
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 227--228
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 253--254
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 256--257
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 259--260
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 261--262
+[][][][][][][] 
+ []
+
+[83]
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 263--264
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 265--266
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 267--268
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 269--270
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 274--275
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (72.78506pt too wide) in paragraph at lines 276--277
+[][][][][][][] 
+ []
+
+[84]
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/it' undefined
+(Font)              using `OMS/cmss/m/n' instead
+(Font)              for symbol `textbackslash' on input line 383.
+
+[85] [86]) (../orbitTransferFun.m
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 3--4
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 7--8
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 11--13
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 13--14
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 15--16
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 18--19
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 23--24
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 26--27
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 32--33
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 43--44
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 55--56
+[][][][][][] 
+ []
+
+[87]
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 60--61
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 62--63
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 77--78
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 80--81
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 82--83
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 88--89
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 94--95
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 108--109
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 122--123
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 126--127
+[][][][][][] 
+ []
+
+[88]
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 129--130
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 135--136
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 138--139
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 141--142
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 150--151
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 152--153
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 155--156
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 157--158
+[][][][][][] 
+ []
+
+) (../orbitTransferObj.m
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 6--7
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 8--9
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 11--12
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 16--17
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 19--20
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 25--26
+[][][][][][] 
+ []
+
+[89]
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 36--37
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 48--49
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 53--54
+[][][][][][] 
+ []
+
+
+Overfull \hbox (59.39749pt too wide) in paragraph at lines 55--56
+[][][][][][] 
+ []
+
+) (../orbitTransferCon.m) (../orbitTransferGrd.m) [90] (../orbitTransferJac.m)
+(../orbitTransferJacPat.m) [91] (FinalProject.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `FinalProject.out' has not changed.
-(rerunfilecheck)             Checksum: 34F320852385E5EE60E10F8BF916F82F;925.
+(rerunfilecheck)             Checksum: 36ED86CCCEF382DFFC165594C40D8833;3271.
  ) 
 Here is how much of TeX's memory you used:
- 10997 strings out of 478582
- 171610 string characters out of 2844345
- 647460 words of memory out of 3000000
- 28998 multiletter control sequences out of 15000+600000
- 477122 words of font info for 59 fonts, out of 8000000 for 9000
+ 14277 strings out of 478582
+ 240664 string characters out of 2844345
+ 734460 words of memory out of 3000000
+ 31107 multiletter control sequences out of 15000+600000
+ 478794 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,63p,767b,342s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/elias/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Users/elias/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Users/elias/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><C:/Users/elias/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/elias/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/elias/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/elias/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/elias/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users
-/elias/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C
-:/Users/elias/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb>
-Output written on FinalProject.pdf (8 pages, 200950 bytes).
+ 60i,11n,63p,755b,2448s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\elias\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss
+0700.pk> <C:\Users\elias\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcsi0700.pk><C:/Users/elias/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb><C:/Users/elias/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><C:/Users/elias/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/elias/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/elias/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/elias/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/eli
+as/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/U
+sers/elias/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.p
+fb><C:/Users/elias/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr5.pfb><C:/Users/elias/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr7.pfb><C:/Users/elias/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmss8.pfb><C:/Users/elias/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/elias/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/elias/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/elias/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on FinalProject.pdf (98 pages, 4017232 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3105 PDF objects out of 3580 (max. 8388607)
+ 1027 named destinations out of 1200 (max. 500000)
+ 833 words of extra memory for PDF output out of 10000 (max. 10000000)
 

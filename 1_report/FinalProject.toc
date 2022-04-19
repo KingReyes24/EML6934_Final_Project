@@ -2,3 +2,13 @@
 \contentsline {section}{\numberline {2}Differential Equations of Motion}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Position, Velocity and Acceleration of the Spacecraft}{1}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Newton's Second Law for A Particle}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Conversion to First-Order Equations}{3}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Formulation of Optimal Control Problem}{5}{section.3}%
+\contentsline {section}{\numberline {4}Numerical Solution of Optimal Control Problem}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Minimize Terminal Time with Unconstrained Control}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Maximize Terminal Mass with Unconstrained Control}{22}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Minimize Terminal Time with Constrained Control}{38}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Maximize Terminal Mass with Constrained Control}{59}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Overall Analysis}{80}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Future Work}{80}{section.5}%
+\contentsline {section}{\numberline {6}Appendix}{80}{section.6}%
