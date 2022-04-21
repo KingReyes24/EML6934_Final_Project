@@ -20,7 +20,9 @@
 %   v_r(t_f)     = 0                                 %
 %   v_theta(t_f) = sqrt(mu/r(t_f))                   %
 
- close all; clear all;
+close all; clear all;
+format long
+%  clear all
 % -------------------------------------------------- %
 % BEGIN: DO NOT ALTER THE FOLLOWING LINES OF CODE!!! %
 % -------------------------------------------------- %
@@ -28,21 +30,41 @@ global igrid CONSTANTS psStuff nstates ncontrols npaths path_constraint maximize
 % -------------------------------------------------- %
 % END:   DO NOT ALTER THE FOLLOWING LINES OF CODE!!! %
 % -------------------------------------------------- %
+%% GENERATE PATH THAT CONTAINS IPOPT and ADIGATOR
 path = 'C:\Users\elias\Documents\UF_Classes\EML6934\Final_Project\EML6934_Final_Project';
 addpath(genpath(path))
+addpath('C:\Users\elias\Downloads\optiMEXFiles_mexw64_2_28')
+%% Save figures and latex table. 
+% Do not change this if debugging
+save_figs          = 0;
+create_latex_table = 0;
 
-% save figures or create latex table?
-save_figs          = 1;
-create_latex_table = 1;
+%% Set path constrant and objective function descision
+path_constraint= 0; % is there a path contraint?
+maximize_mass  = 0; % maximize m(tf), else min tf
 
-% Set path constrant and objective function descision
-path_constraint= 1; % is there a path contraint?
-maximize_mass  = 1; % maximize m(tf), else min tf
+%% Set polynomial degrees and intervals to loop through
+n_list = [3 ];        % polynomial degrees
+k_list = [4 8 ]; % intervals
 
-% Set polynomial degrees and intervals to loop through
-n_list = [3 4];
-k_list = [2 4 8 16 32];
+%% Set Globals
+% set gloabl constants
+CONSTANTS.MU = 1;
+CONSTANTS.m0 = 1;
+CONSTANTS.ve = 1.8658344;
+% set number of states 
+nstates = 5;
 
+% set number of controls and paths
+if path_constraint
+    ncontrols = 3; 
+    npaths    = 1;
+else
+    ncontrols = 2;
+    npaths    = 0;
+end
+
+%% Solve Optimal Control Problem
 % counter for table
 count  = 1;
 
@@ -54,42 +76,27 @@ for nIdx = 1:numel(n_list)
     N              = n_list(nIdx); % number of polynomial degree
     numIntervals   = k_list(kIdx); % number of intervals
 
-    % set gloabl constants
-    CONSTANTS.MU = 1;
-    CONSTANTS.m0 = 1;
-    CONSTANTS.ve = 1.8658344;
-    % set number of states 
-    nstates = 5;
-    
-    % set number of controls and paths
-    if path_constraint
-        ncontrols = 3; 
-        npaths    = 1;
-    else
-        ncontrols = 2;
-        npaths    = 0;
-    end
-    
     % Bounds on State and Control
     % thetaf and mf are free
     r0 = 1;   theta0 = 0; vr0 = 0; vtheta0 = 1; m0 = 1;
     rf = 1.5;             vrf = 0; vthetaf = sqrt(1/rf);  
 
-    rmin      = 1;    rmax      = 3;
+    rmin      = 1;    rmax      = 1.5;
     thetamin  = 0;    thetamax  = 4*pi;
     vrmin     = -10;  vrmax     = 10;
     vthetamin = -10;  vthetamax = 10;
     mmin      = 0.1;  mmax      = m0;
     t0min     = 0;    t0max     = 0;
-    tfmin     = 0;    tfmax     = 100;
+    tfmin     = 0;    tfmax     = 25;
+    u3min     = 0;    u3max     = 0.1405; % thrust
     if path_constraint
-        u1min = -10;  u1max = 10;     % sin(beta)
-        u2min = -10;  u2max = 10;     % cos(beta)
-        u3min = 0;    u3max = 0.1405; % thrust
+        % set bounds for control with path contraint
+        u1min = -1.5;  u1max = 1.5;     % sin(beta)
+        u2min = -1.5;  u2max = 1.5;     % cos(beta)
     else
+        % set bound for beta 
         u1min = -4*pi; u1max = 4*pi;  % beta
         u2min = 0;     u2max = 0;     % empty
-        u3min = 0;     u3max = 0.1405;% thrust
     end
 
     % Create Leguandre Gauss Points
@@ -130,14 +137,18 @@ for nIdx = 1:numel(n_list)
 
     zu3min = u3min*ones(length(tau)-1,1);
     zu3max = u3max*ones(length(tau)-1,1);
-
+    
+    % Contruct vector of bounds. 
     if path_constraint
+        % using u1, u2, u3
         zmin = [zrmin; zthetamin; zvrmin; zvthetamin; zmmin; zu1min; zu2min; zu3min; t0min; tfmin];
         zmax = [zrmax; zthetamax; zvrmax; zvthetamax; zmmax; zu1max; zu2max; zu3max; t0max; tfmax];
     else
+        % using u1, u3
         zmin = [zrmin; zthetamin; zvrmin; zvthetamin; zmmin; zu1min; zu3min; t0min; tfmin];
         zmax = [zrmax; zthetamax; zvrmax; zvthetamax; zmmax; zu1max; zu3max; t0max; tfmax];
     end
+    
     % Set the bounds on the NLP constraints
     % There are NSTATES sets of defect constraints.
     defectMin = zeros(nstates*(length(tau)-1),1);
@@ -157,20 +168,21 @@ for nIdx = 1:numel(n_list)
 
     % Supply an initial guess
     rguess      = linspace(r0,rf,NLGR+1).';
-    thetaguess  = linspace(theta0,theta0,NLGR+1).';
+    thetaguess  = linspace(theta0,2.5,NLGR+1).';
     vrguess     = linspace(vr0,vrf,NLGR+1).';
-    vthetaguess = linspace(vtheta0,vtheta0,NLGR+1).';
-    mguess      = linspace(m0,m0,NLGR+1).';
-    u3guess     = linspace(0,0,NLGR).';
+    vthetaguess = linspace(vtheta0,vthetaf,NLGR+1).';
+    mguess      = linspace(mmax,mmin,NLGR+1).';
+    u1guess     = linspace(u1min,u1max,NLGR).';
+    u3guess     = linspace(u3max,u3max,NLGR).';
     t0guess     = 0;
-    tfguess     = 3.5;
+    tfguess     = 3;
 
     if path_constraint
+        % contruct u1guess and u2guess for path contraint
         u1guess = linspace(1,1,NLGR).';
         u2guess = linspace(0,0,NLGR).';
         z0 = [rguess;thetaguess;vrguess;vthetaguess;mguess;u1guess;u2guess;u3guess;t0guess;tfguess];
-    else
-        u1guess = linspace(0,0,NLGR).';
+    else  
         z0 = [rguess;thetaguess;vrguess;vthetaguess;mguess;u1guess;u3guess;t0guess;tfguess];
     end
 
@@ -203,14 +215,14 @@ for nIdx = 1:numel(n_list)
     %-----------------------------------------------------------------%
     % Set IPOPT Options %
     %-----------------------------------------------------------------%
-    options.ipopt.tol = 1e-8;
-    options.ipopt.linear_solver = 'ma57'; %'mumps';
-    options.ipopt.max_iter = 8000;
-    options.ipopt.mu_strategy = 'adaptive';
+    options.ipopt.tol           = 1e-8;
+    options.ipopt.linear_solver = 'ma57';%'ma57'; %'mumps';
+    options.ipopt.max_iter      = 8000;
+    options.ipopt.mu_strategy   = 'adaptive';
     options.ipopt.ma57_automatic_scaling = 'yes';
-    options.ipopt.print_user_options = 'yes';
-    options.ipopt.output_file = ['orbitTransfer','IPOPTinfo.txt']; % print output file
-    options.ipopt.print_level = 5; % set print level default
+    options.ipopt.print_user_options = 'no';
+    options.ipopt.output_file        = ['orbitTransfer','IPOPTinfo.txt']; % print output file
+    options.ipopt.print_level        = 5; % set print level default
 
     options.lb = zmin; % Lower bound on the variables.
     options.ub = zmax; % Upper bound on the variables.
@@ -245,6 +257,7 @@ for nIdx = 1:numel(n_list)
     else
         u3   = z(5*(NLGR+1)+NLGR+1:5*(NLGR+1)+2*NLGR);
         beta = unwrap(u1)*180/pi;
+%         beta = u1;
     end
     t0     = z(end-1);
     tf     = z(end);
@@ -254,22 +267,22 @@ for nIdx = 1:numel(n_list)
     % Extract the Lagrange multipliers corresponding                  %
     % the defect constraints.                                         %
     %-----------------------------------------------------------------%
-    multipliersDefects = Fmul(2:nstates*NLGR+1);
-    multipliersDefects = reshape(multipliersDefects,NLGR,nstates);
-    %-----------------------------------------------------------------%
-    % Compute the costates at the LGR points via transformation       %
-    %-----------------------------------------------------------------%
-    costateLGR = inv(diag(w))*multipliersDefects;
-    %-----------------------------------------------------------------%
-    % Compute the costate at the tau=+1 via transformation            %
-    %-----------------------------------------------------------------%
-    costateF = D(:,end).'*multipliersDefects;
-    %-----------------------------------------------------------------%
-    % Now assemble the costates into a single matrix                  %
-    %-----------------------------------------------------------------%
-    costate = [costateLGR; costateF];    
-    lamr = costate(:,1); lamtheta = costate(:,2);
-    lamvr = costate(:,3); lamvtheta = costate(:,4);
+%     multipliersDefects = Fmul(2:nstates*NLGR+1);
+%     multipliersDefects = reshape(multipliersDefects,NLGR,nstates);
+%     %-----------------------------------------------------------------%
+%     % Compute the costates at the LGR points via transformation       %
+%     %-----------------------------------------------------------------%
+%     costateLGR = inv(diag(w))*multipliersDefects;
+%     %-----------------------------------------------------------------%
+%     % Compute the costate at the tau=+1 via transformation            %
+%     %-----------------------------------------------------------------%
+%     costateF = D(:,end).'*multipliersDefects;
+%     %-----------------------------------------------------------------%
+%     % Now assemble the costates into a single matrix                  %
+%     %-----------------------------------------------------------------%
+%     costate = [costateLGR; costateF];    
+%     lamr = costate(:,1); lamtheta = costate(:,2);
+%     lamvr = costate(:,3); lamvtheta = costate(:,4);
 
     %-----------------------------------------------------------------%
     % Get planer coordinates
@@ -285,7 +298,7 @@ for nIdx = 1:numel(n_list)
     %-------------%
     % Plot Results 
     %-------------%
-    close all
+%     close all
     
     fig_cntrl = figure;
     h1 = subplot(2,1,1);
@@ -470,3 +483,4 @@ if create_latex_table
     table2latex(T,[str_table str_obj])
 end
 
+arrayfun(@(x) set( x,'windowstyle', 'docked'),findall(groot,'type','figure')) ;
