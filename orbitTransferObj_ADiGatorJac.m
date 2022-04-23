@@ -19,10 +19,6 @@ Gator1Data = ADiGator_orbitTransferObj_ADiGatorJac.orbitTransferObj_ADiGatorJac.
 global psStuff nstates ncontrols maximize_mass 
 %User Line: global
 %User Line: %-----------------------------------------------------------------%
-%User Line: %         Extract the constants used in the problem.              %
-%User Line: %-----------------------------------------------------------------%
-%User Line: % MU = CONSTANTS.MU; mdot = CONSTANTS.mdot; T = CONSTANTS.T;
-%User Line: %-----------------------------------------------------------------%
 %User Line: % Radau pseudospectral method quantities required:                %
 %User Line: %   - Differentiation matrix (psStuff.D)                          %
 %User Line: %   - Legendre-Gauss-Radau weights (psStuff.w)                    %
@@ -60,17 +56,15 @@ controlIndices.f = cada1f3:cada1f7;
 cada1f1 = length(controlIndices.f);
 cada1f2 = controlIndices.f(cada1f1);
 t0Index.f = cada1f2 + 1;
-%User Line: t0Index     = controlIndices(end)+1;
+%User Line: t0Index        = controlIndices(end)+1;
 tfIndex.f = t0Index.f + 1;
-%User Line: tfIndex     = t0Index+1;
+%User Line: tfIndex        = t0Index+1;
 stateVector.dz0 = z.dz0(Gator1Data.Index1);
 stateVector.f = z.f(stateIndices.f);
-%User Line: stateVector = z(stateIndices);
-%User Line: % controlVector = z(controlIndices);
-%User Line: % t0 = z(t0Index);
-tf.dz0 = z.dz0(49);
+%User Line: stateVector    = z(stateIndices);
+tf.dz0 = z.dz0(903);
 tf.f = z.f(tfIndex.f);
-%User Line: tf = z(tfIndex);
+%User Line: tf             = z(tfIndex);
 %User Line: %-----------------------------------------------------------------%
 %User Line: % Reshape the state and control parts of the NLP decision vector  %
 %User Line: % to matrices of sizes (N+1) by nstates and (N+1) by ncontrols,   %
@@ -88,20 +82,6 @@ cada1f1 = N.f + 1;
 statePlusEnd.dz0 = stateVector.dz0;
 statePlusEnd.f = reshape(stateVector.f,cada1f1,nstates);
 %User Line: statePlusEnd = reshape(stateVector,N+1,nstates);
-cada1f1 = size(statePlusEnd.f,1);
-cada1f2 = cada1f1 - 1;
-cada1f3 = 1:cada1f2;
-stateLGR.dz0 = statePlusEnd.dz0(Gator1Data.Index2);
-stateLGR.f = statePlusEnd.f(cada1f3,:);
-%User Line: stateLGR     = statePlusEnd(1:end-1,:);
-%User Line: % control = reshape(controlVector,N,ncontrols);
-%User Line: %-----------------------------------------------------------------%
-%User Line: % Identify the components of the state column-wise from stateLGR. %
-%User Line: %-----------------------------------------------------------------%
-%User Line: % r      = stateLGR(:,1);
-%User Line: % theta  = stateLGR(:,1);
-%User Line: % vr     = stateLGR(:,3);
-%User Line: % vtheta = stateLGR(:,4);
 %User Line: % Cost Function
 %User Line: % minizing time or maximizing mass
 cadaconditional1 = maximize_mass;
@@ -112,8 +92,8 @@ cadaconditional1 = maximize_mass;
     %User Line: J = tf;
 obj.dz0 = J.dz0; obj.f = J.f;
 %User Line: obj = J;
-obj.dz0_size = 49;
-obj.dz0_location = Gator1Data.Index3;
+obj.dz0_size = 903;
+obj.dz0_location = Gator1Data.Index2;
 end
 
 

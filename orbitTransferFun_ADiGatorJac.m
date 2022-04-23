@@ -79,10 +79,10 @@ stateVector.f = z.f(stateIndices.f);
 controlVector.dz0 = z.dz0(Gator1Data.Index2);
 controlVector.f = z.f(controlIndices.f);
 %User Line: controlVector  = z(controlIndices);
-t0.dz0 = z.dz0(90);
+t0.dz0 = z.dz0(902);
 t0.f = z.f(t0Index.f);
 %User Line: t0             = z(t0Index);
-tf.dz0 = z.dz0(91);
+tf.dz0 = z.dz0(903);
 tf.f = z.f(tfIndex.f);
 %User Line: tf             = z(tfIndex);
 %User Line: %-----------------------------------------------------------------%
@@ -118,8 +118,8 @@ r.dz0 = stateLGR.dz0(Gator1Data.Index4);
 r.f = stateLGR.f(:,1);
 %User Line: r      = stateLGR(:,1);
 theta.dz0 = stateLGR.dz0(Gator1Data.Index5);
-theta.f = stateLGR.f(:,1);
-%User Line: theta  = stateLGR(:,1);
+theta.f = stateLGR.f(:,2);
+%User Line: theta  = stateLGR(:,2);
 vr.dz0 = stateLGR.dz0(Gator1Data.Index6);
 vr.f = stateLGR.f(:,3);
 %User Line: vr     = stateLGR(:,3);
@@ -143,22 +143,6 @@ cadaconditional1 = path_constraint;
     u3.f = control.f(:,2);
     %User Line: u3 = control(:,2);
 %User Line: %-----------------------------------------------------------------%
-%User Line: % The quantity STATEF is the value of the state at the final      %
-%User Line: % time, tf, which corresponds to the state at $\tau=1$.           %
-%User Line: %-----------------------------------------------------------------%
-%User Line: % stateF = statePlusEnd(end,:);
-%User Line: %-----------------------------------------------------------------%
-%User Line: % The orbit-raising problem contains one nonlinear boundary       %
-%User Line: % condition $\sqrt{mu/r(t_f)-v_\theta(t_f) = 0$.  Because $r(t)$  %
-%User Line: % and $v_\theta(t)$ are the first and fourth components of the    %
-%User Line: % state, it is necessary to extract stateF(1) and stateF(4) in    %
-%User Line: % order to compute this boundary condition function.              %
-%User Line: %-----------------------------------------------------------------%
-%User Line: % rF = stateF(1);
-%User Line: % vthetaF = stateF(4);
-%User Line: %
-%User Line: % a = T./m;
-%User Line: %-----------------------------------------------------------------%
 %User Line: % Compute the right-hand side of the differential equations at    %
 %User Line: % the N LGR points.  Each component of the right-hand side is     %
 %User Line: % stored as a column vector of length N, that is each column has  %
@@ -175,7 +159,7 @@ cadaconditional1 = path_constraint;
 %User Line: %-----------------------------------------------------------------%
 rdot.dz0 = vr.dz0; rdot.f = vr.f;
 %User Line: rdot       = vr;
-cada1td1 = zeros(24,1);
+cada1td1 = zeros(256,1);
 cada1td1(Gator1Data.Index11) = vtheta.dz0./r.f(:);
 cada1td1(Gator1Data.Index12) = cada1td1(Gator1Data.Index12) + -vtheta.f(:)./r.f(:).^2.*r.dz0;
 thetadot.dz0 = cada1td1;
@@ -185,16 +169,24 @@ cada1f1dz0 = -u3.dz0;
 cada1f1 = uminus(u3.f);
 mdot.dz0 = cada1f1dz0./ve;
 mdot.f = cada1f1/ve;
-%User Line: mdot       = -u3./ve;
+%User Line: mdot       = -u3/ve;
+cada1td1 = zeros(256,1);
+cada1td1(Gator1Data.Index13) = u3.dz0./m.f(:);
+cada1td1(Gator1Data.Index14) = cada1td1(Gator1Data.Index14) + -u3.f(:)./m.f(:).^2.*m.dz0;
+a.dz0 = cada1td1;
+a.f = u3.f./m.f;
+%User Line: a = u3./m;
 cadaconditional1 = path_constraint;
 %User Line: cadaconditional1 = path_constraint;
-    %User Line: vrdot      = vtheta.^2./r - mu./r.^2 + u3.*u1./m;
-    %User Line: vthetadot  = -vtheta.*vr./r + u3.*u2./m;
+    %User Line: %     vrdot      = vtheta.^2./r - mu./r.^2 + u3.*u1./m;
+    %User Line: %     vthetadot  = -vtheta.*vr./r + u3.*u2./m;
+    %User Line: vrdot      = vtheta.^2./r - mu./r.^2 + a.*u1;
+    %User Line: vthetadot  = -vtheta.*vr./r + a.*u2;
     cada1f1dz0 = 2.*vtheta.f(:).^(2-1).*vtheta.dz0;
     cada1f1 = vtheta.f.^2;
-    cada1td1 = zeros(24,1);
-    cada1td1(Gator1Data.Index13) = cada1f1dz0./r.f(:);
-    cada1td1(Gator1Data.Index14) = cada1td1(Gator1Data.Index14) + -cada1f1(:)./r.f(:).^2.*r.dz0;
+    cada1td1 = zeros(256,1);
+    cada1td1(Gator1Data.Index15) = cada1f1dz0./r.f(:);
+    cada1td1(Gator1Data.Index16) = cada1td1(Gator1Data.Index16) + -cada1f1(:)./r.f(:).^2.*r.dz0;
     cada1f2dz0 = cada1td1;
     cada1f2 = cada1f1./r.f;
     cada1f3dz0 = 2.*r.f(:).^(2-1).*r.dz0;
@@ -202,66 +194,66 @@ cadaconditional1 = path_constraint;
     cada1f4dz0 = -mu./cada1f3(:).^2.*cada1f3dz0;
     cada1f4 = mu./cada1f3;
     cada1td1 = cada1f2dz0;
-    cada1td1(Gator1Data.Index15) = cada1td1(Gator1Data.Index15) + -cada1f4dz0;
+    cada1td1(Gator1Data.Index17) = cada1td1(Gator1Data.Index17) + -cada1f4dz0;
     cada1f5dz0 = cada1td1;
     cada1f5 = cada1f2 - cada1f4;
     cada1f6dz0 = cos(u1.f(:)).*u1.dz0;
     cada1f6 = sin(u1.f);
-    cada1td1 = zeros(24,1);
-    cada1td1(Gator1Data.Index16) = cada1f6(:).*u3.dz0;
-    cada1td1(Gator1Data.Index17) = cada1td1(Gator1Data.Index17) + u3.f(:).*cada1f6dz0;
+    cada1td1 = zeros(256,1);
+    cada1td1(Gator1Data.Index18) = cada1f6(:).*u3.dz0;
+    cada1td1(Gator1Data.Index19) = cada1td1(Gator1Data.Index19) + u3.f(:).*cada1f6dz0;
     cada1f7dz0 = cada1td1;
     cada1f7 = u3.f.*cada1f6;
-    cada1tf1 = m.f(Gator1Data.Index18);
-    cada1td1 = zeros(36,1);
-    cada1td1(Gator1Data.Index19) = cada1f7dz0./cada1tf1(:);
-    cada1td1(Gator1Data.Index20) = cada1td1(Gator1Data.Index20) + -cada1f7(:)./m.f(:).^2.*m.dz0;
+    cada1tf1 = m.f(Gator1Data.Index20);
+    cada1td1 = zeros(384,1);
+    cada1td1(Gator1Data.Index21) = cada1f7dz0./cada1tf1(:);
+    cada1td1(Gator1Data.Index22) = cada1td1(Gator1Data.Index22) + -cada1f7(:)./m.f(:).^2.*m.dz0;
     cada1f8dz0 = cada1td1;
     cada1f8 = cada1f7./m.f;
-    cada1td1 = zeros(60,1);
-    cada1td1(Gator1Data.Index21) = cada1f5dz0;
-    cada1td1(Gator1Data.Index22) = cada1td1(Gator1Data.Index22) + cada1f8dz0;
+    cada1td1 = zeros(640,1);
+    cada1td1(Gator1Data.Index23) = cada1f5dz0;
+    cada1td1(Gator1Data.Index24) = cada1td1(Gator1Data.Index24) + cada1f8dz0;
     vrdot.dz0 = cada1td1;
     vrdot.f = cada1f5 + cada1f8;
     %User Line: vrdot      = vtheta.^2./r - mu./r.^2 + u3.*sin(u1)./m;
     cada1f1dz0 = -vtheta.dz0;
     cada1f1 = uminus(vtheta.f);
-    cada1td1 = zeros(24,1);
-    cada1td1(Gator1Data.Index23) = vr.f(:).*cada1f1dz0;
-    cada1td1(Gator1Data.Index24) = cada1td1(Gator1Data.Index24) + cada1f1(:).*vr.dz0;
+    cada1td1 = zeros(256,1);
+    cada1td1(Gator1Data.Index25) = vr.f(:).*cada1f1dz0;
+    cada1td1(Gator1Data.Index26) = cada1td1(Gator1Data.Index26) + cada1f1(:).*vr.dz0;
     cada1f2dz0 = cada1td1;
     cada1f2 = cada1f1.*vr.f;
-    cada1tf1 = r.f(Gator1Data.Index25);
-    cada1td1 = zeros(36,1);
-    cada1td1(Gator1Data.Index26) = cada1f2dz0./cada1tf1(:);
-    cada1td1(Gator1Data.Index27) = cada1td1(Gator1Data.Index27) + -cada1f2(:)./r.f(:).^2.*r.dz0;
+    cada1tf1 = r.f(Gator1Data.Index27);
+    cada1td1 = zeros(384,1);
+    cada1td1(Gator1Data.Index28) = cada1f2dz0./cada1tf1(:);
+    cada1td1(Gator1Data.Index29) = cada1td1(Gator1Data.Index29) + -cada1f2(:)./r.f(:).^2.*r.dz0;
     cada1f3dz0 = cada1td1;
     cada1f3 = cada1f2./r.f;
     cada1f4dz0 = -sin(u1.f(:)).*u1.dz0;
     cada1f4 = cos(u1.f);
-    cada1td1 = zeros(24,1);
-    cada1td1(Gator1Data.Index28) = cada1f4(:).*u3.dz0;
-    cada1td1(Gator1Data.Index29) = cada1td1(Gator1Data.Index29) + u3.f(:).*cada1f4dz0;
+    cada1td1 = zeros(256,1);
+    cada1td1(Gator1Data.Index30) = cada1f4(:).*u3.dz0;
+    cada1td1(Gator1Data.Index31) = cada1td1(Gator1Data.Index31) + u3.f(:).*cada1f4dz0;
     cada1f5dz0 = cada1td1;
     cada1f5 = u3.f.*cada1f4;
-    cada1tf1 = m.f(Gator1Data.Index30);
-    cada1td1 = zeros(36,1);
-    cada1td1(Gator1Data.Index31) = cada1f5dz0./cada1tf1(:);
-    cada1td1(Gator1Data.Index32) = cada1td1(Gator1Data.Index32) + -cada1f5(:)./m.f(:).^2.*m.dz0;
+    cada1tf1 = m.f(Gator1Data.Index32);
+    cada1td1 = zeros(384,1);
+    cada1td1(Gator1Data.Index33) = cada1f5dz0./cada1tf1(:);
+    cada1td1(Gator1Data.Index34) = cada1td1(Gator1Data.Index34) + -cada1f5(:)./m.f(:).^2.*m.dz0;
     cada1f6dz0 = cada1td1;
     cada1f6 = cada1f5./m.f;
-    cada1td1 = zeros(72,1);
-    cada1td1(Gator1Data.Index33) = cada1f3dz0;
-    cada1td1(Gator1Data.Index34) = cada1td1(Gator1Data.Index34) + cada1f6dz0;
+    cada1td1 = zeros(768,1);
+    cada1td1(Gator1Data.Index35) = cada1f3dz0;
+    cada1td1(Gator1Data.Index36) = cada1td1(Gator1Data.Index36) + cada1f6dz0;
     vthetadot.dz0 = cada1td1;
     vthetadot.f = cada1f3 + cada1f6;
     %User Line: vthetadot  = -vtheta.*vr./r + u3.*cos(u1)./m;
-cada1td1 = zeros(180,1);
-cada1td1(Gator1Data.Index35) = rdot.dz0;
-cada1td1(Gator1Data.Index36) = thetadot.dz0;
-cada1td1(Gator1Data.Index37) = vrdot.dz0;
-cada1td1(Gator1Data.Index38) = vthetadot.dz0;
-cada1td1(Gator1Data.Index39) = mdot.dz0;
+cada1td1 = zeros(1920,1);
+cada1td1(Gator1Data.Index37) = rdot.dz0;
+cada1td1(Gator1Data.Index38) = thetadot.dz0;
+cada1td1(Gator1Data.Index39) = vrdot.dz0;
+cada1td1(Gator1Data.Index40) = vthetadot.dz0;
+cada1td1(Gator1Data.Index41) = mdot.dz0;
 diffeqRHS.dz0 = cada1td1;
 diffeqRHS.f = [rdot.f thetadot.f vrdot.f vthetadot.f mdot.f];
 %User Line: diffeqRHS = [rdot, thetadot, vrdot, vthetadot, mdot];
@@ -270,10 +262,10 @@ diffeqRHS.f = [rdot.f thetadot.f vrdot.f vthetadot.f mdot.f];
 %User Line: % that the left-hand side is computed using the state at the LGR  %
 %User Line: % points PLUS the final point.                                    %
 %User Line: %-----------------------------------------------------------------%
-cada1td1 = sparse(Gator1Data.Index40,Gator1Data.Index41,statePlusEnd.dz0,13,65);
+cada1td1 = sparse(Gator1Data.Index42,Gator1Data.Index43,statePlusEnd.dz0,129,645);
 cada1td1 = D*cada1td1;
 cada1td1 = cada1td1(:);
-diffeqLHS.dz0 = full(cada1td1(Gator1Data.Index42));
+diffeqLHS.dz0 = full(cada1td1(Gator1Data.Index44));
 diffeqLHS.f = D*statePlusEnd.f;
 %User Line: diffeqLHS = D*statePlusEnd;
 %User Line: %-----------------------------------------------------------------%
@@ -287,3 +279,62 @@ cada1td1 = zeros(2,1);
 cada1td1(2) = tf.dz0;
 cada1td1(1) = cada1td1(1) + -t0.dz0;
 cada1f1dz0 = cada1td1;
+cada1f1 = tf.f - t0.f;
+cada1tempdz0 = cada1f1dz0(Gator1Data.Index45);
+cada1tf1 = diffeqRHS.f(Gator1Data.Index46);
+cada1td1 = zeros(3200,1);
+cada1td1(Gator1Data.Index47) = cada1tf1(:).*cada1tempdz0;
+cada1td1(Gator1Data.Index48) = cada1td1(Gator1Data.Index48) + cada1f1.*diffeqRHS.dz0;
+cada1f2dz0 = cada1td1;
+cada1f2 = cada1f1*diffeqRHS.f;
+cada1f3dz0 = cada1f2dz0./2;
+cada1f3 = cada1f2/2;
+cada1td1 = zeros(6272,1);
+cada1td1(Gator1Data.Index49) = diffeqLHS.dz0;
+cada1td1(Gator1Data.Index50) = cada1td1(Gator1Data.Index50) + -cada1f3dz0;
+defects.dz0 = cada1td1;
+defects.f = diffeqLHS.f - cada1f3;
+%User Line: defects = diffeqLHS-(tf-t0)*diffeqRHS/2;
+%User Line: %-----------------------------------------------------------------%
+%User Line: % Construct the path constraints at the N LGR points.             %
+%User Line: % Reshape the path contraints into a column vector.               %
+%User Line: %-----------------------------------------------------------------%
+cadaconditional1 = path_constraint;
+%User Line: cadaconditional1 = path_constraint;
+    %User Line: paths = u1.^2 + u2.^2;
+    %User Line: paths = reshape(paths,N*npaths,1);
+    paths.f =  [];
+    %User Line: paths = [];
+%User Line: % paths = u1.^2+u2.^2;
+%User Line: %-----------------------------------------------------------------%
+%User Line: % Reshape the defect contraints into a column vector.             %
+%User Line: %-----------------------------------------------------------------%
+cada1f1 = N.f*nstates;
+defects.dz0 = defects.dz0;
+defects.f = reshape(defects.f,cada1f1,1);
+%User Line: defects = reshape(defects,N*nstates,1);
+%User Line: %-----------------------------------------------------------------%
+%User Line: % Construct the objective function plus constraint vector.        %
+%User Line: %-----------------------------------------------------------------%
+cadaconditional1 = maximize_mass;
+%User Line: cadaconditional1 = maximize_mass;
+    %User Line: m = statePlusEnd(:,5);
+    %User Line: J = -m(end);
+    J.dz0 = tf.dz0;     J.f = tf.f;
+    %User Line: J = tf;
+cada1td1 = zeros(6273,1);
+cada1td1(5633) = J.dz0;
+cada1td1(Gator1Data.Index51) = defects.dz0;
+C.dz0 = cada1td1;
+C.f = [J.f;defects.f;paths.f];
+%User Line: C = [J;defects;paths];
+C.dz0_size = [641,903];
+C.dz0_location = Gator1Data.Index52;
+end
+
+
+function ADiGator_LoadData()
+global ADiGator_orbitTransferFun_ADiGatorJac
+ADiGator_orbitTransferFun_ADiGatorJac = load('orbitTransferFun_ADiGatorJac.mat');
+return
+end

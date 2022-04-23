@@ -61,7 +61,7 @@ control      = reshape(controlVector,N,ncontrols);
 % Identify the components of the state column-wise from stateLGR. % 
 %-----------------------------------------------------------------%
 r      = stateLGR(:,1);
-theta  = stateLGR(:,1);
+theta  = stateLGR(:,2);
 vr     = stateLGR(:,3);
 vtheta = stateLGR(:,4);
 m      = stateLGR(:,5);
@@ -74,22 +74,6 @@ else
     u2 = 0;
     u3 = control(:,2);
 end
-%-----------------------------------------------------------------%
-% The quantity STATEF is the value of the state at the final      %
-% time, tf, which corresponds to the state at $\tau=1$.           %
-%-----------------------------------------------------------------%
-% stateF = statePlusEnd(end,:);
-%-----------------------------------------------------------------%
-% The orbit-raising problem contains one nonlinear boundary       %
-% condition $\sqrt{mu/r(t_f)-v_\theta(t_f) = 0$.  Because $r(t)$  %
-% and $v_\theta(t)$ are the first and fourth components of the    %
-% state, it is necessary to extract stateF(1) and stateF(4) in    %
-% order to compute this boundary condition function.              %
-%-----------------------------------------------------------------%
-% rF = stateF(1);
-% vthetaF = stateF(4);
-% 
-% a = T./m;
 
 %-----------------------------------------------------------------%
 % Compute the right-hand side of the differential equations at    %
@@ -108,10 +92,14 @@ end
 %-----------------------------------------------------------------%
 rdot       = vr;
 thetadot   = vtheta./r;
-mdot       = -u3./ve;
+mdot       = -u3/ve;
+
+a = u3./m;
 if path_constraint
-    vrdot      = vtheta.^2./r - mu./r.^2 + u3.*u1./m;
-    vthetadot  = -vtheta.*vr./r + u3.*u2./m;
+%     vrdot      = vtheta.^2./r - mu./r.^2 + u3.*u1./m;
+%     vthetadot  = -vtheta.*vr./r + u3.*u2./m;
+    vrdot      = vtheta.^2./r - mu./r.^2 + a.*u1;
+    vthetadot  = -vtheta.*vr./r + a.*u2;
 else
     vrdot      = vtheta.^2./r - mu./r.^2 + u3.*sin(u1)./m;
     vthetadot  = -vtheta.*vr./r + u3.*cos(u1)./m;
@@ -140,17 +128,20 @@ defects = diffeqLHS-(tf-t0)*diffeqRHS/2;
 % Reshape the path contraints into a column vector.               % 
 %-----------------------------------------------------------------%
 if path_constraint 
-    paths = u1.^2+u2.^2;
+    paths = u1.^2 + u2.^2;
     paths = reshape(paths,N*npaths,1);
 else
     paths = [];
 end
 % paths = u1.^2+u2.^2;
 
+
+
 %-----------------------------------------------------------------%
 % Reshape the defect contraints into a column vector.             % 
 %-----------------------------------------------------------------%
 defects = reshape(defects,N*nstates,1);
+
 
 %-----------------------------------------------------------------%
 % Construct the objective function plus constraint vector.        %

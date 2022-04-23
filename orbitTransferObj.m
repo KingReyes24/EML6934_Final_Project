@@ -4,11 +4,6 @@ function obj = orbitTransferObj(z)
 global psStuff nstates ncontrols maximize_mass    
 
 %-----------------------------------------------------------------%
-%         Extract the constants used in the problem.              %
-%-----------------------------------------------------------------%
-% MU = CONSTANTS.MU; mdot = CONSTANTS.mdot; T = CONSTANTS.T;
-
-%-----------------------------------------------------------------%
 % Radau pseudospectral method quantities required:                %
 %   - Differentiation matrix (psStuff.D)                          %
 %   - Legendre-Gauss-Radau weights (psStuff.w)                    %
@@ -26,12 +21,10 @@ D = psStuff.D; tau = psStuff.tau; w = psStuff.w;
 N = length(tau)-1;
 stateIndices   = 1:nstates*(N+1);
 controlIndices = (nstates*(N+1)+1):(nstates*(N+1)+ncontrols*N);
-t0Index     = controlIndices(end)+1;
-tfIndex     = t0Index+1;
-stateVector = z(stateIndices);
-% controlVector = z(controlIndices);
-% t0 = z(t0Index);
-tf = z(tfIndex);
+t0Index        = controlIndices(end)+1;
+tfIndex        = t0Index+1;
+stateVector    = z(stateIndices);
+tf             = z(tfIndex);
 
 %-----------------------------------------------------------------%
 % Reshape the state and control parts of the NLP decision vector  %
@@ -47,17 +40,6 @@ tf = z(tfIndex);
 % method, the control is approximated at only the N LGR points.   %
 %-----------------------------------------------------------------%
 statePlusEnd = reshape(stateVector,N+1,nstates);
-stateLGR     = statePlusEnd(1:end-1,:);
-% control = reshape(controlVector,N,ncontrols);
-
-%-----------------------------------------------------------------%
-% Identify the components of the state column-wise from stateLGR. % 
-%-----------------------------------------------------------------%
-% r      = stateLGR(:,1);
-% theta  = stateLGR(:,1);
-% vr     = stateLGR(:,3);
-% vtheta = stateLGR(:,4);
-
 
 % Cost Function
 % minizing time or maximizing mass

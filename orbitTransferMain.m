@@ -1,28 +1,8 @@
 % ---------------------------------------------------%
 %             Orbit-Trnasfer Problem                 %
 % ---------------------------------------------------%
-% Solve the following optimal control problem:       %
-% Maximize t_f                                       %
-% subject to the differential equation constraints   %
-%   dr/dt       = v_r                                %
-%   dtheta/dt   = v_theta/r                          %
-%   dv_r/dt     = v_theta^2/r - mu/r^2 + T*u_1/m     %
-%   dv_theta/dt = -v_r*v_theta/r + T*u_2/m           %
-% the equality path constraint                       %
-%   u_1^2 + u_2^2 = 1                                %
-% and the boundary conditions                        %
-%   r(0)         = 1                                 %
-%   theta(0)     = 0                                 %
-%   v_r(0)       = 0                                 %
-%   v_theta(0)   = sqrt(mu/r(0))                     %
-%   m(0)         = 1                                 %
-%   r(t_f)       = 1.5                               %
-%   v_r(t_f)     = 0                                 %
-%   v_theta(t_f) = sqrt(mu/r(t_f))                   %
-
 close all; clear all;
 format long
-%  clear all
 % -------------------------------------------------- %
 % BEGIN: DO NOT ALTER THE FOLLOWING LINES OF CODE!!! %
 % -------------------------------------------------- %
@@ -30,22 +10,23 @@ global igrid CONSTANTS psStuff nstates ncontrols npaths path_constraint maximize
 % -------------------------------------------------- %
 % END:   DO NOT ALTER THE FOLLOWING LINES OF CODE!!! %
 % -------------------------------------------------- %
-%% GENERATE PATH THAT CONTAINS IPOPT and ADIGATOR
-path = 'C:\Users\elias\Documents\UF_Classes\EML6934\Final_Project\EML6934_Final_Project';
-addpath(genpath(path))
-addpath('C:\Users\elias\Downloads\optiMEXFiles_mexw64_2_28')
+
 %% Save figures and latex table. 
-% Do not change this if debugging
+% Set to 0 when debugging
 save_figs          = 0;
 create_latex_table = 0;
+plot_comparisons   = 1;
 
+if save_figs
+    set(0,'DefaultFigureWindowStyle','normal')
+end
 %% Set path constrant and objective function descision
 path_constraint= 0; % is there a path contraint?
-maximize_mass  = 0; % maximize m(tf), else min tf
+maximize_mass  = 1; % maximize m(tf), else min tf
 
 %% Set polynomial degrees and intervals to loop through
-n_list = [3 ];        % polynomial degrees
-k_list = [4 8 ]; % intervals
+n_list = [3 4];         % polynomial degrees
+k_list = [2 4 8 16 32]; % intervals
 
 %% Set Globals
 % set gloabl constants
@@ -89,14 +70,20 @@ for nIdx = 1:numel(n_list)
     t0min     = 0;    t0max     = 0;
     tfmin     = 0;    tfmax     = 25;
     u3min     = 0;    u3max     = 0.1405; % thrust
+    if maximize_mass
+        rmax  = 1.6;
+        mmin  = 0.7;
+        tfmax = 100;
+    end
     if path_constraint
         % set bounds for control with path contraint
+%         u1min = -1.5;  u1max = 1.5;     % sin(beta)
+%         u2min = -1.5;  u2max = 1.5;     % cos(beta)
         u1min = -1.5;  u1max = 1.5;     % sin(beta)
         u2min = -1.5;  u2max = 1.5;     % cos(beta)
     else
         % set bound for beta 
-        u1min = -4*pi; u1max = 4*pi;  % beta
-        u2min = 0;     u2max = 0;     % empty
+        u1min = -2*pi; u1max = 2*pi;  % beta
     end
 
     % Create Leguandre Gauss Points
@@ -131,16 +118,15 @@ for nIdx = 1:numel(n_list)
 
     zu1min = u1min*ones(length(tau)-1,1);
     zu1max = u1max*ones(length(tau)-1,1);
-
-    zu2min = u2min*ones(length(tau)-1,1);
-    zu2max = u2max*ones(length(tau)-1,1);
-
     zu3min = u3min*ones(length(tau)-1,1);
     zu3max = u3max*ones(length(tau)-1,1);
     
     % Contruct vector of bounds. 
     if path_constraint
         % using u1, u2, u3
+        zu2min = u2min*ones(length(tau)-1,1);
+        zu2max = u2max*ones(length(tau)-1,1);
+
         zmin = [zrmin; zthetamin; zvrmin; zvthetamin; zmmin; zu1min; zu2min; zu3min; t0min; tfmin];
         zmax = [zrmax; zthetamax; zvrmax; zvthetamax; zmmax; zu1max; zu2max; zu3max; t0max; tfmax];
     else
@@ -156,20 +142,21 @@ for nIdx = 1:numel(n_list)
     if path_constraint 
         % There is a path constraint
         pathMin = ones(length(tau)-1,1); pathMax = ones(length(tau)-1,1);
+    
     else
         % No path constraint
         pathMin = []; pathMax = [];
     end
-    % I dont believe there is nonlinear event constraint
-    eventMin = [];   eventMax = [];
-    objMin   = -inf; objMax   = inf;
-    Fmin = [objMin; defectMin; pathMin; eventMin];
-    Fmax = [objMax; defectMax; pathMax; eventMax];
+
+    objMin = -inf; 
+    objMax = inf;
+    Fmin   = [objMin; defectMin; pathMin]; 
+    Fmax   = [objMax; defectMax; pathMax];
 
     % Supply an initial guess
     rguess      = linspace(r0,rf,NLGR+1).';
     thetaguess  = linspace(theta0,2.5,NLGR+1).';
-    vrguess     = linspace(vr0,vrf,NLGR+1).';
+    vrguess     = linspace(vr0,vr0,NLGR+1).';
     vthetaguess = linspace(vtheta0,vthetaf,NLGR+1).';
     mguess      = linspace(mmax,mmin,NLGR+1).';
     u1guess     = linspace(u1min,u1max,NLGR).';
@@ -217,7 +204,7 @@ for nIdx = 1:numel(n_list)
     %-----------------------------------------------------------------%
     options.ipopt.tol           = 1e-8;
     options.ipopt.linear_solver = 'ma57';%'ma57'; %'mumps';
-    options.ipopt.max_iter      = 8000;
+    options.ipopt.max_iter      = 4000;
     options.ipopt.mu_strategy   = 'adaptive';
     options.ipopt.ma57_automatic_scaling = 'yes';
     options.ipopt.print_user_options = 'no';
@@ -233,11 +220,6 @@ for nIdx = 1:numel(n_list)
     % Call IPOPT
     %-----------------------------------------------------------------%
     [z, info] = ipopt(z0,funcs,options);
-
-    %-----------------------------------------------------------------%
-    % extract lagrange multipliers from ipopt output, info
-    %-----------------------------------------------------------------%
-    Fmul = info.lambda;
 
     % Extract the state and control from the decision vector z.
     % Remember that the state is approximated at the LGR points
@@ -257,32 +239,11 @@ for nIdx = 1:numel(n_list)
     else
         u3   = z(5*(NLGR+1)+NLGR+1:5*(NLGR+1)+2*NLGR);
         beta = unwrap(u1)*180/pi;
-%         beta = u1;
     end
     t0     = z(end-1);
     tf     = z(end);
     t      = (tf-t0)*(tau+1)/2+t0;
     tLGR   = t(1:end-1);
-    %-----------------------------------------------------------------%
-    % Extract the Lagrange multipliers corresponding                  %
-    % the defect constraints.                                         %
-    %-----------------------------------------------------------------%
-%     multipliersDefects = Fmul(2:nstates*NLGR+1);
-%     multipliersDefects = reshape(multipliersDefects,NLGR,nstates);
-%     %-----------------------------------------------------------------%
-%     % Compute the costates at the LGR points via transformation       %
-%     %-----------------------------------------------------------------%
-%     costateLGR = inv(diag(w))*multipliersDefects;
-%     %-----------------------------------------------------------------%
-%     % Compute the costate at the tau=+1 via transformation            %
-%     %-----------------------------------------------------------------%
-%     costateF = D(:,end).'*multipliersDefects;
-%     %-----------------------------------------------------------------%
-%     % Now assemble the costates into a single matrix                  %
-%     %-----------------------------------------------------------------%
-%     costate = [costateLGR; costateF];    
-%     lamr = costate(:,1); lamtheta = costate(:,2);
-%     lamvr = costate(:,3); lamvtheta = costate(:,4);
 
     %-----------------------------------------------------------------%
     % Get planer coordinates
@@ -298,8 +259,15 @@ for nIdx = 1:numel(n_list)
     %-------------%
     % Plot Results 
     %-------------%
-%     close all
-    
+    close all
+    if maximize_mass 
+        str_obj  = 'mf';
+        str_obj1 = 'maximized ';
+    else
+        str_obj  = 'tf';
+        str_obj1 = 'minimized ';
+    end    
+
     fig_cntrl = figure;
     h1 = subplot(2,1,1);
     plot(tLGR,beta,'-o');
@@ -307,7 +275,7 @@ for nIdx = 1:numel(n_list)
     xlabel('$t$','Interpreter','LaTeX')
     set(gca,'FontName','Times','FontSize',14);
     set(gcf,'color','white')
-    title('Thrust angle that minimized objective function')
+    title(['Thrust angle that ' str_obj1 str_obj])
     grid minor;
     
     h2 = subplot(2,1,2); 
@@ -315,7 +283,7 @@ for nIdx = 1:numel(n_list)
     set(gca,'FontName','Times','FontSize',14);
     set(gcf,'color','white')
     ylabel('$T(t)$','Interpreter','LaTeX');
-    title('Thrust magnitude that minimized objective function')
+    title(['Thrust magnitude that ' str_obj1 str_obj])
     xlabel('$t$','Interpreter','LaTeX')
     grid minor
     linkaxes([h1 h2],'x')
@@ -324,20 +292,20 @@ for nIdx = 1:numel(n_list)
     plot(t,r,'-o'); plot(t,theta,'-o'); plot(t,vr,'-o');
     plot(t,vtheta,'-o'); plot(t,m,'-o');
     xlabel('t','Interpreter','LaTeX')
-    legend('r(t)','$\theta(t)$','vr(t)','v$\theta(t)$','m(t)','Interpreter','LaTeX')
+    legend('r(t)','$\theta(t)$','$v_r(t)$','$v_\theta(t)$','m(t)','Interpreter','LaTeX')
     set(gcf,'color','white')
     set(gca,'FontName','Times','fontsize',14)
-    title('States that minimized objective function')
+    title(['States of trajectory that ' str_obj1 str_obj])
 
-    fig_orbit = figure; hold on; grid minor
-    plot(x_orbit_1,y_orbit_1)
-    plot(x_orbit_2,y_orbit_2)
-    plot(x_transfer,y_transfer)
+    fig_orbit = figure;   
+    polarplot(theta_orbit,1*ones(1,numel(theta_orbit)))
+    hold on;
+    polarplot(theta_orbit,1.5*ones(1,numel(theta_orbit)))
+    polarplot(theta,r); 
     set(gca,'FontName','Times','fontsize',14)
     set(gcf,'color','white')
     legend('Initial Orbit','Final Orbit','Orbit Transfer')
-    axis equal
-    title('Orbit Transfer Overview')
+    title('Orbit transfer overview')
     
     if save_figs
         if maximize_mass 
@@ -362,7 +330,6 @@ for nIdx = 1:numel(n_list)
         set(yl,'FontSize',14);
         set(gca,'FontName','Times','FontSize',14);
         grid on;
-
         subplot(1,2,2);
         plot(tLGR,u2,'-o');
         xl = xlabel('$t$','Interpreter','LaTeX');
@@ -370,97 +337,15 @@ for nIdx = 1:numel(n_list)
         set(xl,'FontSize',14);
         set(yl,'FontSize',14);
         set(gca,'FontName','Times','FontSize',14);
-        set(gcf,'color','white')
+        set(gcf,'color','white')   
         grid on;
+        suptitle(['Path constriant control that ' str_obj1 str_obj])
         
         if save_figs
             str_path = ['path' plot_str str_obj];
             print(fig_path,str_path,'-depsc')
         end
     end
-    
-%     figure(1);
-%     subplot(2,2,1);
-%     plot(t,r,'-o');
-%     xl = xlabel('$t$','Interpreter','LaTeX');
-%     yl = ylabel('$r(t)$','Interpreter','LaTeX');
-%     set(xl,'FontSize',14);
-%     set(yl,'FontSize',14);
-%     set(gca,'FontName','Times','FontSize',14);
-%     set(gcf,'color','white')
-%     grid on;
-% 
-%     subplot(2,2,2);
-%     plot(t,theta,'-o');
-%     xl = xlabel('$t$','Interpreter','LaTeX');
-%     yl = ylabel('$\theta(t)$','Interpreter','LaTeX');
-%     set(xl,'FontSize',14);
-%     set(yl,'FontSize',14);
-%     set(gca,'FontName','Times','FontSize',14);
-%     set(gcf,'color','white')
-%     grid on;
-% 
-%     subplot(2,2,3);
-%     plot(t,vr,'-o');
-%     xl = xlabel('$t$','Interpreter','LaTeX');
-%     yl = ylabel('$v_r(t)$','Interpreter','LaTeX');
-%     set(xl,'FontSize',14);
-%     set(yl,'FontSize',14);
-%     set(gca,'FontName','Times','FontSize',14);
-%     set(gcf,'color','white')
-%     grid on;
-% 
-%     subplot(2,2,4);
-%     plot(t,vtheta,'-o');
-%     xl = xlabel('$t$','Interpreter','LaTeX');
-%     yl = ylabel('$v_\theta(t)$','Interpreter','LaTeX');
-%     set(xl,'FontSize',14);
-%     set(yl,'FontSize',14);
-%     set(gca,'FontName','Times','FontSize',14);
-%     set(gcf,'color','white')
-%     grid on;
-
-%     figure;
-%     subplot(2,2,1);
-%     plot(t,lamr,'-o');
-%     xl = xlabel('$t$','Interpreter','LaTeX');
-%     yl = ylabel('$\lambda_r(t)$','Interpreter','LaTeX');
-%     set(xl,'FontSize',14);
-%     set(yl,'FontSize',14);
-%     set(gca,'FontName','Times','FontSize',14);
-%     set(gcf,'color','white')
-%     grid on;
-% 
-%     subplot(2,2,2);
-%     plot(t,lamtheta,'-o');
-%     xl = xlabel('$t$','Interpreter','LaTeX');
-%     yl = ylabel('$\lambda_\theta(t)$','Interpreter','LaTeX');
-%     set(xl,'FontSize',14);
-%     set(yl,'FontSize',14);
-%     set(gca,'FontName','Times','FontSize',14);
-%     set(gcf,'color','white')
-%     grid on;
-% 
-%     subplot(2,2,3);
-%     plot(t,lamvr,'-o');
-%     xl = xlabel('$t$','Interpreter','LaTeX');
-%     yl = ylabel('$\lambda_{v_r}(t)$','Interpreter','LaTeX');
-%     set(xl,'FontSize',14);
-%     set(yl,'FontSize',14);
-%     set(gca,'FontName','Times','FontSize',14);
-%     set(gcf,'color','white')
-%     grid on;
-% 
-%     subplot(2,2,4);
-%     plot(t,lamvtheta,'-o');
-%     xl = xlabel('$t$','Interpreter','LaTeX');
-%     yl = ylabel('$\lambda_{v_\theta}(t)$','Interpreter','LaTeX');
-%     set(xl,'FontSize',14);
-%     set(yl,'FontSize',14);
-%     set(gca,'FontName','Times','FontSize',14);
-%     set(gcf,'color','white')
-%     grid on;
-    
     %--------------%
     % save results %
     %--------------%
@@ -482,5 +367,49 @@ if create_latex_table
     str_table = sprintf('table_C%d_',ncontrols);
     table2latex(T,[str_table str_obj])
 end
+nlistvec = repmat(n_list',1,numel(k_list));
+klistvec = repmat(k_list,numel(n_list),1);
+runtime  = reshape(cpu_time,[],2);
+runtime  = runtime';
+if maximize_mass
+    mfmat  = reshape(final_mass,[],2);
+    objmat = mfmat';
+   
+else
+    tfmat  = reshape(final_time,[],2);
+    objmat = tfmat';
+end
+if plot_comparisons
+    fig_obj = figure; hold on;
+    plot(k_list,objmat(1,:),'-o')
+    plot(k_list,objmat(2,:),'-o')
+    xlabel('Intervals')
+    ylabel(['Objective function ' str_obj])
+    set(gcf,'color','white')
+    legend('Degree 3','Degree 4')
+    set(gca,'fontweight','bold','fontsize',14, 'XMinorGrid','on','YMinorGrid','on')
+    title('Objective Function Performance')
 
-arrayfun(@(x) set( x,'windowstyle', 'docked'),findall(groot,'type','figure')) ;
+    fig_runtime = figure; hold on;
+    plot(k_list,runtime(1,:),'-o')
+    plot(k_list,runtime(2,:),'-o')
+    legend('Degree 3','Degree 4')
+    set(gcf,'color','white')
+    set(gca,'fontweight','bold','fontsize',14, 'XMinorGrid','on','YMinorGrid','on')
+    xlabel('Intervals')
+    ylabel('Execution Time (s)')
+    title('Execution Time Performance')
+
+    if save_figs
+        str_control = sprintf('_c%d_',ncontrols);
+        str_path = ['runtime' str_control str_obj];
+        print(fig_runtime,str_path,'-depsc')
+
+        str_path = ['obj' str_control str_obj];
+        print(fig_obj,str_path,'-depsc')
+
+    end
+end
+
+% set(0,'DefaultFigureWindowStyle','docked')
+% arrayfun(@(x) set( x,'windowstyle', 'docked'),findall(groot,'type','figure')) ;

@@ -14,8 +14,8 @@
 
 function [Jac,Fun] = orbitTransferFun_Jac(z)
 gator_z.f = z;
-gator_z.dz0 = ones(1031,1);
+gator_z.dz0 = ones(903,1);
 C = orbitTransferFun_ADiGatorJac(gator_z);
-Jac = sparse(C.dz0_location(:,1),C.dz0_location(:,2),C.dz0,769,1031);
+Jac = sparse(C.dz0_location(:,1),C.dz0_location(:,2),C.dz0,641,903);
 Fun = C.f;
 end
