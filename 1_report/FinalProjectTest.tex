@@ -1,0 +1,1183 @@
+\documentclass[]{article}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage[section]{placeins}
+\usepackage{listings}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=black
+	filecolor=black,
+	linkcolor=blue,
+	urlcolor=black
+}
+\lstset{
+	language=MATLAB,
+	basicstyle=\scriptsize\sffamily,
+	numbers=left,
+	numberstyle=\tiny,
+	frame=tb,
+	columns=fullflexible,
+	showstringspaces=false
+}
+
+%opening
+\title{EML6934 Optimal Control \\ Final Project}
+\author{Elias Reyes}
+
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	\pagenumbering{roman}
+	\newpage
+	\tableofcontents
+	\newpage
+	\listoffigures
+	\listoftables
+	\newpage
+	\lstlistoflistings
+	\newpage
+	\pagenumbering{arabic}
+	
+	\section{Problem Statement}
+	\section{Differential Equations of Motion}
+	The differential equations of motion were derived using both Newton's second law. The schematic for the problem can be seen Figure \ref{fig:schematic}. The spacecraft is modeled as point \(P\) of  mass \(m\). The spacecraft moves relative to an inertial reference frame \(l\). The reference frame fixed in \(l\) is expressed as \(\{e_{x},e_{y},e_{z}\}\). The position of the spacecraft is denoted as \(r_{P/O}\), where \(O\) is modeled as the sun, fixed in \(l\). The spacecraft is parameterized in the basis \(\{u_{r},u_{\theta},u_{z}\}\), where the rotation is about \(u_{z}\) = \(e_{z}\). The rotation creates an angle \(\theta\) between \(e_{x}\) and \(u_{r}\), which can be seen in Figure \ref{fig:rotation2}.
+	\begin{figure}
+		\centering
+		\includegraphics[width=85mm,scale=0.85]{midterm_schematic.png}
+		\caption{Schematic of particle moving in an inertially fixed plane}
+		\label{fig:schematic}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=75mm,scale=0.75]{rotation.png}
+		\caption{Reference frame rotation}
+		\label{fig:rotation2}
+	\end{figure}
+	\noindent 
+	Two forces are said to act on the spacecraft. The first is the gravitational force which is given as
+	\begin{equation} \label{grav_force}
+		G = -m\mu\frac{r_{P/O}}{||r_{P/O}||^3},
+	\end{equation}
+	%\[G = -m\mu\frac{r_{P/O}}{||r_{P/O}||^3},\]
+	while the second is the thrust force given as\\
+	\begin{equation} \label{thrust_force}
+		T = Tw,
+	\end{equation}
+	%\[T = Tw,\]
+	where \(w\) is the unit vector that lies an angle \(\beta\) from the direction \(u_{\theta}\) as seen in Figure \ref{fig:beta}.
+	\begin{figure}
+		\centering
+		\includegraphics[width=50mm,scale=0.5]{beta.png}
+		\caption{Thrust Force at Angle \(\beta\)}
+		\label{fig:beta}
+	\end{figure}
+	\subsection{Position, Velocity and Acceleration of the Spacecraft}
+	As seen in Figure \ref{fig:schematic}, the position of the spacecraft represented in reference frame \(A\), is given as 
+	\begin{equation} \label{position}
+		^A\vec{r}_{P/O} = ru_{r}.
+	\end{equation}
+	The velocity can then be represented in the inertial frame \(l\) by using equation \ref{golden_rule}, where \(^l\vec{\omega}^A\) is the angular velocity between reference frame \(l\) and \(A\).
+	\begin{equation} \label{golden_rule}
+		\frac{^ld\vec{r}_{P/O}}{dt} = \frac{^Ad\vec{r}_{P/O}}{dt} +\ ^l\vec{\omega}^A\  \times\  ^A\vec{r}_{P/O} 
+	\end{equation}
+	Using Equation \ref{golden_rule}, the velocity of the spacecraft in the inertial frame is then formulated as
+	\begin{align}
+		^l\vec{v_{p}} &= \frac{^ld\vec{r}_{P/O}}{dt} \nonumber\\
+		^l\vec{v_{p}} &= \dot{r}u_{r} +\ \dot{\theta}u_{z}\ \times\ ru_{r} \nonumber\\
+		^l\vec{v_{p}} &= \dot{r}u_{r} +\ \dot{\theta}ru_{\theta} \label{velocity}
+	\end{align}
+	The acceleration of the particle can then be formulated as 
+	\begin{align}
+		^l\vec{a_{p}} &= \frac{^ld\vec{v_{P}}}{dt} \nonumber\\
+		^l\vec{a_{p}} &= \frac{^Ad\vec{v_{P}}}{dt} +\ ^l\vec{\omega}^A\  \times\  ^A\vec{v_{P}} \nonumber\\
+		^l\vec{a_{p}} &= \ddot{r}u_{r} +\ (\ddot{\theta}r+\dot{\theta}\dot{r})u_{\theta} +\ \dot{\theta}\dot{r}u_{\theta} -\ \dot{\theta}^2ru_{r} \nonumber\\
+		^l\vec{a_{p}} &= (\ddot{r} -\ \dot{\theta}^2r)u_{r} +\ (\ddot{\theta}r+2\dot{\theta}\dot{r})u_{\theta}   \label{acceleration}
+	\end{align}
+	%\[^A\vec{r}_{P/O}\]
+	
+	%\figurename{Schematic of a particle in a an inertially fixed plane.}
+	\subsection{Newton's Second Law for A Particle}
+	Newton's second law for a particle is represented by
+	\begin{align}
+		\sum{F_{P}} = m_{P} * a_{P}. \label{newton}
+	\end{align}
+	\vspace{2mm}\newline
+	Figure \ref{fig:FBD} represents the free body diagram of the particle system. \(F_{G}\), represented by equation \ref{grav_force}, is the gravitational force and acts along the \(u_{r}\) direction. \(F_{T}\), represented by equation \ref{thrust_force}, is the thrust force and acts in the direction \(w\). It can be seen in Figure \ref{fig:beta} that the thrust force can be re-written as 
+	\begin{align}
+		F_{T} = Tsin(\beta)u_{r} + T\cos(\beta)u_{\theta}, \label{F_T}
+	\end{align}
+	while the gravitational force can be written as
+	\begin{align}
+		F_{G} = -m\mu\frac{1}{r^2}u_{r}. \label{F_G}
+	\end{align}
+	We can now substitute equations \ref{acceleration},  \ref{F_T}, and \ref{F_G} into equation \ref{newton} to obtain
+	\begin{align*}
+		-m\mu\frac{1}{r^2}u_{r} + Tsin(\beta)u_{r} + T\cos(\beta)u_{\theta} = m[(\ddot{r} -\ \dot{\theta}^2r)u_{r} +\ (\ddot{\theta}r+2\dot{\theta}\dot{r})u_{\theta}]. 
+	\end{align*}
+	After equating terms, the two equations of motion using Newtons Seconds become:
+	\begin{align}
+		(u_{r})\qquad      &  \ddot{r}      = \dot{\theta}^2r - \frac{\mu}{r^2} + \frac{Tsin(\beta)}{m} \label{eom1}\\
+		(u_{\theta})\qquad &  \ddot{\theta} = -\frac{2\dot{r}\dot{\theta}}{r}   + \frac{T\cos(\beta)}{mr} \label{eom2}
+	\end{align}
+	\begin{figure}
+		%	\includegraphics[width=\linewidth]{FBD.png}
+		\centering
+		\includegraphics[width=50mm,scale=0.5]{FBD.png}
+		\caption{Free Body Diagram}
+		\label{fig:FBD}
+	\end{figure}
+
+	\subsection{Conversion to First-Order Equations}
+	To re-write the two second-order equations into first four first-order equations, the following substitutions can be made:
+	\begin{align}
+		\dot{r}       &= v_r,     \label{vr} \\
+		r\dot{\theta} &= v_\theta,  \nonumber \\
+		\dot{\theta}  &= \frac{v_\theta}{r}. \label{vtheta}
+	\end{align}
+	Then, taking the derivatives of \(r\) and \(\theta\) of equations \ref{vr} and \ref{vtheta}, respectively, we obtain:
+	\begin{align}
+		\ddot{r}      &= \dot{v}_r,  \label{rddot} \\
+		\ddot{\theta} &= \frac{\dot{v}_{\theta}r - v_{\theta}\dot{r}}{r^2}. \label{thetaddot}
+	\end{align}
+	After substituting equations \ref{vr}, \ref{vtheta}, \ref{rddot}, and \ref{thetaddot} into equations \ref{eom1} and \ref{eom2}, two first-order equations are derived as:
+	\begin{align}
+		\dot{v}_r     &= \frac{v^2_{\theta}r}{r^2} - \frac{\mu}{r^2} + \frac{T\sin(\beta)}{m},                      \nonumber \\
+		\dot{v}_r     &= \frac{v^2_{\theta}}{r} - \frac{\mu}{r^2} + \frac{T\sin(\beta)}{m},                        \label{vrdot}
+	\end{align}
+	and,
+	\begin{align}
+		\frac{\dot{v}_{\theta}r - v_{\theta}v_r}{r^2} &= -\frac{2v_{\theta}v_r}{r^2}   + \frac{T\cos(\beta)}{mr},   \nonumber\\
+		\dot{v}_{\theta}r - v_{\theta}v_r &= -\frac{2v_{\theta}v_{r}r^2}{r^2}   + \frac{T\cos(\beta)r^2}{mr},       \nonumber\\
+		\dot{v}_\theta &= -\frac{2v_{\theta}v_{r}}{r}   + \frac{T\cos(\beta)}{m} + \frac{v_{\theta}v_r}{r},        \nonumber\\
+		\dot{v}_\theta &= -\frac{v_{\theta}v_{r}}{r}   + \frac{T\cos(\beta)}{m} \label{vthetadot}.
+	\end{align}
+	Next, a fifth first-order equation is given as
+	\begin{align}
+		\dot{m} &= -\frac{T}{v_e}. \label{massflowrate}
+	\end{align}
+	The five first-order differential equations are listed below:
+	\begin{align*}
+		\dot{r}       &= v_r,     \\
+		\dot{\theta}  &= \frac{v_\theta}{r},  \\ 
+	    \dot{v}_r     &= \frac{v^2_{\theta}}{r} - \frac{\mu}{r^2} + \frac{T\sin(\beta)}{m},       \\
+		\dot{v}_\theta &= -\frac{v_{\theta}v_{r}}{r}   + \frac{T\cos(\beta)}{m}, \\
+		\dot{m} &= -\frac{T}{v_e}.
+	\end{align*}
+
+	\section{Formulation of Optimal Control Problem}
+	There are two objectives for the optimal control problem. The first objective is to minimize the time to transfer from an initial circular orbit to a final circular orbit. The second objective is to maximize the terminal mass when transferring from an initial circular orbit to a final circular orbit. Below is an overview of the problem:
+
+	\begin{align*}
+		\mathrm{Objective \ 1}:& \quad \min\ t_f \\
+		\mathrm{Objective \ 2}:& \quad \max\ m(t_f) \\
+		\mathrm{State}:&     \quad r(t), \theta(t), v_r(t), v_\theta(t), m(t) \\
+		\mathrm{Control}:&   \quad \beta(t), T(t)
+	\end{align*}
+	\subsection{Boundary Conditions}
+	The boundary conditions for this problem are as followed:
+	\begin{alignat*}{2}                                                                                                                                                                        
+		r(t_0)          &= r_0          &  &= 1, \\
+		\theta(t_0)     &= \theta_0     &  &= 0, \\
+		v_r(t_0)        &= v_{r_0}      &  &= 0, \\
+		v_{\theta}(t_0) &= v_{\theta_0} &  &= \sqrt{\frac{\mu}{r_0}}, \\
+		m(t_0)          &= m_0          &  &= 1,\\
+		r(t_f)          &= r_f          &  &= 1,\\
+		\theta(t_f)     &= free,        &  & \\
+		v_r(t_f)        &= v_{r_f}      &  &= 0, \\
+		v_{\theta}(t_f) &= v_{\theta_f} &  &=\sqrt{\frac{\mu}{r_f}},\\
+		m(t_f)          &= free.         &  & 
+	\end{alignat*}
+	\subsection{Control Parameterization}
+	There are two different sets of controls for the optimal control problem. The objectives will first be minimized with the controls being thrust angle \(\beta\), and thrust magnitude T. The objectives will then be minimized by making the following substitutions into the differential equations:
+	\begin{align*}                                                                                                                                                                        
+    	u_1 =& \sin(\beta), \\
+    	u_2 =& \cos(\beta).
+	\end{align*}
+	Now the controls are \(u_1\), \(u_2\), and the thrust magnitude T. When applying this set of controls, the following path constraint must be made:
+	\begin{align*}                                                                                                                                                                        
+		u_1^2 + u_2^2 = 1.
+	\end{align*}
+	
+	\section{Numerical Solution of Optimal Control Problem}
+	The optimal control problem was solved using multiple interval Legendre-Gauss-Radau collocation. For simplicity, Adigator was used for automatic differentiation and IPOPT was used for the nonlinear optimization. For this study, four different cases were investigated. The four different discretizations of Legendre-Gauss-Radau collocation are:
+	\begin{enumerate}
+		\item Minimize \(t_f\) with with unconstrained control parameterized by polynomial degrees N = (3,4) with intervals of K = (2,4,8,16,32)
+		\item Minimize \(m(t_f)\) with with unconstrained control parameterized by polynomial degrees N = (3,4) with intervals of K = (2,4,8,16,32)
+		\item Minimize \(t_f\) with with constrained control parameterized by polynomial degrees N = (3,4) with intervals of K = (2,4,8,16,32)
+		\item Minimize \(m(t_f)\) with with constrained control parameterized by polynomial degrees N = (3,4) with intervals of K = (2,4,8,16,32)
+	\end{enumerate}
+%         0  solved
+%         1  solved to acceptable level
+%         2  infeasible problem detected
+%         3  search direction becomes too small
+%         4  diverging iterates
+%         5  user requested stop
+%     
+%        -1  maximum number of iterations exceeded
+%        -2  restoration phase failed
+%        -3  error in step computation
+
+    \subsection{Minimize Terminal Time with Unconstrained Control}
+	 The optimal control problem was first solved with the objection function being to minimize \(t_f\) with unconstrained control parameterized by polynomials of degree N = (3,4) for intervals of K = (2,4,8,16,32). The controls were thrust angle \(\beta\) and thrust magnitude T. The statistic for each combination is shown in Table \ref{table:1}. A comparison of the objective function for each combination is shown in Figure \ref{fig:obj_c2_tf}. Interestingly, the objective function was best optimized for the case of polynomial degree 4 with 2 intervals. Taking a closer look at the orbit transfer for this case, Figure \ref{fig:orbit_N4_K2_C2_tf}, it is noticeable that the first two segments slightly cross the initial orbit radius. While the lower bound of the radius, r, was set to 1, the path still violated that criteria. This is because the constraints are only evaluated at the LGR points and not every point between the LGR points. For this case the optimizer obeyed its constraints but may have produced a trajectory that is undesirable in reality. If the additional constraint was added such that a segment conjoining two LGR points can not violate a specific radius, then the objective function may have not been as optimized. For all these cases there is one outlier which is polynomial degree 3 with 2 intervals. The objective function, final time, is approximately 4.6\% greater than any of the other combinations. Looking at Figure \ref{fig:control_N3_K2_C2_tf} it is noticeable that the thrust drops from the upper limit down to zero at the third LGR point. For the objective function to be fully optimized, the thrust should be maximized the entire time. This is the case for the rest of the combinations. Also, N = 3 and K = 2 is the only case where the control \(\beta\) does not resemble that of the other combinations. All the other combinations show similar results to Indirect Shooting, shown in the midterm. Lastly, the comparison of the execution time between all of the combinations is shown in Figure \ref{fig:runtime_c2_tf}. Interestingly, the execution time does not increase very much as the number of intervals increases. While there is an increase in execution time as polynomial degree and number of intervals increases, it is not nearly as drastic as Multiple Shooting. This is most likely due to collocation being much more efficient due to it solving a mass system of equations.
+	\begin{table}[h!]
+   	\begin{tabular}{lllllll}
+   		Degree & Intervals & Iterations & CPU Time & tf & mf & Solved\ Status \\ 
+   		\hline 
+   		3 & 2 & 18 & 0.209 & 3.4087 & 0.79163 & 0 \\ 
+   		3 & 4 & 62 & 0.514 & 3.2457 & 0.75559 & 0 \\ 
+   		3 & 8 & 99 & 0.677 & 3.2467 & 0.75552 & 0 \\ 
+   		3 & 16 & 151 & 0.994 & 3.247 & 0.7555 & 1 \\ 
+   		3 & 32 & 127 & 1.2 & 3.2469 & 0.7555 & 1 \\ 
+   		4 & 2 & 39 & 0.345 & 3.2456 & 0.7556 & 0 \\ 
+   		4 & 4 & 87 & 0.595 & 3.2466 & 0.75552 & 0 \\ 
+   		4 & 8 & 140 & 0.915 & 3.247 & 0.7555 & 0 \\ 
+   		4 & 16 & 143 & 0.867 & 3.247 & 0.7555 & 0 \\ 
+   		4 & 32 & 160 & 0.982 & 3.2469 & 0.7555 & 1 \\ 
+   		\hline 
+   	\end{tabular}
+   	\caption{Results for minimizing \(t_f\) with unconstrained control}
+   	\label{table:1}
+   \end{table}
+    \begin{figure}
+	  	\centering
+	  	\includegraphics[scale=0.75]{obj_c2_tf.eps}
+	  	\caption{Objective function performance with unconstrained controls}
+	  	\label{fig:obj_c2_tf}
+    \end{figure}
+    \begin{figure}
+    	\centering
+    	\includegraphics[scale=0.75]{runtime_c2_tf.eps}
+    	\caption{Execution performance of minimizing terminal time with unconstrained controls}
+    	\label{fig:runtime_c2_tf}
+    \end{figure}
+%	\FloatBarrier
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K2_C2_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:3\ , K:2\))}
+		\label{fig:states_N3_K2_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K2_C2_tf.eps}
+		\caption{Control that minimized terminal time (\(N:3\ , K:2\))}
+		\label{fig:control_N3_K2_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K2_C2_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:2\))}
+		\label{fig:orbit_N3_K2_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K4_C2_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:3\ , K:4\))}
+		\label{fig:states_N3_K4_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K4_C2_tf.eps}
+		\caption{Control that minimized terminal time (\(N:3\ , K:4\))}
+		\label{fig:control_N3_K4_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K4_C2_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:4\))}
+		\label{fig:orbit_N3_K4_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K8_C2_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:3\ , K:8\))}
+		\label{fig:states_N3_K8_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K8_C2_tf.eps}
+		\caption{Control that minimized terminal time (\(N:3\ , K:8\))}
+		\label{fig:control_N3_K8_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K8_C2_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:8\))}
+		\label{fig:orbit_N3_K8_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K16_C2_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:3\ , K:16\))}
+		\label{fig:states_N3_K16_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K16_C2_tf.eps}
+		\caption{Control that minimized terminal time (\(N:3\ , K:16\))}
+		\label{fig:control_N3_K16_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K16_C2_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:16\))}
+		\label{fig:orbit_N3_K16_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K32_C2_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:3\ , K:32\))}
+		\label{fig:states_N3_K32_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K32_C2_tf.eps}
+		\caption{Control that minimized terminal time (\(N:3\ , K:32\))}
+		\label{fig:control_N3_K32_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K32_C2_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:32\))}
+		\label{fig:orbit_N3_K32_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K2_C2_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:4\ , K:2\))}
+		\label{fig:states_N4_K2_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K2_C2_tf.eps}
+		\caption{Control that minimized terminal time (\(N:4\ , K:2\))}
+		\label{fig:control_N4_K2_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K2_C2_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:2\))}
+		\label{fig:orbit_N4_K2_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K4_C2_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:4\ , K:4\))}
+		\label{fig:states_N4_K4_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K4_C2_tf.eps}
+		\caption{Control that minimized terminal time (\(N:4\ , K:4\))}
+		\label{fig:control_N4_K4_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K4_C2_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:4\))}
+		\label{fig:orbit_N4_K4_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K8_C2_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:4\ , K:8\))}
+		\label{fig:states_N4_K8_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K8_C2_tf.eps}
+		\caption{Control that minimized terminal time (\(N:4\ , K:8\))}
+		\label{fig:control_N4_K8_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K8_C2_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:8\))}
+		\label{fig:orbit_N4_K8_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K16_C2_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:4\ , K:16\))}
+		\label{fig:states_N4_K16_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K16_C2_tf.eps}
+		\caption{Control that minimized terminal time (\(N:4\ , K:16\))}
+		\label{fig:control_N4_K16_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K16_C2_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:16\))}
+		\label{fig:orbit_N4_K16_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K32_C2_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:4\ , K:32\))}
+		\label{fig:states_N4_K32_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K32_C2_tf.eps}
+		\caption{Control that minimized terminal time (\(N:4\ , K:32\))}
+		\label{fig:control_N4_K32_C2_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K32_C2_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:32\))}
+		\label{fig:orbit_N4_K32_C2_tf}
+	\end{figure}
+	
+	\FloatBarrier
+	\subsection{Maximize Terminal Mass with Unconstrained Control}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K2_C2_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:3\ , K:2\))}
+		\label{fig:states_N3_K2_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K2_C2_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:3\ , K:2\))}
+		\label{fig:control_N3_K2_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K2_C2_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:2\))}
+		\label{fig:orbit_N3_K2_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K4_C2_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:3\ , K:4\))}
+		\label{fig:states_N3_K4_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K4_C2_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:3\ , K:4\))}
+		\label{fig:control_N3_K4_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K4_C2_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:4\))}
+		\label{fig:orbit_N3_K4_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K8_C2_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:3\ , K:8\))}
+		\label{fig:states_N3_K8_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K8_C2_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:3\ , K:8\))}
+		\label{fig:control_N3_K8_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K8_C2_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:8\))}
+		\label{fig:orbit_N3_K8_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K16_C2_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:3\ , K:16\))}
+		\label{fig:states_N3_K16_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K16_C2_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:3\ , K:16\))}
+		\label{fig:control_N3_K16_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K16_C2_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:16\))}
+		\label{fig:orbit_N3_K16_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K32_C2_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:3\ , K:32\))}
+		\label{fig:states_N3_K32_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K32_C2_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:3\ , K:32\))}
+		\label{fig:control_N3_K32_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K32_C2_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:32\))}
+		\label{fig:orbit_N3_K32_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K2_C2_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:4\ , K:2\))}
+		\label{fig:states_N4_K2_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K2_C2_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:4\ , K:2\))}
+		\label{fig:control_N4_K2_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K2_C2_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:2\))}
+		\label{fig:orbit_N4_K2_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K4_C2_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:4\ , K:4\))}
+		\label{fig:states_N4_K4_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K4_C2_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:4\ , K:4\))}
+		\label{fig:control_N4_K4_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K4_C2_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:4\))}
+		\label{fig:orbit_N4_K4_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K8_C2_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:4\ , K:8\))}
+		\label{fig:states_N4_K8_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K8_C2_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:4\ , K:8\))}
+		\label{fig:control_N4_K8_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K8_C2_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:8\))}
+		\label{fig:orbit_N4_K8_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K16_C2_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:4\ , K:16\))}
+		\label{fig:states_N4_K16_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K16_C2_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:4\ , K:16\))}
+		\label{fig:control_N4_K16_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K16_C2_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:16\))}
+		\label{fig:orbit_N4_K16_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K32_C2_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:4\ , K:32\))}
+		\label{fig:states_N4_K32_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K32_C2_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:4\ , K:32\))}
+		\label{fig:control_N4_K32_C2_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K32_C2_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:32\))}
+		\label{fig:orbit_N4_K32_C2_mf}
+	\end{figure}
+	\begin{table}
+		\begin{tabular}{lllllll}
+			Degree & Intervals & Iterations & CPU Time & tf & mf & Solved\ Status \\ 
+			\hline 
+			3 & 2 & 111 & 0.593 & 10.5213 & 0.90901 & 0 \\ 
+			3 & 4 & 201 & 1.001 & 5.1606 & 0.9072 & 0 \\ 
+			3 & 8 & 99 & 0.585 & 7.2433 & 0.90714 & 0 \\ 
+			3 & 16 & 92 & 0.585 & 6.6139 & 0.9072 & 0 \\ 
+			3 & 32 & 128 & 0.737 & 7.7283 & 0.90721 & 0 \\ 
+			4 & 2 & 65 & 0.468 & 5.0469 & 0.90717 & 0 \\ 
+			4 & 4 & 130 & 0.73 & 5.2922 & 0.90719 & 0 \\ 
+			4 & 8 & 230 & 1.171 & 8.2586 & 0.9072 & 0 \\ 
+			4 & 16 & 97 & 0.593 & 7.8959 & 0.9072 & 0 \\ 
+			4 & 32 & 291 & 1.637 & 11.9018 & 0.9072 & 0 \\ 
+			\hline 
+		\end{tabular}
+		\caption{Results for maximizing \(m_f\) with unconstrained control}
+		\label{table:2}
+	\end{table}
+	\FloatBarrier
+	\subsection{Minimize Terminal Time with Constrained Control}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K2_C3_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:3\ , K:2\))}
+		\label{fig:states_N3_K2_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K2_C3_tf.eps}
+		\caption{Control that minimized terminal time (\(N:3\ , K:2\))}
+		\label{fig:control_N3_K2_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N3_K2_C3_tf.eps}
+		\caption{Path constrained control that minimized terminal time (\(N:3\ , K:2\))}
+		\label{fig:path_N3_K2_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K2_C3_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:2\))}
+		\label{fig:orbit_N3_K2_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K4_C3_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:3\ , K:4\))}
+		\label{fig:states_N3_K4_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K4_C3_tf.eps}
+		\caption{Control that minimized terminal time (\(N:3\ , K:4\))}
+		\label{fig:control_N3_K4_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N3_K4_C3_tf.eps}
+		\caption{Path constrained control that minimized terminal time (\(N:3\ , K:4\))}
+		\label{fig:path_N3_K4_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K4_C3_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:4\))}
+		\label{fig:orbit_N3_K4_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K8_C3_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:3\ , K:8\))}
+		\label{fig:states_N3_K8_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K8_C3_tf.eps}
+		\caption{Control that minimized terminal time (\(N:3\ , K:8\))}
+		\label{fig:control_N3_K8_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N3_K8_C3_tf.eps}
+		\caption{Path constrained control that minimized terminal time (\(N:3\ , K:8\))}
+		\label{fig:path_N3_K8_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K8_C3_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:8\))}
+		\label{fig:orbit_N3_K8_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K16_C3_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:3\ , K:16\))}
+		\label{fig:states_N3_K16_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K16_C3_tf.eps}
+		\caption{Control that minimized terminal time (\(N:3\ , K:16\))}
+		\label{fig:control_N3_K16_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N3_K16_C3_tf.eps}
+		\caption{Path constrained control that minimized terminal time (\(N:3\ , K:16\))}
+		\label{fig:path_N3_K16_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K16_C3_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:16\))}
+		\label{fig:orbit_N3_K16_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K32_C3_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:3\ , K:32\))}
+		\label{fig:states_N3_K32_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K32_C3_tf.eps}
+		\caption{Control that minimized terminal time (\(N:3\ , K:32\))}
+		\label{fig:control_N3_K32_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N3_K32_C3_tf.eps}
+		\caption{Path constrained control that minimized terminal time (\(N:3\ , K:32\))}
+		\label{fig:path_N3_K32_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K32_C3_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:32\))}
+		\label{fig:orbit_N3_K32_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K2_C3_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:4\ , K:2\))}
+		\label{fig:states_N4_K2_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K2_C3_tf.eps}
+		\caption{Control that minimized terminal time (\(N:4\ , K:2\))}
+		\label{fig:control_N4_K2_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N4_K2_C3_tf.eps}
+		\caption{Path constrained control that minimized terminal time (\(N:4\ , K:2\))}
+		\label{fig:path_N4_K2_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K2_C3_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:2\))}
+		\label{fig:orbit_N4_K2_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K4_C3_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:4\ , K:4\))}
+		\label{fig:states_N4_K4_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K4_C3_tf.eps}
+		\caption{Control that minimized terminal time (\(N:4\ , K:4\))}
+		\label{fig:control_N4_K4_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N4_K4_C3_tf.eps}
+		\caption{Path constrained control that minimized terminal time (\(N:4\ , K:4\))}
+		\label{fig:path_N4_K4_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K4_C3_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:4\))}
+		\label{fig:orbit_N4_K4_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K8_C3_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:4\ , K:8\))}
+		\label{fig:states_N4_K8_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K8_C3_tf.eps}
+		\caption{Control that minimized terminal time (\(N:4\ , K:8\))}
+		\label{fig:control_N4_K8_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N4_K8_C3_tf.eps}
+		\caption{Path constrained control that minimized terminal time (\(N:4\ , K:8\))}
+		\label{fig:path_N4_K8_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K8_C3_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:8\))}
+		\label{fig:orbit_N4_K8_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K16_C3_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:4\ , K:16\))}
+		\label{fig:states_N4_K16_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K16_C3_tf.eps}
+		\caption{Control that minimized terminal time (\(N:4\ , K:16\))}
+		\label{fig:control_N4_K16_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N4_K16_C3_tf.eps}
+		\caption{Path constrained control that minimized terminal time (\(N:4\ , K:16\))}
+		\label{fig:path_N4_K16_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K16_C3_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:16\))}
+		\label{fig:orbit_N4_K16_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K32_C3_tf.eps}
+		\caption{States for trajectory that minimized terminal time (\(N:4\ , K:32\))}
+		\label{fig:states_N4_K32_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K32_C3_tf.eps}
+		\caption{Control that minimized terminal time (\(N:4\ , K:32\))}
+		\label{fig:control_N4_K32_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N4_K32_C3_tf.eps}
+		\caption{Path constrained control that minimized terminal time (\(N:4\ , K:32\))}
+		\label{fig:path_N4_K32_C3_tf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K32_C3_tf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:32\))}
+		\label{fig:orbit_N4_K32_C3_tf}
+	\end{figure}
+	\begin{table}
+		\begin{tabular}{lllllll}
+			Degree & Intervals & Iterations & CPU Time & tf & mf & Solved\ Status \\ 
+			\hline 
+			3 & 2 & 45 & 0.329 & 3.2472 & 0.75548 & 0 \\ 
+			3 & 4 & 64 & 0.521 & 3.2457 & 0.75559 & 0 \\ 
+			3 & 8 & 86 & 0.553 & 3.2467 & 0.75552 & 0 \\ 
+			3 & 16 & 131 & 0.702 & 3.247 & 0.7555 & 1 \\ 
+			3 & 32 & 137 & 0.757 & 3.2469 & 0.7555 & 1 \\ 
+			4 & 2 & 72 & 0.574 & 3.2456 & 0.7556 & 0 \\ 
+			4 & 4 & 71 & 0.441 & 3.2466 & 0.75552 & 0 \\ 
+			4 & 8 & 107 & 1.143 & 3.247 & 0.7555 & 1 \\ 
+			4 & 16 & 145 & 1.125 & 3.247 & 0.7555 & 1 \\ 
+			4 & 32 & 160 & 0.964 & 3.2469 & 0.7555 & 0 \\ 
+			\hline 
+		\end{tabular}
+		\caption{Results for minimizing \(t_f\) with constrained control}
+		\label{table:3}
+	\end{table}
+	\FloatBarrier
+	\subsection{Maximize Terminal Mass with Constrained Control}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K2_C3_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:3\ , K:2\))}
+		\label{fig:states_N3_K2_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K2_C3_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:3\ , K:2\))}
+		\label{fig:control_N3_K2_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N3_K2_C3_mf.eps}
+		\caption{Path constrained control that maximized terminal mass (\(N:3\ , K:2\))}
+		\label{fig:path_N3_K2_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K2_C3_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:2\))}
+		\label{fig:orbit_N3_K2_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K4_C3_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:3\ , K:4\))}
+		\label{fig:states_N3_K4_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K4_C3_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:3\ , K:4\))}
+		\label{fig:control_N3_K4_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N3_K4_C3_mf.eps}
+		\caption{Path constrained control that maximized terminal mass (\(N:3\ , K:4\))}
+		\label{fig:path_N3_K4_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K4_C3_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:4\))}
+		\label{fig:orbit_N3_K4_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K8_C3_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:3\ , K:8\))}
+		\label{fig:states_N3_K8_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K8_C3_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:3\ , K:8\))}
+		\label{fig:control_N3_K8_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N3_K8_C3_mf.eps}
+		\caption{Path constrained control that maximized terminal mass (\(N:3\ , K:8\))}
+		\label{fig:path_N3_K8_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K8_C3_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:8\))}
+		\label{fig:orbit_N3_K8_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K16_C3_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:3\ , K:16\))}
+		\label{fig:states_N3_K16_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K16_C3_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:3\ , K:16\))}
+		\label{fig:control_N3_K16_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N3_K16_C3_mf.eps}
+		\caption{Path constrained control that maximized terminal mass (\(N:3\ , K:16\))}
+		\label{fig:path_N3_K16_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K16_C3_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:16\))}
+		\label{fig:orbit_N3_K16_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N3_K32_C3_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:3\ , K:32\))}
+		\label{fig:states_N3_K32_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N3_K32_C3_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:3\ , K:32\))}
+		\label{fig:control_N3_K32_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N3_K32_C3_mf.eps}
+		\caption{Path constrained control that maximized terminal mass (\(N:3\ , K:32\))}
+		\label{fig:path_N3_K32_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N3_K32_C3_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:3\ , K:32\))}
+		\label{fig:orbit_N3_K32_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K2_C3_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:4\ , K:2\))}
+		\label{fig:states_N4_K2_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K2_C3_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:4\ , K:2\))}
+		\label{fig:control_N4_K2_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N4_K2_C3_mf.eps}
+		\caption{Path constrained control that maximized terminal mass (\(N:4\ , K:2\))}
+		\label{fig:path_N4_K2_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K2_C3_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:2\))}
+		\label{fig:orbit_N4_K2_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K4_C3_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:4\ , K:4\))}
+		\label{fig:states_N4_K4_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K4_C3_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:4\ , K:4\))}
+		\label{fig:control_N4_K4_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N4_K4_C3_mf.eps}
+		\caption{Path constrained control that maximized terminal mass (\(N:4\ , K:4\))}
+		\label{fig:path_N4_K4_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K4_C3_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:4\))}
+		\label{fig:orbit_N4_K4_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K8_C3_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:4\ , K:8\))}
+		\label{fig:states_N4_K8_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K8_C3_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:4\ , K:8\))}
+		\label{fig:control_N4_K8_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N4_K8_C3_mf.eps}
+		\caption{Path constrained control that maximized terminal mass (\(N:4\ , K:8\))}
+		\label{fig:path_N4_K8_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K8_C3_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:8\))}
+		\label{fig:orbit_N4_K8_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K16_C3_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:4\ , K:16\))}
+		\label{fig:states_N4_K16_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K16_C3_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:4\ , K:16\))}
+		\label{fig:control_N4_K16_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N4_K16_C3_mf.eps}
+		\caption{Path constrained control that maximized terminal mass (\(N:4\ , K:16\))}
+		\label{fig:path_N4_K16_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K16_C3_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:16\))}
+		\label{fig:orbit_N4_K16_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{states_N4_K32_C3_mf.eps}
+		\caption{States for trajectory that maximized terminal mass (\(N:4\ , K:32\))}
+		\label{fig:states_N4_K32_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{control_N4_K32_C3_mf.eps}
+		\caption{Control that maximized terminal mass (\(N:4\ , K:32\))}
+		\label{fig:control_N4_K32_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{path_N4_K32_C3_mf.eps}
+		\caption{Path constrained control that maximized terminal mass (\(N:4\ , K:32\))}
+		\label{fig:path_N4_K32_C3_mf}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.75]{orbit_N4_K32_C3_mf.eps}
+		\caption{Trajectory from initial to final orbit (\(N:4\ , K:32\))}
+		\label{fig:orbit_N4_K32_C3_mf}
+	\end{figure}
+	\begin{table}
+		\begin{tabular}{lllllll}
+			Degree & Intervals & Iterations & CPU Time & tf & mf & Solved\ Status \\ 
+			\hline 
+			3 & 2 & 54 & 0.41 & 5.3953 & 0.90766 & 0 \\ 
+			3 & 4 & 313 & 1.522 & 8.8202 & 0.90741 & 0 \\ 
+			3 & 8 & 182 & 0.947 & 8.7513 & 0.90718 & 0 \\ 
+			3 & 16 & 517 & 2.443 & 6.911 & 0.9072 & 1 \\ 
+			3 & 32 & 189 & 1.026 & 8.5699 & 0.9072 & 0 \\ 
+			4 & 2 & 594 & 2.793 & 11.1036 & 0.90894 & 0 \\ 
+			4 & 4 & 406 & 1.96 & 6.1534 & 0.90718 & 0 \\ 
+			4 & 8 & 349 & 1.678 & 6.4506 & 0.9072 & 0 \\ 
+			4 & 16 & 397 & 1.938 & 6.6388 & 0.90721 & 0 \\ 
+			4 & 32 & 687 & 3.704 & 8.1883 & 0.90721 & 0 \\ 
+			\hline 
+		\end{tabular}
+		\caption{Results for maximizing \(m_f\) with constrained control}
+		\label{table:4}
+	\end{table}
+	\FloatBarrier
+
+%	\subsection{Overall Analysis}
+	
+	\section{Future Work}
+
+	
+	\section{Appendix}
+	\lstinputlisting[label=orbitTransferMain,    caption = orbitTransferMain.m]{../orbitTransferMain.m}
+	\lstinputlisting[label=orbitTransferFun,     caption = orbitTransferFun.m]{../orbitTransferFun.m}
+	\lstinputlisting[label=orbitTransferObj,     caption = orbitTransferObj.m]{../orbitTransferObj.m}
+	\lstinputlisting[label=orbitTransferCon,     caption = orbitTransferCon.m]{../orbitTransferCon.m}
+	\lstinputlisting[label= orbitTransferGrd,    caption = orbitTransferGrd.m]{../orbitTransferGrd.m}
+	\lstinputlisting[label= orbitTransferJac,    caption = orbitTransferJac.m]{../orbitTransferJac.m}
+    \lstinputlisting[label= orbitTransferJacPat, caption = orbitTransferJacPat.m]{../orbitTransferJacPat.m}
+
+
+\end{document}
