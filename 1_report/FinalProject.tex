@@ -225,33 +225,33 @@
 %        -3  error in step computation
 
     \subsection{Minimize Terminal Time with Unconstrained Control}
-	    %The optimal control problem was first solved with the objection function being to minimize \(t_f\) with unconstrained control parameterized by polynomials of degree N = (3,4) for intervals of K = %(2,4,8,16,32). The controls were thrust angle \(\beta\) and thrust magnitude T. The statistic for each combination is shown in Table \ref{table:1}. A comparison of the objective function for each combination %is shown in Figure \ref{fig:obj_c2_tf}. Interestingly, the objective function was best optimized for the case of polynomial degree 4 with 2 intervals. Taking a closer look at the orbit transfer for this case, %Figure \ref{fig:orbit_N4_K2_C2_tf}, it is noticeable that the first two segments slightly cross the initial orbit radius. While the lower bound of the radius, r, was set to 1, the path still violated that %criteria. This is because the constraints are only evaluated at the LGR points and not every point between the LGR points. For this case the optimizer obeyed its constraints but may have produced a trajectory %that is undesirable in reality. If the additional constraint was added such that a segment conjoining two LGR points can not violate a specific radius, then the objective function may have not been as %optimized. For all these cases there is one outlier which is polynomial degree 3 with 2 intervals. The objective function, final time, is approximately 4.6\% greater than any of the other combinations. %Looking at Figure \ref{fig:control_N3_K2_C2_tf} it is noticeable that the thrust drops from the upper limit down to zero at the third LGR point. For the objective function to be fully optimized, the thrust %should be maximized the entire time. This is the case for the rest of the combinations. Also, N = 3 and K = 2 is the only case where the control \(\beta\) does not resemble that of the other combinations. All %the other combinations show similar results to Indirect Shooting, shown in the midterm. Lastly, the comparison of the execution time between all of the combinations is shown in Figure \ref{fig:runtime_c2_tf}. %Interestingly, the execution time does not increase very much as the number of intervals increases. While there is an increase in execution time as polynomial degree and number of intervals increases, it is %not nearly as drastic as Multiple Shooting. This is most likely due to collocation being much more efficient due to it solving a mass system of equations. 
- %   \begin{table}[h!]
-  %  	\begin{tabular}{lllllll}
-  %  		Degree & Intervals & Iterations & CPU Time & tf & mf & Solved\ Status \\ 
-  %  		\hline 
-  %  		3 & 2 & 18 & 0.209 & 3.4087 & 0.79163 & 0 \\ 
-  %  		3 & 4 & 62 & 0.514 & 3.2457 & 0.75559 & 0 \\ 
-  %  		3 & 8 & 99 & 0.677 & 3.2467 & 0.75552 & 0 \\ 
-  %  		3 & 16 & 151 & 0.994 & 3.247 & 0.7555 & 1 \\ 
-  %  		3 & 32 & 127 & 1.2 & 3.2469 & 0.7555 & 1 \\ 
-  %  		4 & 2 & 39 & 0.345 & 3.2456 & 0.7556 & 0 \\ 
-  %  		4 & 4 & 87 & 0.595 & 3.2466 & 0.75552 & 0 \\ 
-  %  		4 & 8 & 140 & 0.915 & 3.247 & 0.7555 & 0 \\ 
-  %  		4 & 16 & 143 & 0.867 & 3.247 & 0.7555 & 0 \\ 
-  %  		4 & 32 & 160 & 0.982 & 3.2469 & 0.7555 & 1 \\ 
-  %  		\hline 
-  %  	\end{tabular}
-  %  	\caption{Results for minimizing \(t_f\) with unconstrained control}
-  %  	\label{table:1}
-  %  \end{table}
- %   \begin{figure}
-    	\centering
-    	\includegraphics[scale=0.75]{obj_c2_tf.eps}
-    	\caption{Objective function performance with unconstrained controls}
-    	\label{fig:obj_c2_tf}
+	 The optimal control problem was first solved with the objection function being to minimize \(t_f\) with unconstrained control parameterized by polynomials of degree N = (3,4) for intervals of K = (2,4,8,16,32). The controls were thrust angle \(\beta\) and thrust magnitude T. The statistic for each combination is shown in Table \ref{table:1}. A comparison of the objective function for each combination is shown in Figure \ref{fig:obj_c2_tf}. Interestingly, the objective function was best optimized for the case of polynomial degree 4 with 2 intervals. Taking a closer look at the orbit transfer for this case, Figure \ref{fig:orbit_N4_K2_C2_tf}, it is noticeable that the first two segments slightly cross the initial orbit radius. While the lower bound of the radius, r, was set to 1, the path still violated that criteria. This is because the constraints are only evaluated at the LGR points and not every point between the LGR points. For this case the optimizer obeyed its constraints but may have produced a trajectory that is undesirable in reality. If the additional constraint was added such that a segment conjoining two LGR points can not violate a specific radius, then the objective function may have not been as optimized. For all these cases there is one outlier which is polynomial degree 3 with 2 intervals. The objective function, final time, is approximately 4.6\% greater than any of the other combinations. Looking at Figure \ref{fig:control_N3_K2_C2_tf} it is noticeable that the thrust drops from the upper limit down to zero at the third LGR point. For the objective function to be fully optimized, the thrust should be maximized the entire time. This is the case for the rest of the combinations. Also, N = 3 and K = 2 is the only case where the control \(\beta\) does not resemble that of the other combinations. All the other combinations show similar results to Indirect Shooting, shown in the midterm. Lastly, the comparison of the execution time between all of the combinations is shown in Figure \ref{fig:runtime_c2_tf}. Interestingly, the execution time does not increase very much as the number of intervals increases. While there is an increase in execution time as polynomial degree and number of intervals increases, it is not nearly as drastic as Multiple Shooting. This is most likely due to collocation being much more efficient due to it solving a mass system of equations.
+	\begin{table}[h!]
+   	\begin{tabular}{lllllll}
+   		Degree & Intervals & Iterations & CPU Time & tf & mf & Solved\ Status \\ 
+   		\hline 
+   		3 & 2 & 18 & 0.209 & 3.4087 & 0.79163 & 0 \\ 
+   		3 & 4 & 62 & 0.514 & 3.2457 & 0.75559 & 0 \\ 
+   		3 & 8 & 99 & 0.677 & 3.2467 & 0.75552 & 0 \\ 
+   		3 & 16 & 151 & 0.994 & 3.247 & 0.7555 & 1 \\ 
+   		3 & 32 & 127 & 1.2 & 3.2469 & 0.7555 & 1 \\ 
+   		4 & 2 & 39 & 0.345 & 3.2456 & 0.7556 & 0 \\ 
+   		4 & 4 & 87 & 0.595 & 3.2466 & 0.75552 & 0 \\ 
+   		4 & 8 & 140 & 0.915 & 3.247 & 0.7555 & 0 \\ 
+   		4 & 16 & 143 & 0.867 & 3.247 & 0.7555 & 0 \\ 
+   		4 & 32 & 160 & 0.982 & 3.2469 & 0.7555 & 1 \\ 
+   		\hline 
+   	\end{tabular}
+   	\caption{Results for minimizing \(t_f\) with unconstrained control}
+   	\label{table:1}
+   \end{table}
+    \begin{figure}
+	  	\centering
+	  	\includegraphics[scale=0.75]{obj_c2_tf.eps}
+	  	\caption{Objective function performance with unconstrained controls}
+	  	\label{fig:obj_c2_tf}
     \end{figure}
-%    \begin{figure}
+    \begin{figure}
     	\centering
     	\includegraphics[scale=0.75]{runtime_c2_tf.eps}
     	\caption{Execution performance of minimizing terminal time with unconstrained controls}
@@ -439,7 +439,7 @@
 		\label{fig:orbit_N4_K32_C2_tf}
 	\end{figure}
 	
-%	\FloatBarrier
+	\FloatBarrier
 	\subsection{Maximize Terminal Mass with Unconstrained Control}
 	\begin{figure}
 		\centering
